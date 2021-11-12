@@ -1,0 +1,2 @@
+# ERTS_final_project
+Hardware_accellerated_neural_network_on_zybo_platform
