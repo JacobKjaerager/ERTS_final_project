@@ -1,0 +1,23 @@
+﻿  NN_Code.cpp
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(72): warning C4244: 'argument': conversion from 'short' to 'unsigned char', possible loss of data
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(75): warning C4244: 'argument': conversion from 'short' to 'unsigned char', possible loss of data
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(93): warning C4102: 'relu_label1': unreferenced label
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(107): warning C4102: 'softmax_lite_loop': unreferenced label
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(146): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(147): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(148): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(149): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(150): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(151): warning C4068: unknown pragma
+  neuralnetwork_ccode.c
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(72): warning C4244: 'function': conversion from 'short' to 'unsigned char', possible loss of data
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(75): warning C4244: 'function': conversion from 'short' to 'unsigned char', possible loss of data
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(93): warning C4102: 'relu_label1': unreferenced label
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(107): warning C4102: 'softmax_lite_loop': unreferenced label
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(146): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(147): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(148): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(149): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(150): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.c(151): warning C4068: unknown pragma
+  NN_Code.vcxproj -> C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\NN_Code\Debug\NN_Code.exe
