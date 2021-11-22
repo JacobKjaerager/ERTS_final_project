@@ -1,0 +1,85 @@
+#include "xparameters.h"
+#include "xneuralnetwork.h"
+//#include "bias.h"
+//#include "weights.h"
+
+uint8_t getChoiceFromUser()
+{
+	xil_printf("Enter choice: \r\n");
+	/* Read an input value from the console. */
+	uint8_t value = inbyte();
+	xil_printf("\r\n\r\n");
+
+	return value-48;
+}
+
+int main()
+{
+	int input[80] = { -11, 10, 20, -15, 4, 40, 9, 1, -12, -13, 10, -18, -3, 11, 10, 4, 2, 5, 3, -3, 7, -9, 3, 9, -1, 8, -12, 1, 10, -6, 2, -3, -5, 3, 1, -2, 2, -1, 3, 1, -4, 0, -1, 3, -3, 2, -5, -2, 5, 5, -3, -2, 1, 2, -3, -4, -5, -5, -1, 0, 3, 3, 0, 2, 4, 4, 5, -1, 3, -1, 2, 1, 2, -3, 1, 0, -1, -2, 1, 0};
+	char input1[80] = {8, 34, 232, 16, 21, 12, 253, 1, 13, 18, 4, 240, 250, 16, 249, 246, 251, 249, 254, 246, 12, 7, 249, 10, 6, 1, 253, 5, 6, 8, 248, 11, 2, 255, 249, 6, 249, 252, 253, 1, 0, 0, 252, 252, 0, 253, 3, 0, 3, 251, 1, 253, 251, 254, 251, 255, 1, 3, 8, 6, 0, 250, 2, 4, 255, 0, 6, 254, 1, 1, 255, 2, 255, 254, 1, 255, 255, 0, 255, 3};
+	char test[10] = {1, 2, 3, 4, 1, 6, 7, 8, 9, 1};
+
+	//char test = (char) input[0];
+	XNeuralnetwork nn;
+	XNeuralnetwork_Initialize(&nn, XPAR_NEURALNETWORK_0_DEVICE_ID);
+
+
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	XNeuralnetwork_Set_setBais_r(&nn, 0);
+	XNeuralnetwork_Set_setWeight_r(&nn, 0);
+	XNeuralnetwork_Set_runNN_r(&nn, 1);
+	XNeuralnetwork_Write_input_r_Bytes(&nn, 0, (char*)input, 80);
+	XNeuralnetwork_Start(&nn);
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	u32 res = XNeuralnetwork_Get_return(&nn);
+
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	XNeuralnetwork_Set_setBais_r(&nn, 0);
+	XNeuralnetwork_Set_setWeight_r(&nn, 0);
+	XNeuralnetwork_Set_runNN_r(&nn, 1);
+	XNeuralnetwork_Write_input_r_Bytes(&nn, 0, (char*)input1, 80);
+	XNeuralnetwork_Start(&nn);
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	res = XNeuralnetwork_Get_return(&nn);
+
+	/*while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	XNeuralnetwork_Set_setBais_r(&nn, 0);
+	XNeuralnetwork_Set_setWeight_r(&nn, 1);
+	XNeuralnetwork_Set_runNN_r(&nn, 0);
+	XNeuralnetwork_Write_biasWeight_input_r_Bytes(&nn, 0, (char*)test, 10);
+	XNeuralnetwork_Start(&nn);
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}*/
+
+	//u32 res;// = XNeuralnetwork_Get_return(&nn);
+
+	while(1){
+		uint8_t choice = getChoiceFromUser();
+
+		while(!XNeuralnetwork_IsReady(&nn))
+		{}
+
+		XNeuralnetwork_Set_setBais_r(&nn, 1);
+		XNeuralnetwork_Set_setWeight_r(&nn, 1);
+		XNeuralnetwork_Set_runNN_r(&nn, (char) choice);
+		XNeuralnetwork_Start(&nn);
+		while(!XNeuralnetwork_IsReady(&nn))
+		{}
+
+		res = XNeuralnetwork_Get_return(&nn);
+		xil_printf("%d ", res);
+
+	}
+	xil_printf("Done\r\n");
+	return 0;
+}

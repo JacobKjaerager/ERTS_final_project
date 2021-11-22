@@ -1,0 +1,1242 @@
+
+
+================================================================
+== Vivado HLS Report for 'run_classification'
+================================================================
+* Date:           Mon Nov 22 20:34:38 2021
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        NeuralNetwork_HLS
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.91|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  57840|  57840|  57840|  57840|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                         |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- memset_resArray1       |     69|     69|         1|          -|          -|    70|    no    |
+        |- memset_resArray2       |     69|     69|         1|          -|          -|    70|    no    |
+        |- runLayer_outerloop     |  28280|  28280|       404|          -|          -|    70|    no    |
+        | + runLayer_outerloop.1  |    400|    400|         5|          -|          -|    80|    no    |
+        |- relu_label1            |     70|     70|         2|          1|          1|    70|    yes   |
+        |- runLayer_outerloop     |  24780|  24780|       354|          -|          -|    70|    no    |
+        | + runLayer_outerloop.1  |    350|    350|         5|          -|          -|    70|    no    |
+        |- relu_label1            |     70|     70|         2|          1|          1|    70|    yes   |
+        |- runLayer_outerloop     |   4480|   4480|        64|          -|          -|    70|    no    |
+        | + runLayer_outerloop.1  |     60|     60|         6|          -|          -|    10|    no    |
+        |- softmax_lite_loop      |     10|     10|         3|          1|          1|     9|    yes   |
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 2
+  * Pipeline-2: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 39
+* Pipeline: 3
+  Pipeline-0: II = 1, D = 2, States = { 12 13 }
+  Pipeline-1: II = 1, D = 2, States = { 23 24 }
+  Pipeline-2: II = 1, D = 3, States = { 36 37 38 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!tmp)
+	3  / (tmp)
+3 --> 
+	3  / (!tmp_8)
+	4  / (tmp_8)
+4 --> 
+	5  / (!exitcond6)
+	12  / (exitcond6)
+5 --> 
+	6  / (!exitcond5)
+	10  / (exitcond5)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	5  / true
+10 --> 
+	11  / true
+11 --> 
+	4  / true
+12 --> 
+	14  / (exitcond_i1)
+	13  / (!exitcond_i1)
+13 --> 
+	12  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / (!exitcond4)
+	23  / (exitcond4)
+16 --> 
+	17  / (!exitcond3)
+	21  / (exitcond3)
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	16  / true
+21 --> 
+	22  / true
+22 --> 
+	15  / true
+23 --> 
+	25  / (exitcond_i)
+	24  / (!exitcond_i)
+24 --> 
+	23  / true
+25 --> 
+	26  / true
+26 --> 
+	35  / (exitcond2)
+	27  / (!exitcond2)
+27 --> 
+	28  / (!exitcond)
+	33  / (exitcond)
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	27  / true
+33 --> 
+	34  / true
+34 --> 
+	26  / true
+35 --> 
+	36  / true
+36 --> 
+	39  / (exitcond_i9)
+	37  / (!exitcond_i9)
+37 --> 
+	38  / true
+38 --> 
+	36  / true
+39 --> 
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: empty (4)  [1/1] 0.00ns
+:0  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([80 x i32]* %input_r, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_1: resArray1 (5)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:133
+:1  %resArray1 = alloca [70 x i32], align 4
+
+ST_1: resArray2 (6)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+:2  %resArray2 = alloca [70 x i32], align 4
+
+ST_1: StgValue_43 (7)  [1/1] 1.59ns
+:3  br label %meminst
+
+
+ <State 2>: 3.25ns
+ST_2: invdar (9)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:133
+meminst:0  %invdar = phi i7 [ 0, %0 ], [ %indvarinc, %meminst ]
+
+ST_2: invdar_cast (10)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:133
+meminst:1  %invdar_cast = zext i7 %invdar to i32
+
+ST_2: indvarinc (11)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:133
+meminst:2  %indvarinc = add i7 %invdar, 1
+
+ST_2: resArray1_addr (12)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:133
+meminst:3  %resArray1_addr = getelementptr [70 x i32]* %resArray1, i32 0, i32 %invdar_cast
+
+ST_2: StgValue_48 (13)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:133
+meminst:4  store i32 0, i32* %resArray1_addr, align 4
+
+ST_2: tmp (14)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:133
+meminst:5  %tmp = icmp eq i7 %invdar, -59
+
+ST_2: StgValue_50 (15)  [1/1] 0.00ns
+meminst:6  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @memset_resArray1_str)
+
+ST_2: empty_3 (16)  [1/1] 0.00ns
+meminst:7  %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 70, i64 70, i64 70)
+
+ST_2: StgValue_52 (17)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:133
+meminst:8  br i1 %tmp, label %meminst1.preheader, label %meminst
+
+ST_2: StgValue_53 (19)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+meminst1.preheader:0  br label %meminst1
+
+
+ <State 3>: 3.25ns
+ST_3: invdar2 (21)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+meminst1:0  %invdar2 = phi i7 [ %indvarinc3, %meminst1 ], [ 0, %meminst1.preheader ]
+
+ST_3: invdar2_cast (22)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+meminst1:1  %invdar2_cast = zext i7 %invdar2 to i32
+
+ST_3: indvarinc3 (23)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+meminst1:2  %indvarinc3 = add i7 %invdar2, 1
+
+ST_3: resArray2_addr (24)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+meminst1:3  %resArray2_addr = getelementptr [70 x i32]* %resArray2, i32 0, i32 %invdar2_cast
+
+ST_3: StgValue_58 (25)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+meminst1:4  store i32 0, i32* %resArray2_addr, align 4
+
+ST_3: tmp_8 (26)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+meminst1:5  %tmp_8 = icmp eq i7 %invdar2, -59
+
+ST_3: StgValue_60 (27)  [1/1] 0.00ns
+meminst1:6  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @memset_resArray2_str)
+
+ST_3: empty_4 (28)  [1/1] 0.00ns
+meminst1:7  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 70, i64 70, i64 70)
+
+ST_3: StgValue_62 (29)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:134
+meminst1:8  br i1 %tmp_8, label %.preheader.preheader, label %meminst1
+
+ST_3: StgValue_63 (31)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+.preheader.preheader:0  br label %.preheader
+
+
+ <State 4>: 3.25ns
+ST_4: outNeurons_0_i9 (33)  [1/1] 0.00ns
+.preheader:0  %outNeurons_0_i9 = phi i7 [ %outNeurons, %4 ], [ 0, %.preheader.preheader ]
+
+ST_4: tmp_9 (34)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+.preheader:1  %tmp_9 = zext i7 %outNeurons_0_i9 to i32
+
+ST_4: exitcond6 (35)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+.preheader:2  %exitcond6 = icmp eq i7 %outNeurons_0_i9, -58
+
+ST_4: empty_5 (36)  [1/1] 0.00ns
+.preheader:3  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 70, i64 70, i64 70)
+
+ST_4: outNeurons (37)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+.preheader:4  %outNeurons = add i7 %outNeurons_0_i9, 1
+
+ST_4: StgValue_69 (38)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+.preheader:5  br i1 %exitcond6, label %runLayer.exit13.preheader, label %1
+
+ST_4: StgValue_70 (40)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:67->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str1) nounwind
+
+ST_4: tmp_2 (41)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:67->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:1  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([19 x i8]* @p_str1)
+
+ST_4: resArray1_addr_1 (42)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:2  %resArray1_addr_1 = getelementptr inbounds [70 x i32]* %resArray1, i32 0, i32 %tmp_9
+
+ST_4: StgValue_73 (43)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:3  store i32 0, i32* %resArray1_addr_1, align 4
+
+ST_4: tmp_5_cast (44)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:4  %tmp_5_cast = zext i7 %outNeurons_0_i9 to i13
+
+ST_4: StgValue_75 (45)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:5  br label %2
+
+ST_4: StgValue_76 (78)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+runLayer.exit13.preheader:0  br label %runLayer.exit13
+
+
+ <State 5>: 5.59ns
+ST_5: inNeurons_0_i1 (47)  [1/1] 0.00ns
+:0  %inNeurons_0_i1 = phi i7 [ 0, %1 ], [ %inNeurons, %3 ]
+
+ST_5: phi_mul (48)  [1/1] 0.00ns
+:1  %phi_mul = phi i13 [ 0, %1 ], [ %next_mul, %3 ]
+
+ST_5: tmp_1 (49)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:2  %tmp_1 = zext i7 %inNeurons_0_i1 to i32
+
+ST_5: exitcond5 (50)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:3  %exitcond5 = icmp eq i7 %inNeurons_0_i1, -48
+
+ST_5: empty_6 (51)  [1/1] 0.00ns
+:4  %empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 80, i64 80, i64 80)
+
+ST_5: inNeurons (52)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:5  %inNeurons = add i7 %inNeurons_0_i1, 1
+
+ST_5: StgValue_83 (53)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:6  br i1 %exitcond5, label %4, label %3
+
+ST_5: next_mul (55)  [1/1] 2.34ns
+:0  %next_mul = add i13 %phi_mul, 70
+
+ST_5: tmp_6 (56)  [1/1] 2.34ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:1  %tmp_6 = add i13 %phi_mul, %tmp_5_cast
+
+ST_5: tmp_6_cast (57)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:2  %tmp_6_cast = zext i13 %tmp_6 to i32
+
+ST_5: weights_addr (58)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:3  %weights_addr = getelementptr inbounds [11200 x i8]* @weights_s, i32 0, i32 %tmp_6_cast
+
+ST_5: weights_load (59)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:4  %weights_load = load i8* %weights_addr, align 1
+
+ST_5: input_r_addr (61)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:6  %input_r_addr = getelementptr [80 x i32]* %input_r, i32 0, i32 %tmp_1
+
+ST_5: input_r_load (62)  [2/2] 2.31ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:7  %input_r_load = load i32* %input_r_addr, align 4
+
+ST_5: bias_addr (69)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:0  %bias_addr = getelementptr inbounds [150 x i8]* @bias_s, i32 0, i32 %tmp_9
+
+ST_5: bias_load (70)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:1  %bias_load = load i8* %bias_addr, align 1
+
+ST_5: resArray1_load_1 (72)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:3  %resArray1_load_1 = load i32* %resArray1_addr_1, align 4
+
+
+ <State 6>: 3.25ns
+ST_6: weights_load (59)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:4  %weights_load = load i8* %weights_addr, align 1
+
+ST_6: input_r_load (62)  [1/2] 2.31ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:7  %input_r_load = load i32* %input_r_addr, align 4
+
+
+ <State 7>: 6.91ns
+ST_7: tmp_7 (60)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:5  %tmp_7 = sext i8 %weights_load to i32
+
+ST_7: tmp_10 (63)  [2/2] 6.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:8  %tmp_10 = mul nsw i32 %input_r_load, %tmp_7
+
+ST_7: resArray1_load (64)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:9  %resArray1_load = load i32* %resArray1_addr_1, align 4
+
+
+ <State 8>: 6.91ns
+ST_8: tmp_10 (63)  [1/2] 6.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:8  %tmp_10 = mul nsw i32 %input_r_load, %tmp_7
+
+ST_8: resArray1_load (64)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:9  %resArray1_load = load i32* %resArray1_addr_1, align 4
+
+
+ <State 9>: 6.15ns
+ST_9: tmp_11 (65)  [1/1] 2.90ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:10  %tmp_11 = add nsw i32 %resArray1_load, %tmp_10
+
+ST_9: StgValue_102 (66)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:11  store i32 %tmp_11, i32* %resArray1_addr_1, align 4
+
+ST_9: StgValue_103 (67)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:12  br label %2
+
+
+ <State 10>: 6.15ns
+ST_10: bias_load (70)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:1  %bias_load = load i8* %bias_addr, align 1
+
+ST_10: tmp_12 (71)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:2  %tmp_12 = sext i8 %bias_load to i32
+
+ST_10: resArray1_load_1 (72)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:3  %resArray1_load_1 = load i32* %resArray1_addr_1, align 4
+
+ST_10: tmp_13 (73)  [1/1] 2.90ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:4  %tmp_13 = add nsw i32 %resArray1_load_1, %tmp_12
+
+
+ <State 11>: 3.25ns
+ST_11: StgValue_108 (74)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:5  store i32 %tmp_13, i32* %resArray1_addr_1, align 4
+
+ST_11: empty_7 (75)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:76->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:6  %empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([19 x i8]* @p_str1, i32 %tmp_2)
+
+ST_11: StgValue_110 (76)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:136
+:7  br label %.preheader
+
+
+ <State 12>: 3.25ns
+ST_12: i_0_i1 (80)  [1/1] 0.00ns
+runLayer.exit13:0  %i_0_i1 = phi i7 [ %i, %._crit_edge.i20 ], [ 0, %runLayer.exit13.preheader ]
+
+ST_12: exitcond_i1 (81)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+runLayer.exit13:1  %exitcond_i1 = icmp eq i7 %i_0_i1, -58
+
+ST_12: i (82)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+runLayer.exit13:2  %i = add i7 %i_0_i1, 1
+
+ST_12: StgValue_114 (83)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+runLayer.exit13:3  br i1 %exitcond_i1, label %relu.exit21.preheader, label %5
+
+ST_12: tmp_4 (89)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:4  %tmp_4 = zext i7 %i_0_i1 to i32
+
+ST_12: resArray1_addr_2 (90)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:5  %resArray1_addr_2 = getelementptr inbounds [70 x i32]* %resArray1, i32 0, i32 %tmp_4
+
+ST_12: resArray1_load_2 (91)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:6  %resArray1_load_2 = load i32* %resArray1_addr_2, align 4
+
+
+ <State 13>: 3.25ns
+ST_13: empty_8 (85)  [1/1] 0.00ns
+:0  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 70, i64 70, i64 70)
+
+ST_13: StgValue_119 (86)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:94->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:1  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str2) nounwind
+
+ST_13: tmp_3 (87)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:94->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:2  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str2)
+
+ST_13: StgValue_121 (88)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_13: resArray1_load_2 (91)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:6  %resArray1_load_2 = load i32* %resArray1_addr_2, align 4
+
+ST_13: tmp_5 (92)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:7  %tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %resArray1_load_2, i32 31)
+
+ST_13: StgValue_124 (93)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:8  br i1 %tmp_5, label %6, label %._crit_edge.i20
+
+ST_13: StgValue_125 (95)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:97->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:0  store i32 0, i32* %resArray1_addr_2, align 4
+
+ST_13: StgValue_126 (96)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:98->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+:1  br label %._crit_edge.i20
+
+ST_13: empty_9 (98)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:99->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+._crit_edge.i20:0  %empty_9 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str2, i32 %tmp_3)
+
+ST_13: StgValue_128 (99)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:137
+._crit_edge.i20:1  br label %runLayer.exit13
+
+
+ <State 14>: 1.59ns
+ST_14: StgValue_129 (101)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+relu.exit21.preheader:0  br label %relu.exit21
+
+
+ <State 15>: 3.25ns
+ST_15: outNeurons_0_i4 (103)  [1/1] 0.00ns
+relu.exit21:0  %outNeurons_0_i4 = phi i7 [ %outNeurons_1, %10 ], [ 0, %relu.exit21.preheader ]
+
+ST_15: tmp_s (104)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+relu.exit21:1  %tmp_s = zext i7 %outNeurons_0_i4 to i32
+
+ST_15: exitcond4 (105)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+relu.exit21:2  %exitcond4 = icmp eq i7 %outNeurons_0_i4, -58
+
+ST_15: empty_10 (106)  [1/1] 0.00ns
+relu.exit21:3  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 70, i64 70, i64 70)
+
+ST_15: outNeurons_1 (107)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+relu.exit21:4  %outNeurons_1 = add i7 %outNeurons_0_i4, 1
+
+ST_15: StgValue_135 (108)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+relu.exit21:5  br i1 %exitcond4, label %runLayer.exit8.preheader, label %7
+
+ST_15: StgValue_136 (110)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:67->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str1) nounwind
+
+ST_15: tmp_14 (111)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:67->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:1  %tmp_14 = call i32 (...)* @_ssdm_op_SpecRegionBegin([19 x i8]* @p_str1)
+
+ST_15: resArray2_addr_1 (112)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:2  %resArray2_addr_1 = getelementptr inbounds [70 x i32]* %resArray2, i32 0, i32 %tmp_s
+
+ST_15: StgValue_139 (113)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:3  store i32 0, i32* %resArray2_addr_1, align 4
+
+ST_15: tmp_23_cast9 (114)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:4  %tmp_23_cast9 = zext i7 %outNeurons_0_i4 to i13
+
+ST_15: tmp_23_cast (115)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:5  %tmp_23_cast = zext i7 %outNeurons_0_i4 to i8
+
+ST_15: tmp1 (116)  [1/1] 2.34ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:6  %tmp1 = add i13 %tmp_23_cast9, -2592
+
+ST_15: tmp1_cast (117)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:7  %tmp1_cast = zext i13 %tmp1 to i14
+
+ST_15: StgValue_144 (118)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:8  br label %8
+
+ST_15: StgValue_145 (155)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+runLayer.exit8.preheader:0  br label %runLayer.exit8
+
+
+ <State 16>: 5.59ns
+ST_16: inNeurons_0_i6 (120)  [1/1] 0.00ns
+:0  %inNeurons_0_i6 = phi i7 [ 0, %7 ], [ %inNeurons_1, %9 ]
+
+ST_16: phi_mul1 (121)  [1/1] 0.00ns
+:1  %phi_mul1 = phi i13 [ 0, %7 ], [ %next_mul2, %9 ]
+
+ST_16: phi_mul1_cast (122)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:2  %phi_mul1_cast = zext i13 %phi_mul1 to i14
+
+ST_16: tmp_15 (123)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:3  %tmp_15 = zext i7 %inNeurons_0_i6 to i32
+
+ST_16: exitcond3 (124)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:4  %exitcond3 = icmp eq i7 %inNeurons_0_i6, -58
+
+ST_16: empty_11 (125)  [1/1] 0.00ns
+:5  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 70, i64 70, i64 70)
+
+ST_16: inNeurons_1 (126)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:6  %inNeurons_1 = add i7 %inNeurons_0_i6, 1
+
+ST_16: StgValue_153 (127)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:7  br i1 %exitcond3, label %10, label %9
+
+ST_16: next_mul2 (129)  [1/1] 2.34ns
+:0  %next_mul2 = add i13 %phi_mul1, 70
+
+ST_16: tmp_24 (130)  [1/1] 2.34ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:1  %tmp_24 = add i14 %tmp1_cast, %phi_mul1_cast
+
+ST_16: tmp_25_cast (131)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:2  %tmp_25_cast = zext i14 %tmp_24 to i32
+
+ST_16: weights_addr_1 (132)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:3  %weights_addr_1 = getelementptr inbounds [11200 x i8]* @weights_s, i32 0, i32 %tmp_25_cast
+
+ST_16: weights_load_1 (133)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:4  %weights_load_1 = load i8* %weights_addr_1, align 1
+
+ST_16: resArray1_addr_3 (135)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:6  %resArray1_addr_3 = getelementptr inbounds [70 x i32]* %resArray1, i32 0, i32 %tmp_15
+
+ST_16: resArray1_load_3 (136)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:7  %resArray1_load_3 = load i32* %resArray1_addr_3, align 4
+
+ST_16: tmp_19 (143)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:0  %tmp_19 = add i8 70, %tmp_23_cast
+
+ST_16: tmp_30_cast (144)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:1  %tmp_30_cast = zext i8 %tmp_19 to i32
+
+ST_16: bias_addr_1 (145)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:2  %bias_addr_1 = getelementptr inbounds [150 x i8]* @bias_s, i32 0, i32 %tmp_30_cast
+
+ST_16: bias_load_1 (146)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:3  %bias_load_1 = load i8* %bias_addr_1, align 1
+
+ST_16: resArray2_load_1 (149)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:6  %resArray2_load_1 = load i32* %resArray2_addr_1, align 4
+
+
+ <State 17>: 3.25ns
+ST_17: weights_load_1 (133)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:4  %weights_load_1 = load i8* %weights_addr_1, align 1
+
+ST_17: resArray1_load_3 (136)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:7  %resArray1_load_3 = load i32* %resArray1_addr_3, align 4
+
+
+ <State 18>: 6.91ns
+ST_18: tmp_25 (134)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:5  %tmp_25 = sext i8 %weights_load_1 to i32
+
+ST_18: tmp_26 (137)  [2/2] 6.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:8  %tmp_26 = mul nsw i32 %resArray1_load_3, %tmp_25
+
+ST_18: resArray2_load (138)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:9  %resArray2_load = load i32* %resArray2_addr_1, align 4
+
+
+ <State 19>: 6.91ns
+ST_19: tmp_26 (137)  [1/2] 6.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:8  %tmp_26 = mul nsw i32 %resArray1_load_3, %tmp_25
+
+ST_19: resArray2_load (138)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:9  %resArray2_load = load i32* %resArray2_addr_1, align 4
+
+
+ <State 20>: 6.15ns
+ST_20: tmp_27 (139)  [1/1] 2.90ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:10  %tmp_27 = add nsw i32 %resArray2_load, %tmp_26
+
+ST_20: StgValue_174 (140)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:11  store i32 %tmp_27, i32* %resArray2_addr_1, align 4
+
+ST_20: StgValue_175 (141)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:12  br label %8
+
+
+ <State 21>: 6.15ns
+ST_21: bias_load_1 (146)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:3  %bias_load_1 = load i8* %bias_addr_1, align 1
+
+ST_21: tmp_21 (147)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138 (grouped into LUT with out node tmp_23)
+:4  %tmp_21 = shl i8 %bias_load_1, 3
+
+ST_21: tmp_22 (148)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138 (grouped into LUT with out node tmp_23)
+:5  %tmp_22 = sext i8 %tmp_21 to i32
+
+ST_21: resArray2_load_1 (149)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:6  %resArray2_load_1 = load i32* %resArray2_addr_1, align 4
+
+ST_21: tmp_23 (150)  [1/1] 2.90ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138 (out node of the LUT)
+:7  %tmp_23 = add nsw i32 %resArray2_load_1, %tmp_22
+
+
+ <State 22>: 3.25ns
+ST_22: StgValue_181 (151)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:8  store i32 %tmp_23, i32* %resArray2_addr_1, align 4
+
+ST_22: empty_12 (152)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:76->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:9  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([19 x i8]* @p_str1, i32 %tmp_14)
+
+ST_22: StgValue_183 (153)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:138
+:10  br label %relu.exit21
+
+
+ <State 23>: 3.25ns
+ST_23: i_0_i (157)  [1/1] 0.00ns
+runLayer.exit8:0  %i_0_i = phi i7 [ %i_1, %._crit_edge.i ], [ 0, %runLayer.exit8.preheader ]
+
+ST_23: exitcond_i (158)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+runLayer.exit8:1  %exitcond_i = icmp eq i7 %i_0_i, -58
+
+ST_23: i_1 (159)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+runLayer.exit8:2  %i_1 = add i7 %i_0_i, 1
+
+ST_23: StgValue_187 (160)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+runLayer.exit8:3  br i1 %exitcond_i, label %relu.exit.preheader, label %11
+
+ST_23: tmp_17 (166)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:4  %tmp_17 = zext i7 %i_0_i to i32
+
+ST_23: resArray2_addr_2 (167)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:5  %resArray2_addr_2 = getelementptr inbounds [70 x i32]* %resArray2, i32 0, i32 %tmp_17
+
+ST_23: resArray2_load_2 (168)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:6  %resArray2_load_2 = load i32* %resArray2_addr_2, align 4
+
+
+ <State 24>: 3.25ns
+ST_24: empty_13 (162)  [1/1] 0.00ns
+:0  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 70, i64 70, i64 70)
+
+ST_24: StgValue_192 (163)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:94->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:1  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str2) nounwind
+
+ST_24: tmp_16 (164)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:94->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:2  %tmp_16 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str2)
+
+ST_24: StgValue_194 (165)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_24: resArray2_load_2 (168)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:6  %resArray2_load_2 = load i32* %resArray2_addr_2, align 4
+
+ST_24: tmp_18 (169)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:7  %tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %resArray2_load_2, i32 31)
+
+ST_24: StgValue_197 (170)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:8  br i1 %tmp_18, label %12, label %._crit_edge.i
+
+ST_24: StgValue_198 (172)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:97->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:0  store i32 0, i32* %resArray2_addr_2, align 4
+
+ST_24: StgValue_199 (173)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:98->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+:1  br label %._crit_edge.i
+
+ST_24: empty_14 (175)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:99->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+._crit_edge.i:0  %empty_14 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str2, i32 %tmp_16)
+
+ST_24: StgValue_201 (176)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:139
+._crit_edge.i:1  br label %runLayer.exit8
+
+
+ <State 25>: 1.59ns
+ST_25: StgValue_202 (178)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+relu.exit.preheader:0  br label %relu.exit
+
+
+ <State 26>: 3.25ns
+ST_26: outNeurons_0_i (180)  [1/1] 0.00ns
+relu.exit:0  %outNeurons_0_i = phi i7 [ %outNeurons_2, %16 ], [ 0, %relu.exit.preheader ]
+
+ST_26: tmp_20 (181)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+relu.exit:1  %tmp_20 = zext i7 %outNeurons_0_i to i32
+
+ST_26: exitcond2 (182)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+relu.exit:2  %exitcond2 = icmp eq i7 %outNeurons_0_i, -58
+
+ST_26: empty_15 (183)  [1/1] 0.00ns
+relu.exit:3  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 70, i64 70, i64 70)
+
+ST_26: outNeurons_2 (184)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+relu.exit:4  %outNeurons_2 = add i7 %outNeurons_0_i, 1
+
+ST_26: StgValue_208 (185)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+relu.exit:5  br i1 %exitcond2, label %runLayer.exit, label %13
+
+ST_26: StgValue_209 (187)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:67->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str1) nounwind
+
+ST_26: tmp_28 (188)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:67->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:1  %tmp_28 = call i32 (...)* @_ssdm_op_SpecRegionBegin([19 x i8]* @p_str1)
+
+ST_26: resArray1_addr_5 (189)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:2  %resArray1_addr_5 = getelementptr inbounds [70 x i32]* %resArray1, i32 0, i32 %tmp_20
+
+ST_26: StgValue_212 (190)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:3  store i32 0, i32* %resArray1_addr_5, align 4
+
+ST_26: tmp_38_cast6 (191)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:4  %tmp_38_cast6 = zext i7 %outNeurons_0_i to i14
+
+ST_26: tmp_38_cast (192)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:5  %tmp_38_cast = zext i7 %outNeurons_0_i to i8
+
+ST_26: tmp2 (193)  [1/1] 2.34ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:6  %tmp2 = add i14 %tmp_38_cast6, -5884
+
+ST_26: StgValue_216 (194)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:7  br label %14
+
+ST_26: resArray1_addr_4 (234)  [1/1] 0.00ns
+runLayer.exit:0  %resArray1_addr_4 = getelementptr [70 x i32]* %resArray1, i32 0, i32 0
+
+ST_26: max (235)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:103->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+runLayer.exit:1  %max = load i32* %resArray1_addr_4, align 4
+
+
+ <State 27>: 5.57ns
+ST_27: inNeurons_0_i (196)  [1/1] 0.00ns
+:0  %inNeurons_0_i = phi i4 [ 0, %13 ], [ %inNeurons_2, %15 ]
+
+ST_27: tmp_29 (197)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:1  %tmp_29 = zext i4 %inNeurons_0_i to i32
+
+ST_27: exitcond (198)  [1/1] 3.10ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:2  %exitcond = icmp eq i4 %inNeurons_0_i, -6
+
+ST_27: empty_16 (199)  [1/1] 0.00ns
+:3  %empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)
+
+ST_27: inNeurons_2 (200)  [1/1] 2.35ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:4  %inNeurons_2 = add i4 %inNeurons_0_i, 1
+
+ST_27: StgValue_224 (201)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:5  br i1 %exitcond, label %16, label %15
+
+ST_27: p_shl (203)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:60->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:0  %p_shl = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %inNeurons_0_i, i3 0)
+
+ST_27: p_shl7 (204)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:60->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:1  %p_shl7 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %inNeurons_0_i, i1 false)
+
+ST_27: p_shl7_cast (205)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:60->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:2  %p_shl7_cast = zext i5 %p_shl7 to i7
+
+ST_27: neuronIndex (206)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:60->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:3  %neuronIndex = add i7 %p_shl7_cast, %p_shl
+
+ST_27: tmp_42_cast (207)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:4  %tmp_42_cast = zext i7 %neuronIndex to i14
+
+ST_27: tmp_35 (208)  [1/1] 2.34ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:5  %tmp_35 = add i14 %tmp_42_cast, %tmp2
+
+ST_27: tmp_30 (221)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:0  %tmp_30 = add i8 -116, %tmp_38_cast
+
+ST_27: tmp_44_cast (222)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:1  %tmp_44_cast = zext i8 %tmp_30 to i32
+
+ST_27: bias_addr_2 (223)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:2  %bias_addr_2 = getelementptr inbounds [150 x i8]* @bias_s, i32 0, i32 %tmp_44_cast
+
+ST_27: bias_load_2 (224)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:3  %bias_load_2 = load i8* %bias_addr_2, align 1
+
+ST_27: resArray1_load_6 (228)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:7  %resArray1_load_6 = load i32* %resArray1_addr_5, align 4
+
+
+ <State 28>: 3.25ns
+ST_28: tmp_45_cast (209)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:6  %tmp_45_cast = zext i14 %tmp_35 to i32
+
+ST_28: weights_addr_2 (210)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:7  %weights_addr_2 = getelementptr inbounds [11200 x i8]* @weights_s, i32 0, i32 %tmp_45_cast
+
+ST_28: weights_load_2 (211)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:8  %weights_load_2 = load i8* %weights_addr_2, align 1
+
+ST_28: resArray2_addr_3 (213)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:10  %resArray2_addr_3 = getelementptr inbounds [70 x i32]* %resArray2, i32 0, i32 %tmp_29
+
+ST_28: resArray2_load_3 (214)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:11  %resArray2_load_3 = load i32* %resArray2_addr_3, align 4
+
+
+ <State 29>: 3.25ns
+ST_29: weights_load_2 (211)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:8  %weights_load_2 = load i8* %weights_addr_2, align 1
+
+ST_29: resArray2_load_3 (214)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:11  %resArray2_load_3 = load i32* %resArray2_addr_3, align 4
+
+
+ <State 30>: 6.91ns
+ST_30: tmp_36 (212)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:9  %tmp_36 = sext i8 %weights_load_2 to i32
+
+ST_30: tmp_37 (215)  [2/2] 6.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:12  %tmp_37 = mul nsw i32 %tmp_36, %resArray2_load_3
+
+ST_30: resArray1_load_7 (216)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:13  %resArray1_load_7 = load i32* %resArray1_addr_5, align 4
+
+
+ <State 31>: 6.91ns
+ST_31: tmp_37 (215)  [1/2] 6.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:12  %tmp_37 = mul nsw i32 %tmp_36, %resArray2_load_3
+
+ST_31: resArray1_load_7 (216)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:13  %resArray1_load_7 = load i32* %resArray1_addr_5, align 4
+
+
+ <State 32>: 6.15ns
+ST_32: tmp_38 (217)  [1/1] 2.90ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:14  %tmp_38 = add nsw i32 %tmp_37, %resArray1_load_7
+
+ST_32: StgValue_249 (218)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:15  store i32 %tmp_38, i32* %resArray1_addr_5, align 4
+
+ST_32: StgValue_250 (219)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:70->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:16  br label %14
+
+
+ <State 33>: 5.57ns
+ST_33: bias_load_2 (224)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:3  %bias_load_2 = load i8* %bias_addr_2, align 1
+
+ST_33: tmp_31 (225)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140 (grouped into LUT with out node tmp_32)
+:4  %tmp_31 = shl i8 %bias_load_2, 3
+
+ST_33: tmp_32 (226)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140 (out node of the LUT)
+:5  %tmp_32 = add i8 %bias_load_2, %tmp_31
+
+ST_33: resArray1_load_6 (228)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:7  %resArray1_load_6 = load i32* %resArray1_addr_5, align 4
+
+
+ <State 34>: 6.15ns
+ST_34: tmp_33 (227)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:6  %tmp_33 = sext i8 %tmp_32 to i32
+
+ST_34: tmp_34 (229)  [1/1] 2.90ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:8  %tmp_34 = add nsw i32 %resArray1_load_6, %tmp_33
+
+ST_34: StgValue_257 (230)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:9  store i32 %tmp_34, i32* %resArray1_addr_5, align 4
+
+ST_34: empty_17 (231)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:76->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:10  %empty_17 = call i32 (...)* @_ssdm_op_SpecRegionEnd([19 x i8]* @p_str1, i32 %tmp_28)
+
+ST_34: StgValue_259 (232)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:140
+:11  br label %relu.exit
+
+
+ <State 35>: 4.84ns
+ST_35: max (235)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:103->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+runLayer.exit:1  %max = load i32* %resArray1_addr_4, align 4
+
+ST_35: StgValue_261 (236)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:107->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+runLayer.exit:2  br label %17
+
+
+ <State 36>: 3.25ns
+ST_36: max1_i (238)  [1/1] 0.00ns
+:0  %max1_i = phi i32 [ %max, %runLayer.exit ], [ %max_2_i_max1_i, %._crit_edge.i10 ]
+
+ST_36: max_index_i (239)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+:1  %max_index_i = phi i8 [ 0, %runLayer.exit ], [ %max_index_2_i_max_in, %._crit_edge.i10 ]
+
+ST_36: max_index (240)  [1/1] 0.00ns
+:2  %max_index = phi i4 [ 1, %runLayer.exit ], [ %i_2, %._crit_edge.i10 ]
+
+ST_36: exitcond_i9 (241)  [1/1] 3.10ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:107->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+:3  %exitcond_i9 = icmp eq i4 %max_index, -6
+
+ST_36: StgValue_266 (242)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:107->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+:4  br i1 %exitcond_i9, label %softmax_lite.exit, label %._crit_edge.i10
+
+ST_36: tmp_1_i (249)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:5  %tmp_1_i = zext i4 %max_index to i32
+
+ST_36: resArray1_addr_6 (250)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:6  %resArray1_addr_6 = getelementptr [70 x i32]* %resArray1, i32 0, i32 %tmp_1_i
+
+ST_36: max_1 (251)  [2/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:7  %max_1 = load i32* %resArray1_addr_6, align 4
+
+ST_36: i_2 (256)  [1/1] 2.35ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:107->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:12  %i_2 = add i4 %max_index, 1
+
+
+ <State 37>: 3.25ns
+ST_37: max_1 (251)  [1/2] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:7  %max_1 = load i32* %resArray1_addr_6, align 4
+
+
+ <State 38>: 5.33ns
+ST_38: max_index_cast3 (244)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:110->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:0  %max_index_cast3 = zext i4 %max_index to i8
+
+ST_38: empty_18 (245)  [1/1] 0.00ns
+._crit_edge.i10:1  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)
+
+ST_38: StgValue_274 (246)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:107->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:2  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str3) nounwind
+
+ST_38: tmp_i (247)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:107->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:3  %tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str3)
+
+ST_38: StgValue_276 (248)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:108->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_38: tmp_2_i (252)  [1/1] 3.26ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:8  %tmp_2_i = icmp sgt i32 %max_1, %max1_i
+
+ST_38: max_2_i_max1_i (253)  [1/1] 2.07ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:9  %max_2_i_max1_i = select i1 %tmp_2_i, i32 %max_1, i32 %max1_i
+
+ST_38: max_index_2_i_max_in (254)  [1/1] 2.07ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:10  %max_index_2_i_max_in = select i1 %tmp_2_i, i8 %max_index_cast3, i8 %max_index_i
+
+ST_38: empty_19 (255)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:113->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:11  %empty_19 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str3, i32 %tmp_i)
+
+ST_38: StgValue_281 (257)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:107->../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+._crit_edge.i10:13  br label %17
+
+
+ <State 39>: 0.00ns
+ST_39: StgValue_282 (259)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.c:142
+softmax_lite.exit:0  ret i8 %max_index_i
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('invdar', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133) with incoming values : ('indvarinc', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133) [9]  (1.59 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('invdar', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133) with incoming values : ('indvarinc', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133) [9]  (0 ns)
+	'getelementptr' operation ('resArray1_addr', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133) [12]  (0 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:133) of constant 0 on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [13]  (3.25 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('invdar2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134) with incoming values : ('indvarinc3', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134) [21]  (0 ns)
+	'getelementptr' operation ('resArray2_addr', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134) [24]  (0 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:134) of constant 0 on array 'resArray2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134 [25]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('outNeurons') with incoming values : ('outNeurons', ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) [33]  (0 ns)
+	'getelementptr' operation ('resArray1_addr_1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) [42]  (0 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) of constant 0 on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [43]  (3.25 ns)
+
+ <State 5>: 5.59ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul') with incoming values : ('next_mul') [48]  (0 ns)
+	'add' operation ('tmp_6', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) [56]  (2.34 ns)
+	'getelementptr' operation ('weights_addr', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) [58]  (0 ns)
+	'load' operation ('weights_load', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) on array 'weights_s' [59]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('weights_load', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) on array 'weights_s' [59]  (3.25 ns)
+
+ <State 7>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) [63]  (6.91 ns)
+
+ <State 8>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) [63]  (6.91 ns)
+
+ <State 9>: 6.15ns
+The critical path consists of the following:
+	'add' operation ('tmp_11', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) [65]  (2.9 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) of variable 'tmp_11', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:136 on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [66]  (3.25 ns)
+
+ <State 10>: 6.15ns
+The critical path consists of the following:
+	'load' operation ('bias_load', ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) on array 'bias_s' [70]  (3.25 ns)
+	'add' operation ('tmp_13', ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) [73]  (2.9 ns)
+
+ <State 11>: 3.25ns
+The critical path consists of the following:
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136) of variable 'tmp_13', ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:136 on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [74]  (3.25 ns)
+
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:137) [80]  (0 ns)
+	'getelementptr' operation ('resArray1_addr_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137) [90]  (0 ns)
+	'load' operation ('resArray1_load_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137) on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [91]  (3.25 ns)
+
+ <State 13>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('resArray1_load_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:137) on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [91]  (3.25 ns)
+
+ <State 14>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('outNeurons') with incoming values : ('outNeurons', ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [103]  (1.59 ns)
+
+ <State 15>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('outNeurons') with incoming values : ('outNeurons', ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [103]  (0 ns)
+	'getelementptr' operation ('resArray2_addr_1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [112]  (0 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) of constant 0 on array 'resArray2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134 [113]  (3.25 ns)
+
+ <State 16>: 5.59ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul1') with incoming values : ('next_mul2') [121]  (0 ns)
+	'add' operation ('tmp_24', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [130]  (2.34 ns)
+	'getelementptr' operation ('weights_addr_1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [132]  (0 ns)
+	'load' operation ('weights_load_1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) on array 'weights_s' [133]  (3.25 ns)
+
+ <State 17>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('weights_load_1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) on array 'weights_s' [133]  (3.25 ns)
+
+ <State 18>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_26', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [137]  (6.91 ns)
+
+ <State 19>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_26', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [137]  (6.91 ns)
+
+ <State 20>: 6.15ns
+The critical path consists of the following:
+	'add' operation ('tmp_27', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [139]  (2.9 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) of variable 'tmp_27', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:138 on array 'resArray2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134 [140]  (3.25 ns)
+
+ <State 21>: 6.15ns
+The critical path consists of the following:
+	'load' operation ('bias_load_1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) on array 'bias_s' [146]  (3.25 ns)
+	'shl' operation ('tmp_21', ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [147]  (0 ns)
+	'add' operation ('tmp_23', ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) [150]  (2.9 ns)
+
+ <State 22>: 3.25ns
+The critical path consists of the following:
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138) of variable 'tmp_23', ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:138 on array 'resArray2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134 [151]  (3.25 ns)
+
+ <State 23>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../NN_Code/NN_Code/neuralnetwork_ccode.c:93->../NN_Code/NN_Code/neuralnetwork_ccode.c:139) [157]  (0 ns)
+	'getelementptr' operation ('resArray2_addr_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139) [167]  (0 ns)
+	'load' operation ('resArray2_load_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139) on array 'resArray2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134 [168]  (3.25 ns)
+
+ <State 24>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('resArray2_load_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:95->../NN_Code/NN_Code/neuralnetwork_ccode.c:139) on array 'resArray2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:134 [168]  (3.25 ns)
+
+ <State 25>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('outNeurons') with incoming values : ('outNeurons', ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [180]  (1.59 ns)
+
+ <State 26>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('outNeurons') with incoming values : ('outNeurons', ../NN_Code/NN_Code/neuralnetwork_ccode.c:66->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [180]  (0 ns)
+	'getelementptr' operation ('resArray1_addr_5', ../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [189]  (0 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:68->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) of constant 0 on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [190]  (3.25 ns)
+
+ <State 27>: 5.57ns
+The critical path consists of the following:
+	'add' operation ('tmp_30', ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [221]  (2.32 ns)
+	'getelementptr' operation ('bias_addr_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [223]  (0 ns)
+	'load' operation ('bias_load_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) on array 'bias_s' [224]  (3.25 ns)
+
+ <State 28>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('weights_addr_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [210]  (0 ns)
+	'load' operation ('weights_load_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) on array 'weights_s' [211]  (3.25 ns)
+
+ <State 29>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('weights_load_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:62->../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) on array 'weights_s' [211]  (3.25 ns)
+
+ <State 30>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_37', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [215]  (6.91 ns)
+
+ <State 31>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_37', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [215]  (6.91 ns)
+
+ <State 32>: 6.15ns
+The critical path consists of the following:
+	'add' operation ('tmp_38', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [217]  (2.9 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) of variable 'tmp_38', ../NN_Code/NN_Code/neuralnetwork_ccode.c:72->../NN_Code/NN_Code/neuralnetwork_ccode.c:140 on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [218]  (3.25 ns)
+
+ <State 33>: 5.57ns
+The critical path consists of the following:
+	'load' operation ('bias_load_2', ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) on array 'bias_s' [224]  (3.25 ns)
+	'add' operation ('tmp_32', ../NN_Code/NN_Code/neuralnetwork_ccode.c:40->../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [226]  (2.32 ns)
+
+ <State 34>: 6.15ns
+The critical path consists of the following:
+	'add' operation ('tmp_34', ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) [229]  (2.9 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140) of variable 'tmp_34', ../NN_Code/NN_Code/neuralnetwork_ccode.c:75->../NN_Code/NN_Code/neuralnetwork_ccode.c:140 on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [230]  (3.25 ns)
+
+ <State 35>: 4.84ns
+The critical path consists of the following:
+	'load' operation ('max', ../NN_Code/NN_Code/neuralnetwork_ccode.c:103->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [235]  (3.25 ns)
+	multiplexor before 'phi' operation ('max') with incoming values : ('max', ../NN_Code/NN_Code/neuralnetwork_ccode.c:103->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) ('max_2_i_max1_i', ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) [238]  (1.59 ns)
+
+ <State 36>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../NN_Code/NN_Code/neuralnetwork_ccode.c:107->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) [240]  (0 ns)
+	'getelementptr' operation ('resArray1_addr_6', ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) [250]  (0 ns)
+	'load' operation ('max', ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [251]  (3.25 ns)
+
+ <State 37>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('max', ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) on array 'resArray1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:133 [251]  (3.25 ns)
+
+ <State 38>: 5.33ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_2_i', ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) [252]  (3.26 ns)
+	'select' operation ('max_index_2_i_max_in', ../NN_Code/NN_Code/neuralnetwork_ccode.c:109->../NN_Code/NN_Code/neuralnetwork_ccode.c:142) [254]  (2.07 ns)
+
+ <State 39>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

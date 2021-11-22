@@ -1,0 +1,34 @@
+/*
+ * NeuralNetwork.c
+ *
+ *  Created on: 19. nov. 2021
+ *      Author: jespe
+ */
+#include "xparameters.h"
+#include "xneuralnetwork.h"
+
+char setBais(char* bias){
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	XNeuralnetwork_Set_setBais_r(&nn, 1);
+	XNeuralnetwork_Set_setWeight_r(&nn, 0);
+	XNeuralnetwork_Set_runNN_r(&nn, 0);
+	XNeuralnetwork_Write_biasWeight_input_r_Bytes(&nn, 0, bias, 50);
+	XNeuralnetwork_Start(&nn);
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+}
+
+char setWeights(char* weights){
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	XNeuralnetwork_Set_setBais_r(&nn, 0);
+	XNeuralnetwork_Set_setWeight_r(&nn, 1);
+	XNeuralnetwork_Set_runNN_r(&nn, 0);
+	XNeuralnetwork_Write_biasWeight_input_r_Bytes(&nn, 0, weights, 50);
+	XNeuralnetwork_Start(&nn);
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+}
