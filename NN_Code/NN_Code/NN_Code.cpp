@@ -1,14 +1,50 @@
 #include <iostream>
-#include "neuralnetwork.hpp"
-#include "neuralnetwork_ccode.c"
+//#include "neuralnetwork.hpp"
+#include "neuralnetwork_ccode.hpp"
 
-int test[] = { 8, 34, -24, 16, 21, 12, -3, 1, 13, 18, 4, -16, -6, 16, -7, -10, -5, -7, -2, -10, 12, 7, -7, 10, 6, 1, -3, 5, 6, 8, -8, 11, 2, -1, -7, 6, -7, -4, -3, 1, 0, 0, -4, -4, 0, -3, 3, 0, 3, -5, 1, -3, -5, -2, -5, -1, 1, -3, 8, -6, 1, -6, -2, 4, -1, 0, 6, -2, 1, 2, -2, 2, 1, 1, 0, -2, 2, -2, -1, 5};
+#define numOfImages 10000
+#define dimensions 80
+
+static int testImages[numOfImages*dimensions] = {
+	#include "testImages.dat"
+};
+
+static int testLabels[numOfImages] = {
+	#include "testLabels.dat"
+};
+
+char dummy = 0;
 
 int main()
 {
-	auto res = run_classification(test);
-	std::cout << res << std::endl;
-	return 0;
+	short int correct = 0;
+	short int incorrect = 0;
+	for (short int i = 0; i < numOfImages; i++)
+	{
+		char res = NeuralNetwork(&testImages[i * 80], &dummy, true, false, false);
+		//char res = run_classification(&testImages[i*80]);
+
+		if (res == testLabels[i])
+		{
+			correct += 1;
+		}
+		else
+		{
+			incorrect += 1;
+		}
+	}
+
+	float accuracy = (float)correct / (float)(correct + incorrect);
+	//printf("Accuracy is: %.6f", accuracy);
+
+	int ret = 0;
+
+	if (accuracy < 0.9)
+	{
+		ret = -1;
+	}
+
+	return ret;
 }
 
 

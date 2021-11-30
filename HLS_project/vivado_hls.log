@@ -1,80 +1,117 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'jespe' on host 'desktop-ifl7hb3' (Windows NT_amd64 version 6.2) on Mon Nov 22 20:34:25 +0100 2021
+INFO: [HLS 200-10] For user 'jespe' on host 'desktop-ifl7hb3' (Windows NT_amd64 version 6.2) on Tue Nov 30 08:52:10 +0100 2021
 INFO: [HLS 200-10] In directory 'C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project'
 INFO: [HLS 200-10] Opening project 'C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS'.
-INFO: [HLS 200-10] Adding design file '../NN_Code/NN_Code/neuralnetwork_ccode.c' to the project
+INFO: [HLS 200-10] Adding design file '../NN_Code/NN_Code/neuralnetwork_ccode.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file '../NN_Code/NN_Code/testbench_vivado.cpp' to the project
 INFO: [HLS 200-10] Opening solution 'C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
 INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
-INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
-INFO: [HLS 200-10] Analyzing design file '../NN_Code/NN_Code/neuralnetwork_ccode.c' ... 
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [HLS 200-10] Analyzing design file '../NN_Code/NN_Code/neuralnetwork_ccode.cpp' ... 
 INFO: [HLS 200-10] Validating synthesis directives ...
-WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Label 'runLayer_label2' does not exist in function 'runLayer'. 
-WARNING: [HLS 200-40] Directive 'LOOP_MERGE' cannot be applied: Label 'runLayer_Outerloop' does not exist in function 'runLayer'. 
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 96.656 ; gain = 47.191
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 96.676 ; gain = 47.211
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 96.188 ; gain = 46.641
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:27 . Memory (MB): peak = 96.270 ; gain = 46.723
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [XFORM 203-603] Inlining function 'getWeight' into 'runLayer' (../NN_Code/NN_Code/neuralnetwork_ccode.c:72).
-INFO: [XFORM 203-603] Inlining function 'getBias' into 'runLayer' (../NN_Code/NN_Code/neuralnetwork_ccode.c:75).
-INFO: [XFORM 203-603] Inlining function 'runLayer' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.c:140).
-INFO: [XFORM 203-603] Inlining function 'runLayer' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.c:138).
-INFO: [XFORM 203-603] Inlining function 'runLayer' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.c:136).
-INFO: [XFORM 203-603] Inlining function 'relu' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.c:139).
-INFO: [XFORM 203-603] Inlining function 'relu' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.c:137).
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 98.898 ; gain = 49.434
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:28 . Memory (MB): peak = 98.562 ; gain = 49.016
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'softmax_lite' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.c:142) automatically.
-INFO: [XFORM 203-602] Inlining function 'setBias' into 'NeuralNetwork' (../NN_Code/NN_Code/neuralnetwork_ccode.c:159) automatically.
-INFO: [XFORM 203-602] Inlining function 'setWeights' into 'NeuralNetwork' (../NN_Code/NN_Code/neuralnetwork_ccode.c:163) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 99.121 ; gain = 49.656
-INFO: [XFORM 203-602] Inlining function 'softmax_lite' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.c:142) automatically.
-INFO: [XFORM 203-602] Inlining function 'setBias' into 'NeuralNetwork' (../NN_Code/NN_Code/neuralnetwork_ccode.c:159) automatically.
-INFO: [XFORM 203-602] Inlining function 'setWeights' into 'NeuralNetwork' (../NN_Code/NN_Code/neuralnetwork_ccode.c:163) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 120.711 ; gain = 71.246
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 123.312 ; gain = 73.848
+INFO: [XFORM 203-602] Inlining function 'getWeight' into 'runLayer.1' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'getBias' into 'runLayer.1' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) automatically.
+INFO: [XFORM 203-602] Inlining function 'getWeight' into 'runLayer' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'getBias' into 'runLayer' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) automatically.
+INFO: [XFORM 203-602] Inlining function 'softmax_lite' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:102) automatically.
+INFO: [XFORM 203-602] Inlining function 'setBias' into 'NeuralNetwork' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:119) automatically.
+INFO: [XFORM 203-602] Inlining function 'setWeights' into 'NeuralNetwork' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:123) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:29 . Memory (MB): peak = 98.914 ; gain = 49.367
+INFO: [XFORM 203-602] Inlining function 'getWeight' into 'runLayer.1' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'getBias' into 'runLayer.1' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) automatically.
+INFO: [XFORM 203-602] Inlining function 'getWeight' into 'runLayer' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'getBias' into 'runLayer' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) automatically.
+INFO: [XFORM 203-602] Inlining function 'runLayer.1' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:96) automatically.
+INFO: [XFORM 203-602] Inlining function 'softmax_lite' into 'run_classification' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:102) automatically.
+INFO: [XFORM 203-602] Inlining function 'setBias' into 'NeuralNetwork' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:119) automatically.
+INFO: [XFORM 203-602] Inlining function 'setWeights' into 'NeuralNetwork' (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:123) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:60:4) to (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:59:80) in function 'runLayer'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:30 . Memory (MB): peak = 120.281 ; gain = 70.734
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 141.555 ; gain = 92.008
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'NeuralNetwork' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Implementing module 'run_classification' 
+INFO: [HLS 200-10] -- Implementing module 'relu' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'relu_label1'.
-INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
-INFO: [SCHED 204-61] Pipelining loop 'relu_label1'.
-INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
-INFO: [SCHED 204-61] Pipelining loop 'softmax_lite_loop'.
-INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 13.684 seconds; current allocated memory: 86.361 MB.
+INFO: [HLS 200-111]  Elapsed time: 32.096 seconds; current allocated memory: 104.084 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.216 seconds; current allocated memory: 87.032 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.147 seconds; current allocated memory: 104.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'runLayer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.63ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'mul' operation ('tmp_26_i', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:29->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) (3.36 ns)
+	'add' operation ('tmp_s', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) (3.02 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) of variable 'tmp_s', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64 on array 'output_r' (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.453 seconds; current allocated memory: 104.559 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.328 seconds; current allocated memory: 104.788 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'run_classification' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.959 seconds; current allocated memory: 105.096 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.443 seconds; current allocated memory: 105.395 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Implementing module 'NeuralNetwork' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.314 seconds; current allocated memory: 87.314 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.586 seconds; current allocated memory: 105.645 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.139 seconds; current allocated memory: 87.519 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.333 seconds; current allocated memory: 105.851 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'relu' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'relu'.
+INFO: [HLS 200-111]  Elapsed time: 0.566 seconds; current allocated memory: 106.049 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runLayer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'NeuralNetwork_mul_32s_8s_32_2' to 'NeuralNetwork_mulbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'NeuralNetwork_mac_muladd_7ns_8s_32ns_32_1' to 'NeuralNetwork_maccud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'NeuralNetwork_maccud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'NeuralNetwork_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runLayer'.
+INFO: [HLS 200-111]  Elapsed time: 0.422 seconds; current allocated memory: 106.617 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'run_classification' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'run_classification_resArray1' to 'run_classificatiobkb' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'run_classification_resArray2' to 'run_classificatiocud' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'NeuralNetwork_mul_32s_8s_32_2' to 'NeuralNetwork_muldEe' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'NeuralNetwork_mul_8s_32s_32_2' to 'NeuralNetwork_muleOg' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'NeuralNetwork_muldEe': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'NeuralNetwork_muleOg': 1 instance(s).
+INFO: [SYN 201-210] Renamed object name 'run_classification_resArray1' to 'run_classificatiodEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'run_classification_resArray2' to 'run_classificatioeOg' due to the length limit 20
+WARNING: [RTGEN 206-101] RTL name 'NeuralNetwork_mulbkb' is changed to 'NeuralNetwork_mulbkb_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'NeuralNetwork_mulbkb': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'run_classification'.
-INFO: [HLS 200-111]  Elapsed time: 0.366 seconds; current allocated memory: 88.830 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.424 seconds; current allocated memory: 107.427 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'NeuralNetwork' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -86,16 +123,15 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'NeuralNetwork/setWeight_r'
 INFO: [RTGEN 206-500] Setting interface mode on function 'NeuralNetwork' to 's_axilite & ap_ctrl_hs'.
 INFO: [SYN 201-210] Renamed object name 'NeuralNetwork_weights_s' to 'NeuralNetwork_weifYi' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'NeuralNetwork_bias_s' to 'NeuralNetwork_biag8j' due to the length limit 20
-INFO: [RTGEN 206-100] Bundling port 'return', 'input_r', 'biasWeight_input_r', 'setBais_r' and 'setWeight_r' to AXI-Lite port NNIO.
+INFO: [RTGEN 206-100] Bundling port 'return', 'input_r', 'biasWeight_input_r', 'runNN_r', 'setBais_r' to AXI-Lite port NNIO.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'NeuralNetwork'.
-INFO: [HLS 200-111]  Elapsed time: 1.455 seconds; current allocated memory: 89.659 MB.
-INFO: [RTMG 210-282] Generating pipelined core: 'NeuralNetwork_muldEe_MulnS_0'
-INFO: [RTMG 210-282] Generating pipelined core: 'NeuralNetwork_muleOg_MulnS_1'
-INFO: [RTMG 210-278] Implementing memory 'run_classificatiobkb_ram' using block RAMs.
+INFO: [HLS 200-111]  Elapsed time: 1.83 seconds; current allocated memory: 108.032 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'NeuralNetwork_mulbkb_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'run_classificatiodEe_ram' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'NeuralNetwork_weifYi_ram' using block RAMs with power-on initialization.
 INFO: [RTMG 210-278] Implementing memory 'NeuralNetwork_biag8j_ram' using block RAMs with power-on initialization.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 138.961 ; gain = 89.496
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:17 ; elapsed = 00:00:46 . Memory (MB): peak = 157.785 ; gain = 108.238
 INFO: [SYSC 207-301] Generating SystemC RTL for NeuralNetwork.
 INFO: [VHDL 208-304] Generating VHDL RTL for NeuralNetwork.
 INFO: [VLOG 209-307] Generating Verilog RTL for NeuralNetwork.
-INFO: [HLS 200-112] Total elapsed time: 19.032 seconds; peak allocated memory: 89.659 MB.
+INFO: [HLS 200-112] Total elapsed time: 46.032 seconds; peak allocated memory: 108.032 MB.

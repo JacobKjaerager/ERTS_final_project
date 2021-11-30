@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Wed Nov 17 23:16:17 2021
+--Date        : Fri Nov 26 11:25:02 2021
 --Host        : DESKTOP-IFL7HB3 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -700,7 +700,7 @@ architecture STRUCTURE of design_1 is
   end component design_1_rst_ps7_0_100M_0;
   component design_1_NeuralNetwork_0_0 is
   port (
-    s_axi_NNIO_AWADDR : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    s_axi_NNIO_AWADDR : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_axi_NNIO_AWVALID : in STD_LOGIC;
     s_axi_NNIO_AWREADY : out STD_LOGIC;
     s_axi_NNIO_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -710,7 +710,7 @@ architecture STRUCTURE of design_1 is
     s_axi_NNIO_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_NNIO_BVALID : out STD_LOGIC;
     s_axi_NNIO_BREADY : in STD_LOGIC;
-    s_axi_NNIO_ARADDR : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    s_axi_NNIO_ARADDR : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_axi_NNIO_ARVALID : in STD_LOGIC;
     s_axi_NNIO_ARREADY : out STD_LOGIC;
     s_axi_NNIO_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -820,10 +820,10 @@ NeuralNetwork_0: component design_1_NeuralNetwork_0_0
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_100M_peripheral_aresetn(0),
       interrupt => NLW_NeuralNetwork_0_interrupt_UNCONNECTED,
-      s_axi_NNIO_ARADDR(13 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(13 downto 0),
+      s_axi_NNIO_ARADDR(15 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(15 downto 0),
       s_axi_NNIO_ARREADY => ps7_0_axi_periph_M00_AXI_ARREADY,
       s_axi_NNIO_ARVALID => ps7_0_axi_periph_M00_AXI_ARVALID,
-      s_axi_NNIO_AWADDR(13 downto 0) => ps7_0_axi_periph_M00_AXI_AWADDR(13 downto 0),
+      s_axi_NNIO_AWADDR(15 downto 0) => ps7_0_axi_periph_M00_AXI_AWADDR(15 downto 0),
       s_axi_NNIO_AWREADY => ps7_0_axi_periph_M00_AXI_AWREADY,
       s_axi_NNIO_AWVALID => ps7_0_axi_periph_M00_AXI_AWVALID,
       s_axi_NNIO_BREADY => ps7_0_axi_periph_M00_AXI_BREADY,

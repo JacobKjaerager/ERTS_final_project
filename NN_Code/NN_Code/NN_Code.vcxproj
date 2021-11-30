@@ -151,12 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="NeuralNetwork.cpp" />
+    <ClCompile Include="neuralnetwork_ccode.cpp" />
     <ClCompile Include="NN_Code.cpp" />
-    <ClCompile Include="neuralnetwork_ccode.c" />
+    <ClCompile Include="testbench_vivado.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NeuralNetwork.hpp" />
+    <ClInclude Include="neuralnetwork_ccode.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bias.dat" />

@@ -58,7 +58,7 @@ set NewPortList {[
  	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "6", "7"],
 		"CDFG" : "run_classification",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -66,34 +66,74 @@ set RtlHierarchyInfo {[
 		"Datapath" : "0",
 		"ClockEnable" : "0",
 		"VariableLatency" : "1",
+		"WaitState" : [
+			{"State" : "ap_ST_fsm_state14", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_runLayer_fu_250"},
+			{"State" : "ap_ST_fsm_state18", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_runLayer_fu_250"},
+			{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_relu_fu_266"},
+			{"State" : "ap_ST_fsm_state16", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_relu_fu_266"}],
 		"Port" : [
 			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "weights_s", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "bias_s", "Type" : "Memory", "Direction" : "I"}]},
+			{"Name" : "weights_s", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "grp_runLayer_fu_250", "Port" : "weights_s"}]},
+			{"Name" : "bias_s", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "grp_runLayer_fu_250", "Port" : "bias_s"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resArray1_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resArray2_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.NeuralNetwork_muldEe_U0", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.NeuralNetwork_muldEe_U1", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.NeuralNetwork_muleOg_U2", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_runLayer_fu_250", "Parent" : "0", "Child" : ["4", "5"],
+		"CDFG" : "runLayer",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"VariableLatency" : "1",
+		"Port" : [
+			{"Name" : "layer", "Type" : "None", "Direction" : "I"},
+			{"Name" : "numOfOutNeurons", "Type" : "None", "Direction" : "I"},
+			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "output_r", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "weights_s", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "bias_s", "Type" : "Memory", "Direction" : "I"}]},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_runLayer_fu_250.NeuralNetwork_mulbkb_U1", "Parent" : "3"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_runLayer_fu_250.NeuralNetwork_maccud_U2", "Parent" : "3"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_relu_fu_266", "Parent" : "0",
+		"CDFG" : "relu",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"VariableLatency" : "1",
+		"Port" : [
+			{"Name" : "data", "Type" : "Memory", "Direction" : "IO"}]},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.NeuralNetwork_mulbkb_x_U9", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	run_classification {
 		input_r {Type I LastRead 4 FirstWrite -1}
-		weights_s {Type I LastRead 11 FirstWrite -1}
-		bias_s {Type I LastRead 10 FirstWrite -1}}}
+		weights_s {Type I LastRead 4 FirstWrite -1}
+		bias_s {Type I LastRead 4 FirstWrite -1}}
+	runLayer {
+		layer {Type I LastRead 0 FirstWrite -1}
+		numOfOutNeurons {Type I LastRead 0 FirstWrite -1}
+		input_r {Type I LastRead 3 FirstWrite -1}
+		output_r {Type IO LastRead 5 FirstWrite 1}
+		weights_s {Type I LastRead 3 FirstWrite -1}
+		bias_s {Type I LastRead 2 FirstWrite -1}}
+	relu {
+		data {Type IO LastRead 1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "57840", "Max" : "57840"}
-	, {"Name" : "Interval", "Min" : "57840", "Max" : "57840"}
+	{"Name" : "Latency", "Min" : "37222", "Max" : "88102"}
+	, {"Name" : "Interval", "Min" : "37222", "Max" : "88102"}
 ]}
 
 set PipelineEnableSignalInfo {[
-	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
-	{"Pipeline" : "1", "EnableSignal" : "ap_enable_pp1"}
-	{"Pipeline" : "2", "EnableSignal" : "ap_enable_pp2"}
 ]}
 
 set Spec2ImplPortList { 

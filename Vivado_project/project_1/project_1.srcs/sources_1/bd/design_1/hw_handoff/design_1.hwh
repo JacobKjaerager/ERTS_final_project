@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov 17 23:16:18 2021" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 26 11:25:04 2021" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -302,7 +302,7 @@
             </REGISTER>
             <REGISTER NAME="runNN_r">
               <PROPERTY NAME="DESCRIPTION" VALUE="Data signal of runNN_r"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="8192"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="32768"/>
               <PROPERTY NAME="SIZE" VALUE="32"/>
               <PROPERTY NAME="ACCESS" VALUE="write-only"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
@@ -332,7 +332,7 @@
             </REGISTER>
             <REGISTER NAME="setBais_r">
               <PROPERTY NAME="DESCRIPTION" VALUE="Data signal of setBais_r"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="8200"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="32776"/>
               <PROPERTY NAME="SIZE" VALUE="32"/>
               <PROPERTY NAME="ACCESS" VALUE="write-only"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
@@ -362,7 +362,7 @@
             </REGISTER>
             <REGISTER NAME="setWeight_r">
               <PROPERTY NAME="DESCRIPTION" VALUE="Data signal of setWeight_r"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="8208"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="32784"/>
               <PROPERTY NAME="SIZE" VALUE="32"/>
               <PROPERTY NAME="ACCESS" VALUE="write-only"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
@@ -400,8 +400,8 @@
             </REGISTER>
             <REGISTER NAME="Memory_biasWeight_input_r">
               <PROPERTY NAME="DESCRIPTION" VALUE="Memory biasWeight_input_r"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="4096"/>
-              <PROPERTY NAME="SIZE" VALUE="4096"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="16384"/>
+              <PROPERTY NAME="SIZE" VALUE="16384"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
@@ -410,7 +410,7 @@
         </ADDRESSBLOCK>
       </ADDRESSBLOCKS>
       <PARAMETERS>
-        <PARAMETER NAME="C_S_AXI_NNIO_ADDR_WIDTH" VALUE="14"/>
+        <PARAMETER NAME="C_S_AXI_NNIO_ADDR_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_S_AXI_NNIO_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_NeuralNetwork_0_0"/>
         <PARAMETER NAME="clk_period" VALUE="8.000000"/>
@@ -423,7 +423,7 @@
         <PARAMETER NAME="C_S_AXI_NNIO_HIGHADDR" VALUE="0x43C0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="13" NAME="s_axi_NNIO_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="NeuralNetwork_0_s_axi_NNIO_AWADDR">
+        <PORT DIR="I" LEFT="15" NAME="s_axi_NNIO_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="NeuralNetwork_0_s_axi_NNIO_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awaddr"/>
           </CONNECTIONS>
@@ -473,7 +473,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="13" NAME="s_axi_NNIO_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="NeuralNetwork_0_s_axi_NNIO_ARADDR">
+        <PORT DIR="I" LEFT="15" NAME="s_axi_NNIO_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="NeuralNetwork_0_s_axi_NNIO_ARADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_araddr"/>
           </CONNECTIONS>
@@ -522,7 +522,7 @@
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="s_axi_NNIO" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="14"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="16"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>

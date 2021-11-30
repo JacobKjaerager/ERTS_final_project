@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'NeuralNetwork'" level="0">
-<item name = "Date">Mon Nov 22 20:34:38 2021
+<item name = "Date">Tue Nov 30 08:52:44 2021
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">NeuralNetwork_HLS</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
-<item name = "Target device">xc7z020clg400-1</item>
+<item name = "Target device">xc7z010clg400-1</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00, 6.91, 1.00</column>
+<column name="ap_clk">8.00, 9.63, 1.00</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 57842, 3, 57843, none</column>
+<column name="">2, 88104, 3, 88105, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_run_classification_fu_166">run_classification, 57840, 57840, 57840, 57840, none</column>
+<column name="grp_run_classification_fu_170">run_classification, 37222, 88102, 37222, 88102, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

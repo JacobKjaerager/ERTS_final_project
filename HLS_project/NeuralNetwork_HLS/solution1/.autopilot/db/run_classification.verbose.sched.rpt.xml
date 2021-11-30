@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'run_classification'" level="0">
-<item name = "Date">Mon Nov 22 20:34:38 2021
+<item name = "Date">Tue Nov 30 08:52:42 2021
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">NeuralNetwork_HLS</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
-<item name = "Target device">xc7z020clg400-1</item>
+<item name = "Target device">xc7z010clg400-1</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00, 6.91, 1.00</column>
+<column name="ap_clk">8.00, 9.63, 1.00</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">57840, 57840, 57840, 57840, none</column>
+<column name="">37222, 88102, 37222, 88102, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -38,14 +38,8 @@
 <column name="- memset_resArray1">69, 69, 1, -, -, 70, no</column>
 <column name="- memset_resArray2">69, 69, 1, -, -, 70, no</column>
 <column name="- runLayer_outerloop">28280, 28280, 404, -, -, 70, no</column>
-<column name=" + runLayer_outerloop.1">400, 400, 5, -, -, 80, no</column>
-<column name="- relu_label1">70, 70, 2, 1, 1, 70, yes</column>
-<column name="- runLayer_outerloop">24780, 24780, 354, -, -, 70, no</column>
-<column name=" + runLayer_outerloop.1">350, 350, 5, -, -, 70, no</column>
-<column name="- relu_label1">70, 70, 2, 1, 1, 70, yes</column>
-<column name="- runLayer_outerloop">4480, 4480, 64, -, -, 70, no</column>
-<column name=" + runLayer_outerloop.1">60, 60, 6, -, -, 10, no</column>
-<column name="- softmax_lite_loop">10, 10, 3, 1, 1, 9, yes</column>
+<column name=" + runLayer_innerloop">400, 400, 5, -, -, 80, no</column>
+<column name="- softmax_lite_loop">27, 27, 3, -, -, 9, no</column>
 </table>
 </item>
 </section>

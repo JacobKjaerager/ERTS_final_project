@@ -12,8 +12,9 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [HLS 200-40] Directive 'LOOP_MERGE' cannot be applied: Label 'runLayer_Outerloop' does not exist in function 'runLayer'. " projectName="NeuralNetwork_HLS" solutionName="solution1" date="2021-11-22T20:34:35.280+0100" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Label 'runLayer_label2' does not exist in function 'runLayer'. " projectName="NeuralNetwork_HLS" solutionName="solution1" date="2021-11-22T20:34:35.255+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'NeuralNetwork_mulbkb' is changed to 'NeuralNetwork_mulbkb_x' due to conflict." projectName="NeuralNetwork_HLS" solutionName="solution1" date="2021-11-30T08:52:46.589+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('tmp_26_i', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:29->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp_s', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) (3.02 ns)&#xD;&#xA;&#x9;'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64) of variable 'tmp_s', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:64 on array 'output_r' (3.25 ns)" projectName="NeuralNetwork_HLS" solutionName="solution1" date="2021-11-30T08:52:41.597+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.63ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns)." projectName="NeuralNetwork_HLS" solutionName="solution1" date="2021-11-30T08:52:41.527+0100" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

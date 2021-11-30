@@ -82,25 +82,25 @@ set RtlHierarchyInfo {[
 		"ClockEnable" : "0",
 		"VariableLatency" : "1",
 		"WaitState" : [
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_run_classification_fu_166"}],
+			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_run_classification_fu_170"}],
 		"Port" : [
 			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_run_classification_fu_166", "Port" : "input_r"}]},
+					{"ID" : "4", "SubInstance" : "grp_run_classification_fu_170", "Port" : "input_r"}]},
 			{"Name" : "biasWeight_input_r", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "runNN_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "setBais_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "setWeight_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "weights_s", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_run_classification_fu_166", "Port" : "weights_s"}]},
+					{"ID" : "4", "SubInstance" : "grp_run_classification_fu_170", "Port" : "weights_s"}]},
 			{"Name" : "bias_s", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_run_classification_fu_166", "Port" : "bias_s"}]}]},
+					{"ID" : "4", "SubInstance" : "grp_run_classification_fu_170", "Port" : "bias_s"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_s_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.bias_s_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.NeuralNetwork_NNIO_s_axi_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_166", "Parent" : "0", "Child" : ["5", "6", "7", "8", "9"],
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_170", "Parent" : "0", "Child" : ["5", "6", "7", "10", "11"],
 		"CDFG" : "run_classification",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -108,15 +108,49 @@ set RtlHierarchyInfo {[
 		"Datapath" : "0",
 		"ClockEnable" : "0",
 		"VariableLatency" : "1",
+		"WaitState" : [
+			{"State" : "ap_ST_fsm_state14", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_runLayer_fu_250"},
+			{"State" : "ap_ST_fsm_state18", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_runLayer_fu_250"},
+			{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_relu_fu_266"},
+			{"State" : "ap_ST_fsm_state16", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_relu_fu_266"}],
 		"Port" : [
 			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "weights_s", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "grp_runLayer_fu_250", "Port" : "weights_s"}]},
+			{"Name" : "bias_s", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "grp_runLayer_fu_250", "Port" : "bias_s"}]}]},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_170.resArray1_U", "Parent" : "4"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_170.resArray2_U", "Parent" : "4"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_170.grp_runLayer_fu_250", "Parent" : "4", "Child" : ["8", "9"],
+		"CDFG" : "runLayer",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"VariableLatency" : "1",
+		"Port" : [
+			{"Name" : "layer", "Type" : "None", "Direction" : "I"},
+			{"Name" : "numOfOutNeurons", "Type" : "None", "Direction" : "I"},
+			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "output_r", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "weights_s", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "bias_s", "Type" : "Memory", "Direction" : "I"}]},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_166.resArray1_U", "Parent" : "4"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_166.resArray2_U", "Parent" : "4"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_166.NeuralNetwork_muldEe_U0", "Parent" : "4"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_166.NeuralNetwork_muldEe_U1", "Parent" : "4"},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_166.NeuralNetwork_muleOg_U2", "Parent" : "4"}]}
+	{"ID" : "8", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_170.grp_runLayer_fu_250.NeuralNetwork_mulbkb_U1", "Parent" : "7"},
+	{"ID" : "9", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_170.grp_runLayer_fu_250.NeuralNetwork_maccud_U2", "Parent" : "7"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_170.grp_relu_fu_266", "Parent" : "4",
+		"CDFG" : "relu",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"VariableLatency" : "1",
+		"Port" : [
+			{"Name" : "data", "Type" : "Memory", "Direction" : "IO"}]},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_run_classification_fu_170.NeuralNetwork_mulbkb_x_U9", "Parent" : "4"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -130,14 +164,23 @@ set ArgLastReadFirstWriteLatency {
 		bias_s {Type IO LastRead -1 FirstWrite -1}}
 	run_classification {
 		input_r {Type I LastRead 4 FirstWrite -1}
-		weights_s {Type I LastRead 11 FirstWrite -1}
-		bias_s {Type I LastRead 10 FirstWrite -1}}}
+		weights_s {Type I LastRead 4 FirstWrite -1}
+		bias_s {Type I LastRead 4 FirstWrite -1}}
+	runLayer {
+		layer {Type I LastRead 0 FirstWrite -1}
+		numOfOutNeurons {Type I LastRead 0 FirstWrite -1}
+		input_r {Type I LastRead 3 FirstWrite -1}
+		output_r {Type IO LastRead 5 FirstWrite 1}
+		weights_s {Type I LastRead 3 FirstWrite -1}
+		bias_s {Type I LastRead 2 FirstWrite -1}}
+	relu {
+		data {Type IO LastRead 1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "2", "Max" : "57842"}
-	, {"Name" : "Interval", "Min" : "3", "Max" : "57843"}
+	{"Name" : "Latency", "Min" : "2", "Max" : "88104"}
+	, {"Name" : "Interval", "Min" : "3", "Max" : "88105"}
 ]}
 
 set PipelineEnableSignalInfo {[

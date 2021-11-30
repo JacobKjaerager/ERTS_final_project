@@ -247,9 +247,9 @@
 						<type>0</type>
 						<id>26</id>
 						<name>tmp_s</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -261,10 +261,10 @@
 									<item_version>0</item_version>
 									<item class_id="13" tracking_level="0" version="0">
 										<first class_id="14" tracking_level="0" version="0">
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>155</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -289,10 +289,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>tmp_39</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<name>tmp_7</name>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -304,10 +304,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>155</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -333,9 +333,9 @@
 						<type>0</type>
 						<id>28</id>
 						<name>tmp</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -347,10 +347,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>155</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -375,10 +375,10 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>tmp_1</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<name>tmp_4</name>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -390,10 +390,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>155</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -419,9 +419,9 @@
 						<type>0</type>
 						<id>30</id>
 						<name>or_cond1</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -433,10 +433,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>155</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -462,9 +462,9 @@
 						<type>0</type>
 						<id>31</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -476,10 +476,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>155</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -505,10 +505,10 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>tmp_40</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<name>tmp_8</name>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>158</lineNumber>
+						<lineNumber>118</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -520,10 +520,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>158</second>
+										<second>118</second>
 									</item>
 								</second>
 							</item>
@@ -548,10 +548,10 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>tmp_41</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<name>tmp_9</name>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>158</lineNumber>
+						<lineNumber>118</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -563,10 +563,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>158</second>
+										<second>118</second>
 									</item>
 								</second>
 							</item>
@@ -592,9 +592,9 @@
 						<type>0</type>
 						<id>35</id>
 						<name>tmp1</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>158</lineNumber>
+						<lineNumber>118</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -606,10 +606,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>158</second>
+										<second>118</second>
 									</item>
 								</second>
 							</item>
@@ -635,9 +635,9 @@
 						<type>0</type>
 						<id>36</id>
 						<name>or_cond3</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>158</lineNumber>
+						<lineNumber>118</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -649,10 +649,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>158</second>
+										<second>118</second>
 									</item>
 								</second>
 							</item>
@@ -678,9 +678,9 @@
 						<type>0</type>
 						<id>37</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>158</lineNumber>
+						<lineNumber>118</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -692,10 +692,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>158</second>
+										<second>118</second>
 									</item>
 								</second>
 							</item>
@@ -721,10 +721,10 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>tmp_42</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<name>tmp_1</name>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>122</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -736,10 +736,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>162</second>
+										<second>122</second>
 									</item>
 								</second>
 							</item>
@@ -764,10 +764,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>tmp_43</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<name>tmp_2</name>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>122</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -779,10 +779,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>162</second>
+										<second>122</second>
 									</item>
 								</second>
 							</item>
@@ -807,10 +807,10 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>tmp_44</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<name>tmp_3</name>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>122</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -822,10 +822,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>162</second>
+										<second>122</second>
 									</item>
 								</second>
 							</item>
@@ -851,9 +851,9 @@
 						<type>0</type>
 						<id>42</id>
 						<name>or_cond5</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>122</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -865,10 +865,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>162</second>
+										<second>122</second>
 									</item>
 								</second>
 							</item>
@@ -894,9 +894,9 @@
 						<type>0</type>
 						<id>43</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>122</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -908,10 +908,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>162</second>
+										<second>122</second>
 									</item>
 								</second>
 							</item>
@@ -938,9 +938,9 @@
 						<type>0</type>
 						<id>45</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>33</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -952,17 +952,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>44</second>
+										<second>33</second>
 									</item>
 								</second>
 							</item>
@@ -1018,9 +1018,9 @@
 						<type>0</type>
 						<id>48</id>
 						<name>tmp_i3</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>33</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1032,17 +1032,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>44</second>
+										<second>33</second>
 									</item>
 								</second>
 							</item>
@@ -1067,10 +1067,10 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>i_3</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<name>i_2</name>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>33</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1082,17 +1082,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>44</second>
+										<second>33</second>
 									</item>
 								</second>
 							</item>
@@ -1118,9 +1118,9 @@
 						<type>0</type>
 						<id>51</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>33</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1132,17 +1132,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>44</second>
+										<second>33</second>
 									</item>
 								</second>
 							</item>
@@ -1169,9 +1169,9 @@
 						<type>0</type>
 						<id>53</id>
 						<name>tmp_4_i</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1183,17 +1183,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>46</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1218,9 +1218,9 @@
 						<type>0</type>
 						<id>54</id>
 						<name>biasWeight_input_r_a_1</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1232,17 +1232,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>46</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1269,9 +1269,9 @@
 						<type>0</type>
 						<id>55</id>
 						<name>biasWeight_input_r_l_1</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1283,17 +1283,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>46</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1318,9 +1318,9 @@
 						<type>0</type>
 						<id>56</id>
 						<name>weights_addr</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1332,17 +1332,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>46</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1369,9 +1369,9 @@
 						<type>0</type>
 						<id>57</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1383,17 +1383,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>46</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1419,9 +1419,9 @@
 						<type>0</type>
 						<id>58</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>33</lineNumber>
 						<contextFuncName>setWeights</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1433,17 +1433,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>163</second>
+										<second>123</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setWeights</second>
 										</first>
-										<second>44</second>
+										<second>33</second>
 									</item>
 								</second>
 							</item>
@@ -1496,9 +1496,9 @@
 						<type>0</type>
 						<id>62</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1510,17 +1510,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>23</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1576,9 +1576,9 @@
 						<type>0</type>
 						<id>65</id>
 						<name>tmp_i</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1590,17 +1590,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>23</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1626,9 +1626,9 @@
 						<type>0</type>
 						<id>67</id>
 						<name>i</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1640,17 +1640,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>23</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1676,9 +1676,9 @@
 						<type>0</type>
 						<id>68</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1690,17 +1690,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>23</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1727,9 +1727,9 @@
 						<type>0</type>
 						<id>70</id>
 						<name>tmp_6_i</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>25</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1741,17 +1741,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>25</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1776,9 +1776,9 @@
 						<type>0</type>
 						<id>71</id>
 						<name>biasWeight_input_r_a</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>25</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1790,17 +1790,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>25</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1827,9 +1827,9 @@
 						<type>0</type>
 						<id>72</id>
 						<name>biasWeight_input_r_l</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>25</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1841,17 +1841,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>25</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1876,9 +1876,9 @@
 						<type>0</type>
 						<id>73</id>
 						<name>bias_addr</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>25</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1890,17 +1890,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>25</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1927,9 +1927,9 @@
 						<type>0</type>
 						<id>74</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>25</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1941,17 +1941,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>25</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1977,9 +1977,9 @@
 						<type>0</type>
 						<id>75</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>setBias</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1991,17 +1991,17 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>159</second>
+										<second>119</second>
 									</item>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>setBias</second>
 										</first>
-										<second>23</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2054,9 +2054,9 @@
 						<type>0</type>
 						<id>79</id>
 						<name>res</name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>156</lineNumber>
+						<lineNumber>116</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2068,10 +2068,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>156</second>
+										<second>116</second>
 									</item>
 								</second>
 							</item>
@@ -2099,9 +2099,9 @@
 						<type>0</type>
 						<id>80</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>117</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2113,10 +2113,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>157</second>
+										<second>117</second>
 									</item>
 								</second>
 							</item>
@@ -2176,9 +2176,9 @@
 						<type>0</type>
 						<id>83</id>
 						<name></name>
-						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.c</fileName>
+						<fileName>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project</fileDirectory>
-						<lineNumber>167</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>NeuralNetwork</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2190,10 +2190,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../NN_Code/NN_Code/neuralnetwork_ccode.c</first>
+											<first>../NN_Code/NN_Code/neuralnetwork_ccode.cpp</first>
 											<second>NeuralNetwork</second>
 										</first>
-										<second>167</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -3388,103 +3388,103 @@
 				<sink_obj>79</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_176">
-				<id>358</id>
+				<id>360</id>
 				<edge_type>2</edge_type>
 				<source_obj>32</source_obj>
 				<sink_obj>81</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_177">
-				<id>359</id>
+				<id>361</id>
 				<edge_type>2</edge_type>
 				<source_obj>32</source_obj>
 				<sink_obj>38</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_178">
-				<id>360</id>
+				<id>362</id>
 				<edge_type>2</edge_type>
 				<source_obj>38</source_obj>
 				<sink_obj>63</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_179">
-				<id>361</id>
+				<id>363</id>
 				<edge_type>2</edge_type>
 				<source_obj>38</source_obj>
 				<sink_obj>44</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_180">
-				<id>362</id>
+				<id>364</id>
 				<edge_type>2</edge_type>
 				<source_obj>44</source_obj>
 				<sink_obj>46</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_181">
-				<id>363</id>
+				<id>365</id>
 				<edge_type>2</edge_type>
 				<source_obj>44</source_obj>
 				<sink_obj>84</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_182">
-				<id>364</id>
+				<id>366</id>
 				<edge_type>2</edge_type>
 				<source_obj>46</source_obj>
 				<sink_obj>52</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_183">
-				<id>365</id>
+				<id>367</id>
 				<edge_type>2</edge_type>
 				<source_obj>52</source_obj>
 				<sink_obj>61</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_184">
-				<id>366</id>
+				<id>368</id>
 				<edge_type>2</edge_type>
 				<source_obj>52</source_obj>
 				<sink_obj>59</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_185">
-				<id>367</id>
+				<id>369</id>
 				<edge_type>2</edge_type>
 				<source_obj>59</source_obj>
 				<sink_obj>52</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_186">
-				<id>368</id>
+				<id>370</id>
 				<edge_type>2</edge_type>
 				<source_obj>61</source_obj>
 				<sink_obj>84</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_187">
-				<id>369</id>
+				<id>371</id>
 				<edge_type>2</edge_type>
 				<source_obj>63</source_obj>
 				<sink_obj>69</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_188">
-				<id>370</id>
+				<id>372</id>
 				<edge_type>2</edge_type>
 				<source_obj>69</source_obj>
 				<sink_obj>78</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_189">
-				<id>371</id>
+				<id>373</id>
 				<edge_type>2</edge_type>
 				<source_obj>69</source_obj>
 				<sink_obj>76</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_190">
-				<id>372</id>
+				<id>374</id>
 				<edge_type>2</edge_type>
 				<source_obj>76</source_obj>
 				<sink_obj>69</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_191">
-				<id>373</id>
+				<id>375</id>
 				<edge_type>2</edge_type>
 				<source_obj>78</source_obj>
 				<sink_obj>84</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_192">
-				<id>374</id>
+				<id>376</id>
 				<edge_type>2</edge_type>
 				<source_obj>81</source_obj>
 				<sink_obj>84</sink_obj>
@@ -3516,7 +3516,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>57842</mMinLatency>
+			<mMinLatency>88104</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -3543,7 +3543,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>57841</mMinLatency>
+			<mMinLatency>88103</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>

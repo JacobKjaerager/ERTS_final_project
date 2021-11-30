@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="NeuralNetwork,hls_ip_2017_2,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=8.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.912000,HLS_SYN_LAT=20137,HLS_SYN_TPT=none,HLS_SYN_MEM=23,HLS_SYN_DSP=12,HLS_SYN_FF=2871,HLS_SYN_LUT=1874}" *)
+(* CORE_GENERATION_INFO="NeuralNetwork,hls_ip_2017_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010clg400-1,HLS_INPUT_CLOCK=8.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=9.634000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=21,HLS_SYN_DSP=9,HLS_SYN_FF=2132,HLS_SYN_LUT=1846}" *)
 
 module NeuralNetwork (
         ap_clk,
@@ -90,51 +90,51 @@ reg   [7:0] bias_s_address0;
 reg    bias_s_ce0;
 reg    bias_s_we0;
 wire   [7:0] bias_s_q0;
-wire   [0:0] or_cond5_fu_248_p2;
-reg   [0:0] or_cond5_reg_294;
-wire   [0:0] or_cond1_fu_200_p2;
-wire   [0:0] or_cond3_fu_224_p2;
-wire   [13:0] i_3_fu_260_p2;
-reg   [13:0] i_3_reg_301;
+wire   [0:0] or_cond5_fu_252_p2;
+reg   [0:0] or_cond5_reg_298;
+wire   [0:0] or_cond1_fu_204_p2;
+wire   [0:0] or_cond3_fu_228_p2;
+wire   [13:0] i_2_fu_264_p2;
+reg   [13:0] i_2_reg_305;
 wire    ap_CS_fsm_state3;
-wire   [31:0] tmp_4_i_fu_266_p1;
-reg   [31:0] tmp_4_i_reg_306;
-wire   [0:0] tmp_i3_fu_254_p2;
-wire   [7:0] i_fu_277_p2;
-reg   [7:0] i_reg_319;
+wire   [31:0] tmp_4_i_fu_270_p1;
+reg   [31:0] tmp_4_i_reg_310;
+wire   [0:0] tmp_i3_fu_258_p2;
+wire   [7:0] i_fu_281_p2;
+reg   [7:0] i_reg_323;
 wire    ap_CS_fsm_state5;
-wire   [31:0] tmp_6_i_fu_283_p1;
-reg   [31:0] tmp_6_i_reg_324;
-wire   [0:0] tmp_i_fu_271_p2;
-wire   [7:0] grp_run_classification_fu_166_ap_return;
+wire   [31:0] tmp_6_i_fu_287_p1;
+reg   [31:0] tmp_6_i_reg_328;
+wire   [0:0] tmp_i_fu_275_p2;
+wire   [7:0] grp_run_classification_fu_170_ap_return;
 wire    ap_CS_fsm_state7;
-wire    grp_run_classification_fu_166_ap_done;
-wire    grp_run_classification_fu_166_ap_start;
-wire    grp_run_classification_fu_166_ap_idle;
-wire    grp_run_classification_fu_166_ap_ready;
-wire   [6:0] grp_run_classification_fu_166_input_r_address0;
-wire    grp_run_classification_fu_166_input_r_ce0;
-wire   [13:0] grp_run_classification_fu_166_weights_s_address0;
-wire    grp_run_classification_fu_166_weights_s_ce0;
-wire   [7:0] grp_run_classification_fu_166_bias_s_address0;
-wire    grp_run_classification_fu_166_bias_s_ce0;
-reg   [13:0] i_i2_reg_126;
+wire    grp_run_classification_fu_170_ap_done;
+wire    grp_run_classification_fu_170_ap_start;
+wire    grp_run_classification_fu_170_ap_idle;
+wire    grp_run_classification_fu_170_ap_ready;
+wire   [6:0] grp_run_classification_fu_170_input_r_address0;
+wire    grp_run_classification_fu_170_input_r_ce0;
+wire   [13:0] grp_run_classification_fu_170_weights_s_address0;
+wire    grp_run_classification_fu_170_weights_s_ce0;
+wire   [7:0] grp_run_classification_fu_170_bias_s_address0;
+wire    grp_run_classification_fu_170_bias_s_ce0;
+reg   [13:0] i_i2_reg_130;
 wire    ap_CS_fsm_state4;
 wire    ap_CS_fsm_state2;
-reg   [7:0] i_i_reg_137;
+reg   [7:0] i_i_reg_141;
 wire    ap_CS_fsm_state6;
-reg   [7:0] res_2_reg_148;
-reg    ap_reg_grp_run_classification_fu_166_ap_start;
-wire   [7:0] tmp_fu_188_p2;
-wire   [0:0] tmp_1_fu_194_p2;
-wire   [0:0] tmp_s_fu_176_p2;
-wire   [0:0] tmp_41_fu_212_p2;
-wire   [0:0] tmp_39_fu_182_p2;
-wire   [0:0] tmp1_fu_218_p2;
-wire   [0:0] tmp_40_fu_206_p2;
-wire   [7:0] tmp_42_fu_230_p2;
-wire   [0:0] tmp_43_fu_236_p2;
-wire   [0:0] tmp_44_fu_242_p2;
+reg   [7:0] res_2_reg_152;
+reg    ap_reg_grp_run_classification_fu_170_ap_start;
+wire   [7:0] tmp_fu_192_p2;
+wire   [0:0] tmp_4_fu_198_p2;
+wire   [0:0] tmp_s_fu_180_p2;
+wire   [0:0] tmp_9_fu_216_p2;
+wire   [0:0] tmp_7_fu_186_p2;
+wire   [0:0] tmp1_fu_222_p2;
+wire   [0:0] tmp_8_fu_210_p2;
+wire   [7:0] tmp_1_fu_234_p2;
+wire   [0:0] tmp_2_fu_240_p2;
+wire   [0:0] tmp_3_fu_246_p2;
 wire    ap_CS_fsm_state8;
 reg   [7:0] ap_NS_fsm;
 wire   [7:0] ap_return;
@@ -142,7 +142,7 @@ wire   [7:0] ap_return;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 8'd1;
-#0 ap_reg_grp_run_classification_fu_166_ap_start = 1'b0;
+#0 ap_reg_grp_run_classification_fu_170_ap_start = 1'b0;
 end
 
 NeuralNetwork_weifYi #(
@@ -202,9 +202,9 @@ NeuralNetwork_NNIO_s_axi_U(
     .ap_ready(ap_ready),
     .ap_done(ap_done),
     .ap_idle(ap_idle),
-    .ap_return(res_2_reg_148),
-    .input_r_address0(grp_run_classification_fu_166_input_r_address0),
-    .input_r_ce0(grp_run_classification_fu_166_input_r_ce0),
+    .ap_return(res_2_reg_152),
+    .input_r_address0(grp_run_classification_fu_170_input_r_address0),
+    .input_r_ce0(grp_run_classification_fu_170_input_r_ce0),
     .input_r_q0(input_r_q0),
     .biasWeight_input_r_address0(biasWeight_input_r_address0),
     .biasWeight_input_r_ce0(biasWeight_input_r_ce0),
@@ -214,23 +214,23 @@ NeuralNetwork_NNIO_s_axi_U(
     .setWeight_r(setWeight_r)
 );
 
-run_classification grp_run_classification_fu_166(
+run_classification grp_run_classification_fu_170(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_run_classification_fu_166_ap_start),
-    .ap_done(grp_run_classification_fu_166_ap_done),
-    .ap_idle(grp_run_classification_fu_166_ap_idle),
-    .ap_ready(grp_run_classification_fu_166_ap_ready),
-    .input_r_address0(grp_run_classification_fu_166_input_r_address0),
-    .input_r_ce0(grp_run_classification_fu_166_input_r_ce0),
+    .ap_start(grp_run_classification_fu_170_ap_start),
+    .ap_done(grp_run_classification_fu_170_ap_done),
+    .ap_idle(grp_run_classification_fu_170_ap_idle),
+    .ap_ready(grp_run_classification_fu_170_ap_ready),
+    .input_r_address0(grp_run_classification_fu_170_input_r_address0),
+    .input_r_ce0(grp_run_classification_fu_170_input_r_ce0),
     .input_r_q0(input_r_q0),
-    .weights_s_address0(grp_run_classification_fu_166_weights_s_address0),
-    .weights_s_ce0(grp_run_classification_fu_166_weights_s_ce0),
+    .weights_s_address0(grp_run_classification_fu_170_weights_s_address0),
+    .weights_s_ce0(grp_run_classification_fu_170_weights_s_ce0),
     .weights_s_q0(weights_s_q0),
-    .bias_s_address0(grp_run_classification_fu_166_bias_s_address0),
-    .bias_s_ce0(grp_run_classification_fu_166_bias_s_ce0),
+    .bias_s_address0(grp_run_classification_fu_170_bias_s_address0),
+    .bias_s_ce0(grp_run_classification_fu_170_bias_s_ce0),
     .bias_s_q0(bias_s_q0),
-    .ap_return(grp_run_classification_fu_166_ap_return)
+    .ap_return(grp_run_classification_fu_170_ap_return)
 );
 
 always @ (posedge ap_clk) begin
@@ -243,69 +243,69 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_reg_grp_run_classification_fu_166_ap_start <= 1'b0;
+        ap_reg_grp_run_classification_fu_170_ap_start <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_200_p2 == 1'd1))) begin
-            ap_reg_grp_run_classification_fu_166_ap_start <= 1'b1;
-        end else if ((1'b1 == grp_run_classification_fu_166_ap_ready)) begin
-            ap_reg_grp_run_classification_fu_166_ap_start <= 1'b0;
+        if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_204_p2 == 1'd1))) begin
+            ap_reg_grp_run_classification_fu_170_ap_start <= 1'b1;
+        end else if ((1'b1 == grp_run_classification_fu_170_ap_ready)) begin
+            ap_reg_grp_run_classification_fu_170_ap_start <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (or_cond5_reg_294 == 1'd1))) begin
-        i_i2_reg_126 <= 14'd0;
+    if (((1'b1 == ap_CS_fsm_state2) & (or_cond5_reg_298 == 1'd1))) begin
+        i_i2_reg_130 <= 14'd0;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        i_i2_reg_126 <= i_3_reg_301;
+        i_i2_reg_130 <= i_2_reg_305;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_200_p2 == 1'd0) & (or_cond3_fu_224_p2 == 1'd1))) begin
-        i_i_reg_137 <= 8'd0;
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_204_p2 == 1'd0) & (or_cond3_fu_228_p2 == 1'd1))) begin
+        i_i_reg_141 <= 8'd0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        i_i_reg_137 <= i_reg_319;
+        i_i_reg_141 <= i_reg_323;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((((1'b1 == ap_CS_fsm_state3) & (tmp_i3_fu_254_p2 == 1'd1)) | ((1'b1 == ap_CS_fsm_state5) & (tmp_i_fu_271_p2 == 1'd1)))) begin
-        res_2_reg_148 <= 8'd255;
-    end else if (((1'b1 == ap_CS_fsm_state2) & (or_cond5_reg_294 == 1'd0))) begin
-        res_2_reg_148 <= 8'd254;
-    end else if (((1'b1 == ap_CS_fsm_state7) & (grp_run_classification_fu_166_ap_done == 1'b1))) begin
-        res_2_reg_148 <= grp_run_classification_fu_166_ap_return;
+    if ((((1'b1 == ap_CS_fsm_state3) & (tmp_i3_fu_258_p2 == 1'd1)) | ((1'b1 == ap_CS_fsm_state5) & (tmp_i_fu_275_p2 == 1'd1)))) begin
+        res_2_reg_152 <= 8'd255;
+    end else if (((1'b1 == ap_CS_fsm_state2) & (or_cond5_reg_298 == 1'd0))) begin
+        res_2_reg_152 <= 8'd254;
+    end else if (((1'b1 == ap_CS_fsm_state7) & (grp_run_classification_fu_170_ap_done == 1'b1))) begin
+        res_2_reg_152 <= grp_run_classification_fu_170_ap_return;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        i_3_reg_301 <= i_3_fu_260_p2;
+        i_2_reg_305 <= i_2_fu_264_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        i_reg_319 <= i_fu_277_p2;
+        i_reg_323 <= i_fu_281_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_200_p2 == 1'd0) & (1'd0 == or_cond3_fu_224_p2))) begin
-        or_cond5_reg_294 <= or_cond5_fu_248_p2;
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_204_p2 == 1'd0) & (1'd0 == or_cond3_fu_228_p2))) begin
+        or_cond5_reg_298 <= or_cond5_fu_252_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (1'd0 == tmp_i3_fu_254_p2))) begin
-        tmp_4_i_reg_306[13 : 0] <= tmp_4_i_fu_266_p1[13 : 0];
+    if (((1'b1 == ap_CS_fsm_state3) & (1'd0 == tmp_i3_fu_258_p2))) begin
+        tmp_4_i_reg_310[13 : 0] <= tmp_4_i_fu_270_p1[13 : 0];
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (1'd0 == tmp_i_fu_271_p2))) begin
-        tmp_6_i_reg_324[7 : 0] <= tmp_6_i_fu_283_p1[7 : 0];
+    if (((1'b1 == ap_CS_fsm_state5) & (1'd0 == tmp_i_fu_275_p2))) begin
+        tmp_6_i_reg_328[7 : 0] <= tmp_6_i_fu_287_p1[7 : 0];
     end
 end
 
@@ -335,9 +335,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        biasWeight_input_r_address0 = tmp_6_i_fu_283_p1;
+        biasWeight_input_r_address0 = tmp_6_i_fu_287_p1;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        biasWeight_input_r_address0 = tmp_4_i_fu_266_p1;
+        biasWeight_input_r_address0 = tmp_4_i_fu_270_p1;
     end else begin
         biasWeight_input_r_address0 = 'bx;
     end
@@ -353,9 +353,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
-        bias_s_address0 = tmp_6_i_reg_324;
+        bias_s_address0 = tmp_6_i_reg_328;
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
-        bias_s_address0 = grp_run_classification_fu_166_bias_s_address0;
+        bias_s_address0 = grp_run_classification_fu_170_bias_s_address0;
     end else begin
         bias_s_address0 = 'bx;
     end
@@ -365,7 +365,7 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
         bias_s_ce0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
-        bias_s_ce0 = grp_run_classification_fu_166_bias_s_ce0;
+        bias_s_ce0 = grp_run_classification_fu_170_bias_s_ce0;
     end else begin
         bias_s_ce0 = 1'b0;
     end
@@ -381,9 +381,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        weights_s_address0 = tmp_4_i_reg_306;
+        weights_s_address0 = tmp_4_i_reg_310;
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
-        weights_s_address0 = grp_run_classification_fu_166_weights_s_address0;
+        weights_s_address0 = grp_run_classification_fu_170_weights_s_address0;
     end else begin
         weights_s_address0 = 'bx;
     end
@@ -393,7 +393,7 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
         weights_s_ce0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
-        weights_s_ce0 = grp_run_classification_fu_166_weights_s_ce0;
+        weights_s_ce0 = grp_run_classification_fu_170_weights_s_ce0;
     end else begin
         weights_s_ce0 = 1'b0;
     end
@@ -410,25 +410,25 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_200_p2 == 1'd0) & (or_cond3_fu_224_p2 == 1'd1))) begin
+            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_204_p2 == 1'd0) & (or_cond3_fu_228_p2 == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
-            end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_200_p2 == 1'd0) & (1'd0 == or_cond3_fu_224_p2))) begin
+            end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_204_p2 == 1'd0) & (1'd0 == or_cond3_fu_228_p2))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
-            end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_200_p2 == 1'd1))) begin
+            end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1) & (or_cond1_fu_204_p2 == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state7;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((1'b1 == ap_CS_fsm_state2) & (or_cond5_reg_294 == 1'd1))) begin
+            if (((1'b1 == ap_CS_fsm_state2) & (or_cond5_reg_298 == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state8;
             end
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b1 == ap_CS_fsm_state3) & (tmp_i3_fu_254_p2 == 1'd1))) begin
+            if (((1'b1 == ap_CS_fsm_state3) & (tmp_i3_fu_258_p2 == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state8;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
@@ -438,7 +438,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state5 : begin
-            if (((1'b1 == ap_CS_fsm_state5) & (tmp_i_fu_271_p2 == 1'd1))) begin
+            if (((1'b1 == ap_CS_fsm_state5) & (tmp_i_fu_275_p2 == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state8;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state6;
@@ -448,7 +448,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state5;
         end
         ap_ST_fsm_state7 : begin
-            if (((1'b1 == ap_CS_fsm_state7) & (grp_run_classification_fu_166_ap_done == 1'b1))) begin
+            if (((1'b1 == ap_CS_fsm_state7) & (grp_run_classification_fu_170_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state8;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state7;
@@ -483,49 +483,49 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign grp_run_classification_fu_166_ap_start = ap_reg_grp_run_classification_fu_166_ap_start;
+assign grp_run_classification_fu_170_ap_start = ap_reg_grp_run_classification_fu_170_ap_start;
 
-assign i_3_fu_260_p2 = (i_i2_reg_126 + 14'd1);
+assign i_2_fu_264_p2 = (i_i2_reg_130 + 14'd1);
 
-assign i_fu_277_p2 = (i_i_reg_137 + 8'd1);
+assign i_fu_281_p2 = (i_i_reg_141 + 8'd1);
 
-assign or_cond1_fu_200_p2 = (tmp_1_fu_194_p2 & tmp_s_fu_176_p2);
+assign or_cond1_fu_204_p2 = (tmp_4_fu_198_p2 & tmp_s_fu_180_p2);
 
-assign or_cond3_fu_224_p2 = (tmp1_fu_218_p2 & tmp_40_fu_206_p2);
+assign or_cond3_fu_228_p2 = (tmp1_fu_222_p2 & tmp_8_fu_210_p2);
 
-assign or_cond5_fu_248_p2 = (tmp_43_fu_236_p2 & tmp_44_fu_242_p2);
+assign or_cond5_fu_252_p2 = (tmp_2_fu_240_p2 & tmp_3_fu_246_p2);
 
-assign tmp1_fu_218_p2 = (tmp_41_fu_212_p2 & tmp_39_fu_182_p2);
+assign tmp1_fu_222_p2 = (tmp_9_fu_216_p2 & tmp_7_fu_186_p2);
 
-assign tmp_1_fu_194_p2 = ((tmp_fu_188_p2 == 8'd0) ? 1'b1 : 1'b0);
+assign tmp_1_fu_234_p2 = (setBais_r | runNN_r);
 
-assign tmp_39_fu_182_p2 = ((setWeight_r == 8'd0) ? 1'b1 : 1'b0);
+assign tmp_2_fu_240_p2 = ((tmp_1_fu_234_p2 == 8'd0) ? 1'b1 : 1'b0);
 
-assign tmp_40_fu_206_p2 = ((runNN_r == 8'd0) ? 1'b1 : 1'b0);
+assign tmp_3_fu_246_p2 = ((setWeight_r == 8'd1) ? 1'b1 : 1'b0);
 
-assign tmp_41_fu_212_p2 = ((setBais_r == 8'd1) ? 1'b1 : 1'b0);
+assign tmp_4_fu_198_p2 = ((tmp_fu_192_p2 == 8'd0) ? 1'b1 : 1'b0);
 
-assign tmp_42_fu_230_p2 = (setBais_r | runNN_r);
+assign tmp_4_i_fu_270_p1 = i_i2_reg_130;
 
-assign tmp_43_fu_236_p2 = ((tmp_42_fu_230_p2 == 8'd0) ? 1'b1 : 1'b0);
+assign tmp_6_i_fu_287_p1 = i_i_reg_141;
 
-assign tmp_44_fu_242_p2 = ((setWeight_r == 8'd1) ? 1'b1 : 1'b0);
+assign tmp_7_fu_186_p2 = ((setWeight_r == 8'd0) ? 1'b1 : 1'b0);
 
-assign tmp_4_i_fu_266_p1 = i_i2_reg_126;
+assign tmp_8_fu_210_p2 = ((runNN_r == 8'd0) ? 1'b1 : 1'b0);
 
-assign tmp_6_i_fu_283_p1 = i_i_reg_137;
+assign tmp_9_fu_216_p2 = ((setBais_r == 8'd1) ? 1'b1 : 1'b0);
 
-assign tmp_fu_188_p2 = (setBais_r | setWeight_r);
+assign tmp_fu_192_p2 = (setBais_r | setWeight_r);
 
-assign tmp_i3_fu_254_p2 = ((i_i2_reg_126 == 14'd11200) ? 1'b1 : 1'b0);
+assign tmp_i3_fu_258_p2 = ((i_i2_reg_130 == 14'd11200) ? 1'b1 : 1'b0);
 
-assign tmp_i_fu_271_p2 = ((i_i_reg_137 == 8'd150) ? 1'b1 : 1'b0);
+assign tmp_i_fu_275_p2 = ((i_i_reg_141 == 8'd150) ? 1'b1 : 1'b0);
 
-assign tmp_s_fu_176_p2 = ((runNN_r == 8'd1) ? 1'b1 : 1'b0);
+assign tmp_s_fu_180_p2 = ((runNN_r == 8'd1) ? 1'b1 : 1'b0);
 
 always @ (posedge ap_clk) begin
-    tmp_4_i_reg_306[31:14] <= 18'b000000000000000000;
-    tmp_6_i_reg_324[31:8] <= 24'b000000000000000000000000;
+    tmp_4_i_reg_310[31:14] <= 18'b000000000000000000;
+    tmp_6_i_reg_328[31:8] <= 24'b000000000000000000000000;
 end
 
 endmodule //NeuralNetwork

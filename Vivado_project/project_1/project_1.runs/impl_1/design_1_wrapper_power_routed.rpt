@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Wed Nov 17 23:23:47 2021
+| Date             : Fri Nov 26 11:31:22 2021
 | Host             : DESKTOP-IFL7HB3 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 1.739  |
-| Dynamic (W)              | 1.611  |
-| Device Static (W)        | 0.128  |
+| Total On-Chip Power (W)  | 1.747  |
+| Dynamic (W)              | 1.618  |
+| Device Static (W)        | 0.129  |
 | Effective TJA (C/W)      | 11.5   |
-| Max Ambient (C)          | 64.9   |
-| Junction Temperature (C) | 45.1   |
+| Max Ambient (C)          | 64.8   |
+| Junction Temperature (C) | 45.2   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -46,25 +46,24 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+--------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
-+--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.007 |        3 |       --- |             --- |
-| Slice Logic              |     0.008 |     3464 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     1198 |     17600 |            6.81 |
-|   Register               |    <0.001 |     1560 |     35200 |            4.43 |
-|   CARRY4                 |    <0.001 |       82 |      4400 |            1.86 |
-|   LUT as Distributed RAM |    <0.001 |       56 |      6000 |            0.93 |
-|   LUT as Shift Register  |    <0.001 |       62 |      6000 |            1.03 |
-|   F7/F8 Muxes            |    <0.001 |        8 |     17600 |            0.05 |
-|   Others                 |     0.000 |      214 |       --- |             --- |
-| Signals                  |     0.013 |     3072 |       --- |             --- |
-| Block RAM                |     0.021 |        5 |        60 |            8.33 |
-| DSPs                     |     0.006 |        6 |        80 |            7.50 |
-| PS7                      |     1.556 |        1 |       --- |             --- |
-| Static Power             |     0.128 |          |           |                 |
-| Total                    |     1.739 |          |           |                 |
-+--------------------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.007 |        3 |       --- |             --- |
+| Slice Logic             |     0.007 |     3153 |       --- |             --- |
+|   LUT as Logic          |     0.006 |     1073 |     17600 |            6.10 |
+|   Register              |    <0.001 |     1444 |     35200 |            4.10 |
+|   CARRY4                |    <0.001 |       74 |      4400 |            1.68 |
+|   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
+|   F7/F8 Muxes           |    <0.001 |        8 |     17600 |            0.05 |
+|   Others                |     0.000 |      215 |       --- |             --- |
+| Signals                 |     0.012 |     2829 |       --- |             --- |
+| Block RAM               |     0.032 |     10.5 |        60 |           17.50 |
+| DSPs                    |     0.005 |        5 |        80 |            6.25 |
+| PS7                     |     1.556 |        1 |       --- |             --- |
+| Static Power            |     0.129 |          |           |                 |
+| Total                   |     1.747 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -73,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.060 |       0.053 |      0.007 |
+| Vccint    |       1.000 |     0.067 |       0.060 |      0.008 |
 | Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -82,7 +81,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |
+| Vccbram   |       1.000 |     0.003 |       0.002 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -149,86 +148,30 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| design_1_wrapper                                 |     1.611 |
-|   design_1_i                                     |     1.611 |
-|     NeuralNetwork_0                              |     0.048 |
-|       U0                                         |     0.048 |
-|         NeuralNetwork_NNIO_s_axi_U               |     0.013 |
-|           int_biasWeight_input_r                 |     0.006 |
-|           int_input_r                            |     0.005 |
-|         bias_s_U                                 |    <0.001 |
-|           NeuralNetwork_biahbi_ram_U             |    <0.001 |
-|             ram_reg_0_15_0_0                     |    <0.001 |
-|             ram_reg_0_15_0_0__0                  |    <0.001 |
-|             ram_reg_0_15_0_0__1                  |    <0.001 |
-|             ram_reg_0_15_0_0__10                 |    <0.001 |
-|             ram_reg_0_15_0_0__11                 |    <0.001 |
-|             ram_reg_0_15_0_0__12                 |    <0.001 |
-|             ram_reg_0_15_0_0__13                 |    <0.001 |
-|             ram_reg_0_15_0_0__14                 |    <0.001 |
-|             ram_reg_0_15_0_0__2                  |    <0.001 |
-|             ram_reg_0_15_0_0__3                  |    <0.001 |
-|             ram_reg_0_15_0_0__4                  |    <0.001 |
-|             ram_reg_0_15_0_0__5                  |    <0.001 |
-|             ram_reg_0_15_0_0__6                  |    <0.001 |
-|             ram_reg_0_15_0_0__7                  |    <0.001 |
-|             ram_reg_0_15_0_0__8                  |    <0.001 |
-|             ram_reg_0_15_0_0__9                  |    <0.001 |
-|             ram_reg_0_31_0_0                     |    <0.001 |
-|             ram_reg_0_31_0_0__0                  |    <0.001 |
-|             ram_reg_0_31_0_0__1                  |    <0.001 |
-|             ram_reg_0_31_0_0__2                  |    <0.001 |
-|             ram_reg_0_31_0_0__3                  |    <0.001 |
-|             ram_reg_0_31_0_0__4                  |    <0.001 |
-|             ram_reg_0_31_0_0__5                  |    <0.001 |
-|             ram_reg_0_31_0_0__6                  |    <0.001 |
-|         grp_run_classification_fu_178            |     0.030 |
-|           NeuralNetwork_muleOg_U0                |     0.002 |
-|             NeuralNetwork_muleOg_MulnS_0_U       |     0.002 |
-|           NeuralNetwork_muleOg_U2                |     0.002 |
-|             NeuralNetwork_muleOg_MulnS_0_U       |     0.002 |
-|           NeuralNetwork_mulfYi_U1                |     0.002 |
-|             NeuralNetwork_mulfYi_MulnS_1_U       |     0.002 |
-|           result_input_layer1_U                  |     0.006 |
-|             run_classificatiobkb_ram_U           |     0.006 |
-|           result_layer1_layer2_U                 |     0.006 |
-|             run_classificatiobkb_ram_U           |     0.006 |
-|           result_layer2_output_U                 |     0.002 |
+| design_1_wrapper                                 |     1.618 |
+|   design_1_i                                     |     1.618 |
+|     NeuralNetwork_0                              |     0.055 |
+|       U0                                         |     0.055 |
+|         NeuralNetwork_NNIO_s_axi_U               |     0.021 |
+|           int_biasWeight_input_r                 |     0.015 |
+|           int_input_r                            |     0.004 |
+|         bias_s_U                                 |     0.002 |
+|           NeuralNetwork_biag8j_ram_U             |     0.002 |
+|         grp_run_classification_fu_170            |     0.022 |
+|           NeuralNetwork_mulbkb_x_U9              |     0.002 |
+|             NeuralNetwork_mulbkb_MulnS_0_U       |     0.002 |
+|           grp_relu_fu_266                        |    <0.001 |
+|           grp_runLayer_fu_250                    |     0.008 |
+|             NeuralNetwork_maccud_U2              |     0.002 |
+|               NeuralNetwork_maccud_DSP48_0_U     |     0.002 |
+|             NeuralNetwork_mulbkb_U1              |     0.002 |
+|               NeuralNetwork_mulbkb_MulnS_0_U     |     0.002 |
+|           resArray1_U                            |     0.006 |
+|             run_classificatiodEe_ram_U           |     0.006 |
+|           resArray2_U                            |     0.002 |
 |             run_classificatiodEe_ram_U           |     0.002 |
-|               ram_reg_0_15_0_0                   |    <0.001 |
-|               ram_reg_0_15_10_10                 |    <0.001 |
-|               ram_reg_0_15_11_11                 |    <0.001 |
-|               ram_reg_0_15_12_12                 |    <0.001 |
-|               ram_reg_0_15_13_13                 |    <0.001 |
-|               ram_reg_0_15_14_14                 |    <0.001 |
-|               ram_reg_0_15_15_15                 |    <0.001 |
-|               ram_reg_0_15_16_16                 |    <0.001 |
-|               ram_reg_0_15_17_17                 |    <0.001 |
-|               ram_reg_0_15_18_18                 |    <0.001 |
-|               ram_reg_0_15_19_19                 |    <0.001 |
-|               ram_reg_0_15_1_1                   |    <0.001 |
-|               ram_reg_0_15_20_20                 |    <0.001 |
-|               ram_reg_0_15_21_21                 |    <0.001 |
-|               ram_reg_0_15_22_22                 |    <0.001 |
-|               ram_reg_0_15_23_23                 |    <0.001 |
-|               ram_reg_0_15_24_24                 |    <0.001 |
-|               ram_reg_0_15_25_25                 |    <0.001 |
-|               ram_reg_0_15_26_26                 |    <0.001 |
-|               ram_reg_0_15_27_27                 |    <0.001 |
-|               ram_reg_0_15_28_28                 |    <0.001 |
-|               ram_reg_0_15_29_29                 |    <0.001 |
-|               ram_reg_0_15_2_2                   |    <0.001 |
-|               ram_reg_0_15_30_30                 |    <0.001 |
-|               ram_reg_0_15_31_31                 |    <0.001 |
-|               ram_reg_0_15_3_3                   |    <0.001 |
-|               ram_reg_0_15_4_4                   |    <0.001 |
-|               ram_reg_0_15_5_5                   |    <0.001 |
-|               ram_reg_0_15_6_6                   |    <0.001 |
-|               ram_reg_0_15_7_7                   |    <0.001 |
-|               ram_reg_0_15_8_8                   |    <0.001 |
-|               ram_reg_0_15_9_9                   |    <0.001 |
-|         weights_s_U                              |     0.003 |
-|           NeuralNetwork_weig8j_ram_U             |     0.003 |
+|         weights_s_U                              |     0.009 |
+|           NeuralNetwork_weifYi_ram_U             |     0.009 |
 |     processing_system7_0                         |     1.557 |
 |       inst                                       |     1.557 |
 |     ps7_0_axi_periph                             |     0.006 |
@@ -249,7 +192,7 @@ Table of Contents
 |                 aw_pipe                          |    <0.001 |
 |                 b_pipe                           |    <0.001 |
 |                 r_pipe                           |    <0.001 |
-|               WR.aw_channel_0                    |     0.001 |
+|               WR.aw_channel_0                    |     0.002 |
 |                 aw_cmd_fsm_0                     |    <0.001 |
 |                 cmd_translator_0                 |    <0.001 |
 |                   incr_cmd_0                     |    <0.001 |

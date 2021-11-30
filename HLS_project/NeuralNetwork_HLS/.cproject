@@ -29,6 +29,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/auto_cc/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.815252734" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
@@ -46,6 +47,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/auto_cc/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.949060393" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
@@ -78,6 +80,21 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.433993524.1608371151" name="testbench_vivado.cpp" rcbsApplicability="disable" resourcePath="testbench/testbench_vivado.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.760572969.2029428323">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.760572969.2029428323" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.760572969">
+							<option id="gnu.cpp.compiler.option.preprocessor.def.1766764958" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+							<option id="gnu.cpp.compiler.option.include.paths.1504062957" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/auto_cc/include"/>
+								<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include"/>
+							</option>
+							<option id="gnu.cpp.compiler.option.other.other.1549123537" name="Other flags" superClass="gnu.cpp.compiler.option.other.other"/>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1933750105" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
 						<entry excluding="solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -113,6 +130,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/auto_cc/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1315137578" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -125,6 +143,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/auto_cc/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1729465552" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -152,6 +171,21 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1577667006.1122345366" name="testbench_vivado.cpp" rcbsApplicability="disable" resourcePath="testbench/testbench_vivado.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.878379343.1152671823">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.878379343.1152671823" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.878379343">
+							<option id="gnu.cpp.compiler.option.preprocessor.def.1835251085" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+							<option id="gnu.cpp.compiler.option.include.paths.1603109359" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/auto_cc/include"/>
+								<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include"/>
+							</option>
+							<option id="gnu.cpp.compiler.option.other.other.2116550868" name="Other flags" superClass="gnu.cpp.compiler.option.other.other"/>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.940118569" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
 						<entry excluding="solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>

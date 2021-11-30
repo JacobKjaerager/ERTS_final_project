@@ -1,27 +1,8 @@
-09:53:45 **** Auto Build of configuration Debug for project nn_embedded ****
+11:46:49 **** Incremental Build of configuration Debug for project nn_embedded ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../nn_embedded_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:34:11: warning: unused variable 'choice' [-Wunused-variable]
-   uint8_t choice = getChoiceFromUser();
-           ^~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: nn_embedded.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../nn_embedded_bsp/ps7_cortexa9_0/lib -o "nn_embedded.elf"  ./src/NeuralNetwork.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: nn_embedded.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size nn_embedded.elf  |tee "nn_embedded.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  41260	   2208	  22652	  66120	  10248	nn_embedded.elf
-'Finished building: nn_embedded.elf.size'
-' '
+make: Ingenting at gøre for 'main-build'.
 
-09:53:47 Build Finished (took 1s.860ms)
+11:46:50 Build Finished (took 552ms)
 

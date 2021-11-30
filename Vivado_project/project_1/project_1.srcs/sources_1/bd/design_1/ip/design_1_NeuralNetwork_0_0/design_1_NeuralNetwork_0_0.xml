@@ -153,7 +153,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_NNIO.ADDR_WIDTH">14</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_NNIO.ADDR_WIDTH">16</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>DATA_WIDTH</spirit:name>
@@ -828,7 +828,7 @@
           <spirit:name>runNN_r</spirit:name>
           <spirit:displayName>runNN_r</spirit:displayName>
           <spirit:description>Data signal of runNN_r</spirit:description>
-          <spirit:addressOffset>8192</spirit:addressOffset>
+          <spirit:addressOffset>32768</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -864,7 +864,7 @@
           <spirit:name>setBais_r</spirit:name>
           <spirit:displayName>setBais_r</spirit:displayName>
           <spirit:description>Data signal of setBais_r</spirit:description>
-          <spirit:addressOffset>8200</spirit:addressOffset>
+          <spirit:addressOffset>32776</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -900,7 +900,7 @@
           <spirit:name>setWeight_r</spirit:name>
           <spirit:displayName>setWeight_r</spirit:displayName>
           <spirit:description>Data signal of setWeight_r</spirit:description>
-          <spirit:addressOffset>8208</spirit:addressOffset>
+          <spirit:addressOffset>32784</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -947,8 +947,8 @@
           <spirit:name>Memory_biasWeight_input_r</spirit:name>
           <spirit:displayName>Memory_biasWeight_input_r</spirit:displayName>
           <spirit:description>Memory biasWeight_input_r</spirit:description>
-          <spirit:addressOffset>4096</spirit:addressOffset>
-          <spirit:size spirit:format="long">4096</spirit:size>
+          <spirit:addressOffset>16384</spirit:addressOffset>
+          <spirit:size spirit:format="long">16384</spirit:size>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
             <spirit:value spirit:format="long">0</spirit:value>
@@ -970,11 +970,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 17 22:16:18 UTC 2021</spirit:value>
+            <spirit:value>Fri Nov 26 10:25:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c665915e</spirit:value>
+            <spirit:value>7:b57518f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -989,11 +989,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 17 22:16:18 UTC 2021</spirit:value>
+            <spirit:value>Fri Nov 26 10:25:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c665915e</spirit:value>
+            <spirit:value>7:b57518f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1008,11 +1008,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 17 22:16:18 UTC 2021</spirit:value>
+            <spirit:value>Fri Nov 26 10:25:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:4939b4f3</spirit:value>
+            <spirit:value>7:c15830a9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1027,11 +1027,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 17 22:16:18 UTC 2021</spirit:value>
+            <spirit:value>Fri Nov 26 10:25:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:4939b4f3</spirit:value>
+            <spirit:value>7:c15830a9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1045,11 +1045,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 17 22:19:07 UTC 2021</spirit:value>
+            <spirit:value>Fri Nov 26 10:27:39 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c665915e</spirit:value>
+            <spirit:value>7:b57518f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1060,7 +1060,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_NNIO_ADDR_WIDTH&apos;)) - 1)">13</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_NNIO_ADDR_WIDTH&apos;)) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1206,7 +1206,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_NNIO_ADDR_WIDTH&apos;)) - 1)">13</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_NNIO_ADDR_WIDTH&apos;)) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1347,7 +1347,7 @@
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>C_S_AXI_NNIO_ADDR_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_NNIO_ADDR_WIDTH">14</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_NNIO_ADDR_WIDTH">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_NNIO_DATA_WIDTH</spirit:name>
@@ -1364,39 +1364,43 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_biahbi.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_biag8j.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_muleOg.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_maccud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_mulfYi.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_mulbkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_NNIO_s_axi.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_NNIO_s_axi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_weig8j.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_weifYi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/run_classificatiobkb.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/relu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/run_classificatiodEe.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/runLayer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/run_classification.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/run_classificatiodEe.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/run_classification.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1411,47 +1415,52 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_biahbi.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_biag8j.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_muleOg.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_maccud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_mulfYi.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_mulbkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_NNIO_s_axi.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_NNIO_s_axi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/NeuralNetwork_weig8j.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/NeuralNetwork_weifYi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/run_classificatiobkb.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/relu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/run_classificatiodEe.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/runLayer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cfe3/hdl/vhdl/run_classification.vhd</spirit:name>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/run_classificatiodEe.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/88be/hdl/vhdl/run_classification.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1566,7 +1575,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>Neuralnetwork</xilinx:displayName>
-      <xilinx:coreRevision>2111172313</xilinx:coreRevision>
+      <xilinx:coreRevision>2111261122</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN" xilinx:valueSource="default_prop"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.FREQ_HZ" xilinx:valueSource="user_prop"/>

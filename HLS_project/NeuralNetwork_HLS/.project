@@ -42,9 +42,14 @@
 			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/neuralnetwork_ccode.c</name>
+			<name>source/neuralnetwork_ccode.cpp</name>
 			<type>1</type>
-			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/NN_Code/NN_Code/neuralnetwork_ccode.c</location>
+			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/NN_Code/NN_Code/neuralnetwork_ccode.cpp</location>
+		</link>
+		<link>
+			<name>testbench/testbench_vivado.cpp</name>
+			<type>1</type>
+			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/NN_Code/NN_Code/testbench_vivado.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

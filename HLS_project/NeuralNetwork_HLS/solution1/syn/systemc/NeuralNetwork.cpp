@@ -86,9 +86,9 @@ NeuralNetwork::NeuralNetwork(sc_module_name name) : sc_module(name), mVcdFile(0)
     NeuralNetwork_NNIO_s_axi_U->ap_ready(ap_ready);
     NeuralNetwork_NNIO_s_axi_U->ap_done(ap_done);
     NeuralNetwork_NNIO_s_axi_U->ap_idle(ap_idle);
-    NeuralNetwork_NNIO_s_axi_U->ap_return(res_2_reg_148);
-    NeuralNetwork_NNIO_s_axi_U->input_r_address0(grp_run_classification_fu_166_input_r_address0);
-    NeuralNetwork_NNIO_s_axi_U->input_r_ce0(grp_run_classification_fu_166_input_r_ce0);
+    NeuralNetwork_NNIO_s_axi_U->ap_return(res_2_reg_152);
+    NeuralNetwork_NNIO_s_axi_U->input_r_address0(grp_run_classification_fu_170_input_r_address0);
+    NeuralNetwork_NNIO_s_axi_U->input_r_ce0(grp_run_classification_fu_170_input_r_ce0);
     NeuralNetwork_NNIO_s_axi_U->input_r_q0(input_r_q0);
     NeuralNetwork_NNIO_s_axi_U->biasWeight_input_r_address0(biasWeight_input_r_address0);
     NeuralNetwork_NNIO_s_axi_U->biasWeight_input_r_ce0(biasWeight_input_r_ce0);
@@ -96,23 +96,23 @@ NeuralNetwork::NeuralNetwork(sc_module_name name) : sc_module(name), mVcdFile(0)
     NeuralNetwork_NNIO_s_axi_U->runNN_r(runNN_r);
     NeuralNetwork_NNIO_s_axi_U->setBais_r(setBais_r);
     NeuralNetwork_NNIO_s_axi_U->setWeight_r(setWeight_r);
-    grp_run_classification_fu_166 = new run_classification("grp_run_classification_fu_166");
-    grp_run_classification_fu_166->ap_clk(ap_clk);
-    grp_run_classification_fu_166->ap_rst(ap_rst_n_inv);
-    grp_run_classification_fu_166->ap_start(grp_run_classification_fu_166_ap_start);
-    grp_run_classification_fu_166->ap_done(grp_run_classification_fu_166_ap_done);
-    grp_run_classification_fu_166->ap_idle(grp_run_classification_fu_166_ap_idle);
-    grp_run_classification_fu_166->ap_ready(grp_run_classification_fu_166_ap_ready);
-    grp_run_classification_fu_166->input_r_address0(grp_run_classification_fu_166_input_r_address0);
-    grp_run_classification_fu_166->input_r_ce0(grp_run_classification_fu_166_input_r_ce0);
-    grp_run_classification_fu_166->input_r_q0(input_r_q0);
-    grp_run_classification_fu_166->weights_s_address0(grp_run_classification_fu_166_weights_s_address0);
-    grp_run_classification_fu_166->weights_s_ce0(grp_run_classification_fu_166_weights_s_ce0);
-    grp_run_classification_fu_166->weights_s_q0(weights_s_q0);
-    grp_run_classification_fu_166->bias_s_address0(grp_run_classification_fu_166_bias_s_address0);
-    grp_run_classification_fu_166->bias_s_ce0(grp_run_classification_fu_166_bias_s_ce0);
-    grp_run_classification_fu_166->bias_s_q0(bias_s_q0);
-    grp_run_classification_fu_166->ap_return(grp_run_classification_fu_166_ap_return);
+    grp_run_classification_fu_170 = new run_classification("grp_run_classification_fu_170");
+    grp_run_classification_fu_170->ap_clk(ap_clk);
+    grp_run_classification_fu_170->ap_rst(ap_rst_n_inv);
+    grp_run_classification_fu_170->ap_start(grp_run_classification_fu_170_ap_start);
+    grp_run_classification_fu_170->ap_done(grp_run_classification_fu_170_ap_done);
+    grp_run_classification_fu_170->ap_idle(grp_run_classification_fu_170_ap_idle);
+    grp_run_classification_fu_170->ap_ready(grp_run_classification_fu_170_ap_ready);
+    grp_run_classification_fu_170->input_r_address0(grp_run_classification_fu_170_input_r_address0);
+    grp_run_classification_fu_170->input_r_ce0(grp_run_classification_fu_170_input_r_ce0);
+    grp_run_classification_fu_170->input_r_q0(input_r_q0);
+    grp_run_classification_fu_170->weights_s_address0(grp_run_classification_fu_170_weights_s_address0);
+    grp_run_classification_fu_170->weights_s_ce0(grp_run_classification_fu_170_weights_s_ce0);
+    grp_run_classification_fu_170->weights_s_q0(weights_s_q0);
+    grp_run_classification_fu_170->bias_s_address0(grp_run_classification_fu_170_bias_s_address0);
+    grp_run_classification_fu_170->bias_s_ce0(grp_run_classification_fu_170_bias_s_ce0);
+    grp_run_classification_fu_170->bias_s_q0(bias_s_q0);
+    grp_run_classification_fu_170->ap_return(grp_run_classification_fu_170_ap_return);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -157,125 +157,125 @@ NeuralNetwork::NeuralNetwork(sc_module_name name) : sc_module(name), mVcdFile(0)
 
     SC_METHOD(thread_biasWeight_input_r_address0);
     sensitive << ( ap_CS_fsm_state3 );
-    sensitive << ( tmp_4_i_fu_266_p1 );
+    sensitive << ( tmp_4_i_fu_270_p1 );
     sensitive << ( ap_CS_fsm_state5 );
-    sensitive << ( tmp_6_i_fu_283_p1 );
+    sensitive << ( tmp_6_i_fu_287_p1 );
 
     SC_METHOD(thread_biasWeight_input_r_ce0);
     sensitive << ( ap_CS_fsm_state3 );
     sensitive << ( ap_CS_fsm_state5 );
 
     SC_METHOD(thread_bias_s_address0);
-    sensitive << ( tmp_6_i_reg_324 );
+    sensitive << ( tmp_6_i_reg_328 );
     sensitive << ( ap_CS_fsm_state7 );
-    sensitive << ( grp_run_classification_fu_166_bias_s_address0 );
+    sensitive << ( grp_run_classification_fu_170_bias_s_address0 );
     sensitive << ( ap_CS_fsm_state6 );
 
     SC_METHOD(thread_bias_s_ce0);
     sensitive << ( ap_CS_fsm_state7 );
-    sensitive << ( grp_run_classification_fu_166_bias_s_ce0 );
+    sensitive << ( grp_run_classification_fu_170_bias_s_ce0 );
     sensitive << ( ap_CS_fsm_state6 );
 
     SC_METHOD(thread_bias_s_we0);
     sensitive << ( ap_CS_fsm_state6 );
 
-    SC_METHOD(thread_grp_run_classification_fu_166_ap_start);
-    sensitive << ( ap_reg_grp_run_classification_fu_166_ap_start );
+    SC_METHOD(thread_grp_run_classification_fu_170_ap_start);
+    sensitive << ( ap_reg_grp_run_classification_fu_170_ap_start );
 
-    SC_METHOD(thread_i_3_fu_260_p2);
-    sensitive << ( i_i2_reg_126 );
+    SC_METHOD(thread_i_2_fu_264_p2);
+    sensitive << ( i_i2_reg_130 );
 
-    SC_METHOD(thread_i_fu_277_p2);
-    sensitive << ( i_i_reg_137 );
+    SC_METHOD(thread_i_fu_281_p2);
+    sensitive << ( i_i_reg_141 );
 
-    SC_METHOD(thread_or_cond1_fu_200_p2);
-    sensitive << ( tmp_1_fu_194_p2 );
-    sensitive << ( tmp_s_fu_176_p2 );
+    SC_METHOD(thread_or_cond1_fu_204_p2);
+    sensitive << ( tmp_4_fu_198_p2 );
+    sensitive << ( tmp_s_fu_180_p2 );
 
-    SC_METHOD(thread_or_cond3_fu_224_p2);
-    sensitive << ( tmp1_fu_218_p2 );
-    sensitive << ( tmp_40_fu_206_p2 );
+    SC_METHOD(thread_or_cond3_fu_228_p2);
+    sensitive << ( tmp1_fu_222_p2 );
+    sensitive << ( tmp_8_fu_210_p2 );
 
-    SC_METHOD(thread_or_cond5_fu_248_p2);
-    sensitive << ( tmp_43_fu_236_p2 );
-    sensitive << ( tmp_44_fu_242_p2 );
+    SC_METHOD(thread_or_cond5_fu_252_p2);
+    sensitive << ( tmp_2_fu_240_p2 );
+    sensitive << ( tmp_3_fu_246_p2 );
 
-    SC_METHOD(thread_tmp1_fu_218_p2);
-    sensitive << ( tmp_41_fu_212_p2 );
-    sensitive << ( tmp_39_fu_182_p2 );
+    SC_METHOD(thread_tmp1_fu_222_p2);
+    sensitive << ( tmp_9_fu_216_p2 );
+    sensitive << ( tmp_7_fu_186_p2 );
 
-    SC_METHOD(thread_tmp_1_fu_194_p2);
-    sensitive << ( ap_start );
-    sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( tmp_fu_188_p2 );
-
-    SC_METHOD(thread_tmp_39_fu_182_p2);
-    sensitive << ( ap_start );
-    sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( setWeight_r );
-
-    SC_METHOD(thread_tmp_40_fu_206_p2);
-    sensitive << ( ap_start );
-    sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( runNN_r );
-    sensitive << ( or_cond1_fu_200_p2 );
-
-    SC_METHOD(thread_tmp_41_fu_212_p2);
-    sensitive << ( ap_start );
-    sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( setBais_r );
-    sensitive << ( or_cond1_fu_200_p2 );
-
-    SC_METHOD(thread_tmp_42_fu_230_p2);
+    SC_METHOD(thread_tmp_1_fu_234_p2);
     sensitive << ( runNN_r );
     sensitive << ( setBais_r );
 
-    SC_METHOD(thread_tmp_43_fu_236_p2);
+    SC_METHOD(thread_tmp_2_fu_240_p2);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( or_cond1_fu_200_p2 );
-    sensitive << ( or_cond3_fu_224_p2 );
-    sensitive << ( tmp_42_fu_230_p2 );
+    sensitive << ( or_cond1_fu_204_p2 );
+    sensitive << ( or_cond3_fu_228_p2 );
+    sensitive << ( tmp_1_fu_234_p2 );
 
-    SC_METHOD(thread_tmp_44_fu_242_p2);
+    SC_METHOD(thread_tmp_3_fu_246_p2);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( setWeight_r );
-    sensitive << ( or_cond1_fu_200_p2 );
-    sensitive << ( or_cond3_fu_224_p2 );
+    sensitive << ( or_cond1_fu_204_p2 );
+    sensitive << ( or_cond3_fu_228_p2 );
 
-    SC_METHOD(thread_tmp_4_i_fu_266_p1);
-    sensitive << ( i_i2_reg_126 );
+    SC_METHOD(thread_tmp_4_fu_198_p2);
+    sensitive << ( ap_start );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( tmp_fu_192_p2 );
 
-    SC_METHOD(thread_tmp_6_i_fu_283_p1);
-    sensitive << ( i_i_reg_137 );
+    SC_METHOD(thread_tmp_4_i_fu_270_p1);
+    sensitive << ( i_i2_reg_130 );
 
-    SC_METHOD(thread_tmp_fu_188_p2);
+    SC_METHOD(thread_tmp_6_i_fu_287_p1);
+    sensitive << ( i_i_reg_141 );
+
+    SC_METHOD(thread_tmp_7_fu_186_p2);
+    sensitive << ( ap_start );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( setWeight_r );
+
+    SC_METHOD(thread_tmp_8_fu_210_p2);
+    sensitive << ( ap_start );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( runNN_r );
+    sensitive << ( or_cond1_fu_204_p2 );
+
+    SC_METHOD(thread_tmp_9_fu_216_p2);
+    sensitive << ( ap_start );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( setBais_r );
+    sensitive << ( or_cond1_fu_204_p2 );
+
+    SC_METHOD(thread_tmp_fu_192_p2);
     sensitive << ( setBais_r );
     sensitive << ( setWeight_r );
 
-    SC_METHOD(thread_tmp_i3_fu_254_p2);
+    SC_METHOD(thread_tmp_i3_fu_258_p2);
     sensitive << ( ap_CS_fsm_state3 );
-    sensitive << ( i_i2_reg_126 );
+    sensitive << ( i_i2_reg_130 );
 
-    SC_METHOD(thread_tmp_i_fu_271_p2);
+    SC_METHOD(thread_tmp_i_fu_275_p2);
     sensitive << ( ap_CS_fsm_state5 );
-    sensitive << ( i_i_reg_137 );
+    sensitive << ( i_i_reg_141 );
 
-    SC_METHOD(thread_tmp_s_fu_176_p2);
+    SC_METHOD(thread_tmp_s_fu_180_p2);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( runNN_r );
 
     SC_METHOD(thread_weights_s_address0);
-    sensitive << ( tmp_4_i_reg_306 );
+    sensitive << ( tmp_4_i_reg_310 );
     sensitive << ( ap_CS_fsm_state7 );
-    sensitive << ( grp_run_classification_fu_166_weights_s_address0 );
+    sensitive << ( grp_run_classification_fu_170_weights_s_address0 );
     sensitive << ( ap_CS_fsm_state4 );
 
     SC_METHOD(thread_weights_s_ce0);
     sensitive << ( ap_CS_fsm_state7 );
-    sensitive << ( grp_run_classification_fu_166_weights_s_ce0 );
+    sensitive << ( grp_run_classification_fu_170_weights_s_ce0 );
     sensitive << ( ap_CS_fsm_state4 );
 
     SC_METHOD(thread_weights_s_we0);
@@ -285,15 +285,15 @@ NeuralNetwork::NeuralNetwork(sc_module_name name) : sc_module(name), mVcdFile(0)
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( or_cond5_reg_294 );
-    sensitive << ( or_cond1_fu_200_p2 );
-    sensitive << ( or_cond3_fu_224_p2 );
+    sensitive << ( or_cond5_reg_298 );
+    sensitive << ( or_cond1_fu_204_p2 );
+    sensitive << ( or_cond3_fu_228_p2 );
     sensitive << ( ap_CS_fsm_state3 );
-    sensitive << ( tmp_i3_fu_254_p2 );
+    sensitive << ( tmp_i3_fu_258_p2 );
     sensitive << ( ap_CS_fsm_state5 );
-    sensitive << ( tmp_i_fu_271_p2 );
+    sensitive << ( tmp_i_fu_275_p2 );
     sensitive << ( ap_CS_fsm_state7 );
-    sensitive << ( grp_run_classification_fu_166_ap_done );
+    sensitive << ( grp_run_classification_fu_170_ap_done );
     sensitive << ( ap_CS_fsm_state2 );
 
     SC_THREAD(thread_hdltv_gen);
@@ -302,7 +302,7 @@ NeuralNetwork::NeuralNetwork(sc_module_name name) : sc_module(name), mVcdFile(0)
     SC_THREAD(thread_ap_var_for_const0);
 
     ap_CS_fsm = "00000001";
-    ap_reg_grp_run_classification_fu_166_ap_start = SC_LOGIC_0;
+    ap_reg_grp_run_classification_fu_170_ap_start = SC_LOGIC_0;
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "NeuralNetwork_sc_trace_" << apTFileNum ++;
@@ -355,51 +355,51 @@ NeuralNetwork::NeuralNetwork(sc_module_name name) : sc_module(name), mVcdFile(0)
     sc_trace(mVcdFile, bias_s_ce0, "bias_s_ce0");
     sc_trace(mVcdFile, bias_s_we0, "bias_s_we0");
     sc_trace(mVcdFile, bias_s_q0, "bias_s_q0");
-    sc_trace(mVcdFile, or_cond5_fu_248_p2, "or_cond5_fu_248_p2");
-    sc_trace(mVcdFile, or_cond5_reg_294, "or_cond5_reg_294");
-    sc_trace(mVcdFile, or_cond1_fu_200_p2, "or_cond1_fu_200_p2");
-    sc_trace(mVcdFile, or_cond3_fu_224_p2, "or_cond3_fu_224_p2");
-    sc_trace(mVcdFile, i_3_fu_260_p2, "i_3_fu_260_p2");
-    sc_trace(mVcdFile, i_3_reg_301, "i_3_reg_301");
+    sc_trace(mVcdFile, or_cond5_fu_252_p2, "or_cond5_fu_252_p2");
+    sc_trace(mVcdFile, or_cond5_reg_298, "or_cond5_reg_298");
+    sc_trace(mVcdFile, or_cond1_fu_204_p2, "or_cond1_fu_204_p2");
+    sc_trace(mVcdFile, or_cond3_fu_228_p2, "or_cond3_fu_228_p2");
+    sc_trace(mVcdFile, i_2_fu_264_p2, "i_2_fu_264_p2");
+    sc_trace(mVcdFile, i_2_reg_305, "i_2_reg_305");
     sc_trace(mVcdFile, ap_CS_fsm_state3, "ap_CS_fsm_state3");
-    sc_trace(mVcdFile, tmp_4_i_fu_266_p1, "tmp_4_i_fu_266_p1");
-    sc_trace(mVcdFile, tmp_4_i_reg_306, "tmp_4_i_reg_306");
-    sc_trace(mVcdFile, tmp_i3_fu_254_p2, "tmp_i3_fu_254_p2");
-    sc_trace(mVcdFile, i_fu_277_p2, "i_fu_277_p2");
-    sc_trace(mVcdFile, i_reg_319, "i_reg_319");
+    sc_trace(mVcdFile, tmp_4_i_fu_270_p1, "tmp_4_i_fu_270_p1");
+    sc_trace(mVcdFile, tmp_4_i_reg_310, "tmp_4_i_reg_310");
+    sc_trace(mVcdFile, tmp_i3_fu_258_p2, "tmp_i3_fu_258_p2");
+    sc_trace(mVcdFile, i_fu_281_p2, "i_fu_281_p2");
+    sc_trace(mVcdFile, i_reg_323, "i_reg_323");
     sc_trace(mVcdFile, ap_CS_fsm_state5, "ap_CS_fsm_state5");
-    sc_trace(mVcdFile, tmp_6_i_fu_283_p1, "tmp_6_i_fu_283_p1");
-    sc_trace(mVcdFile, tmp_6_i_reg_324, "tmp_6_i_reg_324");
-    sc_trace(mVcdFile, tmp_i_fu_271_p2, "tmp_i_fu_271_p2");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_ap_return, "grp_run_classification_fu_166_ap_return");
+    sc_trace(mVcdFile, tmp_6_i_fu_287_p1, "tmp_6_i_fu_287_p1");
+    sc_trace(mVcdFile, tmp_6_i_reg_328, "tmp_6_i_reg_328");
+    sc_trace(mVcdFile, tmp_i_fu_275_p2, "tmp_i_fu_275_p2");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_ap_return, "grp_run_classification_fu_170_ap_return");
     sc_trace(mVcdFile, ap_CS_fsm_state7, "ap_CS_fsm_state7");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_ap_done, "grp_run_classification_fu_166_ap_done");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_ap_start, "grp_run_classification_fu_166_ap_start");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_ap_idle, "grp_run_classification_fu_166_ap_idle");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_ap_ready, "grp_run_classification_fu_166_ap_ready");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_input_r_address0, "grp_run_classification_fu_166_input_r_address0");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_input_r_ce0, "grp_run_classification_fu_166_input_r_ce0");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_weights_s_address0, "grp_run_classification_fu_166_weights_s_address0");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_weights_s_ce0, "grp_run_classification_fu_166_weights_s_ce0");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_bias_s_address0, "grp_run_classification_fu_166_bias_s_address0");
-    sc_trace(mVcdFile, grp_run_classification_fu_166_bias_s_ce0, "grp_run_classification_fu_166_bias_s_ce0");
-    sc_trace(mVcdFile, i_i2_reg_126, "i_i2_reg_126");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_ap_done, "grp_run_classification_fu_170_ap_done");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_ap_start, "grp_run_classification_fu_170_ap_start");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_ap_idle, "grp_run_classification_fu_170_ap_idle");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_ap_ready, "grp_run_classification_fu_170_ap_ready");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_input_r_address0, "grp_run_classification_fu_170_input_r_address0");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_input_r_ce0, "grp_run_classification_fu_170_input_r_ce0");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_weights_s_address0, "grp_run_classification_fu_170_weights_s_address0");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_weights_s_ce0, "grp_run_classification_fu_170_weights_s_ce0");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_bias_s_address0, "grp_run_classification_fu_170_bias_s_address0");
+    sc_trace(mVcdFile, grp_run_classification_fu_170_bias_s_ce0, "grp_run_classification_fu_170_bias_s_ce0");
+    sc_trace(mVcdFile, i_i2_reg_130, "i_i2_reg_130");
     sc_trace(mVcdFile, ap_CS_fsm_state4, "ap_CS_fsm_state4");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
-    sc_trace(mVcdFile, i_i_reg_137, "i_i_reg_137");
+    sc_trace(mVcdFile, i_i_reg_141, "i_i_reg_141");
     sc_trace(mVcdFile, ap_CS_fsm_state6, "ap_CS_fsm_state6");
-    sc_trace(mVcdFile, res_2_reg_148, "res_2_reg_148");
-    sc_trace(mVcdFile, ap_reg_grp_run_classification_fu_166_ap_start, "ap_reg_grp_run_classification_fu_166_ap_start");
-    sc_trace(mVcdFile, tmp_fu_188_p2, "tmp_fu_188_p2");
-    sc_trace(mVcdFile, tmp_1_fu_194_p2, "tmp_1_fu_194_p2");
-    sc_trace(mVcdFile, tmp_s_fu_176_p2, "tmp_s_fu_176_p2");
-    sc_trace(mVcdFile, tmp_41_fu_212_p2, "tmp_41_fu_212_p2");
-    sc_trace(mVcdFile, tmp_39_fu_182_p2, "tmp_39_fu_182_p2");
-    sc_trace(mVcdFile, tmp1_fu_218_p2, "tmp1_fu_218_p2");
-    sc_trace(mVcdFile, tmp_40_fu_206_p2, "tmp_40_fu_206_p2");
-    sc_trace(mVcdFile, tmp_42_fu_230_p2, "tmp_42_fu_230_p2");
-    sc_trace(mVcdFile, tmp_43_fu_236_p2, "tmp_43_fu_236_p2");
-    sc_trace(mVcdFile, tmp_44_fu_242_p2, "tmp_44_fu_242_p2");
+    sc_trace(mVcdFile, res_2_reg_152, "res_2_reg_152");
+    sc_trace(mVcdFile, ap_reg_grp_run_classification_fu_170_ap_start, "ap_reg_grp_run_classification_fu_170_ap_start");
+    sc_trace(mVcdFile, tmp_fu_192_p2, "tmp_fu_192_p2");
+    sc_trace(mVcdFile, tmp_4_fu_198_p2, "tmp_4_fu_198_p2");
+    sc_trace(mVcdFile, tmp_s_fu_180_p2, "tmp_s_fu_180_p2");
+    sc_trace(mVcdFile, tmp_9_fu_216_p2, "tmp_9_fu_216_p2");
+    sc_trace(mVcdFile, tmp_7_fu_186_p2, "tmp_7_fu_186_p2");
+    sc_trace(mVcdFile, tmp1_fu_222_p2, "tmp1_fu_222_p2");
+    sc_trace(mVcdFile, tmp_8_fu_210_p2, "tmp_8_fu_210_p2");
+    sc_trace(mVcdFile, tmp_1_fu_234_p2, "tmp_1_fu_234_p2");
+    sc_trace(mVcdFile, tmp_2_fu_240_p2, "tmp_2_fu_240_p2");
+    sc_trace(mVcdFile, tmp_3_fu_246_p2, "tmp_3_fu_246_p2");
     sc_trace(mVcdFile, ap_CS_fsm_state8, "ap_CS_fsm_state8");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
     sc_trace(mVcdFile, ap_return, "ap_return");
@@ -421,7 +421,7 @@ NeuralNetwork::~NeuralNetwork() {
     delete weights_s_U;
     delete bias_s_U;
     delete NeuralNetwork_NNIO_s_axi_U;
-    delete grp_run_classification_fu_166;
+    delete grp_run_classification_fu_170;
 }
 
 void NeuralNetwork::thread_ap_var_for_const0() {
@@ -435,56 +435,56 @@ void NeuralNetwork::thread_ap_clk_no_reset_() {
         ap_CS_fsm = ap_NS_fsm.read();
     }
     if ( ap_rst_n_inv.read() == ap_const_logic_1) {
-        ap_reg_grp_run_classification_fu_166_ap_start = ap_const_logic_0;
+        ap_reg_grp_run_classification_fu_170_ap_start = ap_const_logic_0;
     } else {
         if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
              esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && 
-             esl_seteq<1,1,1>(or_cond1_fu_200_p2.read(), ap_const_lv1_1))) {
-            ap_reg_grp_run_classification_fu_166_ap_start = ap_const_logic_1;
-        } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_run_classification_fu_166_ap_ready.read())) {
-            ap_reg_grp_run_classification_fu_166_ap_start = ap_const_logic_0;
+             esl_seteq<1,1,1>(or_cond1_fu_204_p2.read(), ap_const_lv1_1))) {
+            ap_reg_grp_run_classification_fu_170_ap_start = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_run_classification_fu_170_ap_ready.read())) {
+            ap_reg_grp_run_classification_fu_170_ap_start = ap_const_logic_0;
         }
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) && 
-         esl_seteq<1,1,1>(or_cond5_reg_294.read(), ap_const_lv1_1))) {
-        i_i2_reg_126 = ap_const_lv14_0;
+         esl_seteq<1,1,1>(or_cond5_reg_298.read(), ap_const_lv1_1))) {
+        i_i2_reg_130 = ap_const_lv14_0;
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read())) {
-        i_i2_reg_126 = i_3_reg_301.read();
+        i_i2_reg_130 = i_2_reg_305.read();
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
          esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && 
-         esl_seteq<1,1,1>(or_cond1_fu_200_p2.read(), ap_const_lv1_0) && 
-         esl_seteq<1,1,1>(or_cond3_fu_224_p2.read(), ap_const_lv1_1))) {
-        i_i_reg_137 = ap_const_lv8_0;
+         esl_seteq<1,1,1>(or_cond1_fu_204_p2.read(), ap_const_lv1_0) && 
+         esl_seteq<1,1,1>(or_cond3_fu_228_p2.read(), ap_const_lv1_1))) {
+        i_i_reg_141 = ap_const_lv8_0;
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state6.read())) {
-        i_i_reg_137 = i_reg_319.read();
+        i_i_reg_141 = i_reg_323.read();
     }
     if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
-          esl_seteq<1,1,1>(tmp_i3_fu_254_p2.read(), ap_const_lv1_1)) || 
+          esl_seteq<1,1,1>(tmp_i3_fu_258_p2.read(), ap_const_lv1_1)) || 
          (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) && 
-          esl_seteq<1,1,1>(tmp_i_fu_271_p2.read(), ap_const_lv1_1)))) {
-        res_2_reg_148 = ap_const_lv8_FF;
+          esl_seteq<1,1,1>(tmp_i_fu_275_p2.read(), ap_const_lv1_1)))) {
+        res_2_reg_152 = ap_const_lv8_FF;
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) && 
-                esl_seteq<1,1,1>(or_cond5_reg_294.read(), ap_const_lv1_0))) {
-        res_2_reg_148 = ap_const_lv8_FE;
+                esl_seteq<1,1,1>(or_cond5_reg_298.read(), ap_const_lv1_0))) {
+        res_2_reg_152 = ap_const_lv8_FE;
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) && 
-                esl_seteq<1,1,1>(grp_run_classification_fu_166_ap_done.read(), ap_const_logic_1))) {
-        res_2_reg_148 = grp_run_classification_fu_166_ap_return.read();
+                esl_seteq<1,1,1>(grp_run_classification_fu_170_ap_done.read(), ap_const_logic_1))) {
+        res_2_reg_152 = grp_run_classification_fu_170_ap_return.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read())) {
-        i_3_reg_301 = i_3_fu_260_p2.read();
+        i_2_reg_305 = i_2_fu_264_p2.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read())) {
-        i_reg_319 = i_fu_277_p2.read();
+        i_reg_323 = i_fu_281_p2.read();
     }
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(or_cond1_fu_200_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(ap_const_lv1_0, or_cond3_fu_224_p2.read()))) {
-        or_cond5_reg_294 = or_cond5_fu_248_p2.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(or_cond1_fu_204_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(ap_const_lv1_0, or_cond3_fu_228_p2.read()))) {
+        or_cond5_reg_298 = or_cond5_fu_252_p2.read();
     }
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, tmp_i3_fu_254_p2.read()))) {
-        tmp_4_i_reg_306 = tmp_4_i_fu_266_p1.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, tmp_i3_fu_258_p2.read()))) {
+        tmp_4_i_reg_310 = tmp_4_i_fu_270_p1.read();
     }
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, tmp_i_fu_271_p2.read()))) {
-        tmp_6_i_reg_324 = tmp_6_i_fu_283_p1.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, tmp_i_fu_275_p2.read()))) {
+        tmp_6_i_reg_328 = tmp_6_i_fu_287_p1.read();
     }
 }
 
@@ -551,9 +551,9 @@ void NeuralNetwork::thread_ap_rst_n_inv() {
 
 void NeuralNetwork::thread_biasWeight_input_r_address0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read())) {
-        biasWeight_input_r_address0 =  (sc_lv<14>) (tmp_6_i_fu_283_p1.read());
+        biasWeight_input_r_address0 =  (sc_lv<14>) (tmp_6_i_fu_287_p1.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read())) {
-        biasWeight_input_r_address0 =  (sc_lv<14>) (tmp_4_i_fu_266_p1.read());
+        biasWeight_input_r_address0 =  (sc_lv<14>) (tmp_4_i_fu_270_p1.read());
     } else {
         biasWeight_input_r_address0 = "XXXXXXXXXXXXXX";
     }
@@ -570,9 +570,9 @@ void NeuralNetwork::thread_biasWeight_input_r_ce0() {
 
 void NeuralNetwork::thread_bias_s_address0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state6.read())) {
-        bias_s_address0 =  (sc_lv<8>) (tmp_6_i_reg_324.read());
+        bias_s_address0 =  (sc_lv<8>) (tmp_6_i_reg_328.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read())) {
-        bias_s_address0 = grp_run_classification_fu_166_bias_s_address0.read();
+        bias_s_address0 = grp_run_classification_fu_170_bias_s_address0.read();
     } else {
         bias_s_address0 =  (sc_lv<8>) ("XXXXXXXX");
     }
@@ -582,7 +582,7 @@ void NeuralNetwork::thread_bias_s_ce0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state6.read())) {
         bias_s_ce0 = ap_const_logic_1;
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read())) {
-        bias_s_ce0 = grp_run_classification_fu_166_bias_s_ce0.read();
+        bias_s_ce0 = grp_run_classification_fu_170_bias_s_ce0.read();
     } else {
         bias_s_ce0 = ap_const_logic_0;
     }
@@ -596,91 +596,91 @@ void NeuralNetwork::thread_bias_s_we0() {
     }
 }
 
-void NeuralNetwork::thread_grp_run_classification_fu_166_ap_start() {
-    grp_run_classification_fu_166_ap_start = ap_reg_grp_run_classification_fu_166_ap_start.read();
+void NeuralNetwork::thread_grp_run_classification_fu_170_ap_start() {
+    grp_run_classification_fu_170_ap_start = ap_reg_grp_run_classification_fu_170_ap_start.read();
 }
 
-void NeuralNetwork::thread_i_3_fu_260_p2() {
-    i_3_fu_260_p2 = (!i_i2_reg_126.read().is_01() || !ap_const_lv14_1.is_01())? sc_lv<14>(): (sc_biguint<14>(i_i2_reg_126.read()) + sc_biguint<14>(ap_const_lv14_1));
+void NeuralNetwork::thread_i_2_fu_264_p2() {
+    i_2_fu_264_p2 = (!i_i2_reg_130.read().is_01() || !ap_const_lv14_1.is_01())? sc_lv<14>(): (sc_biguint<14>(i_i2_reg_130.read()) + sc_biguint<14>(ap_const_lv14_1));
 }
 
-void NeuralNetwork::thread_i_fu_277_p2() {
-    i_fu_277_p2 = (!i_i_reg_137.read().is_01() || !ap_const_lv8_1.is_01())? sc_lv<8>(): (sc_biguint<8>(i_i_reg_137.read()) + sc_biguint<8>(ap_const_lv8_1));
+void NeuralNetwork::thread_i_fu_281_p2() {
+    i_fu_281_p2 = (!i_i_reg_141.read().is_01() || !ap_const_lv8_1.is_01())? sc_lv<8>(): (sc_biguint<8>(i_i_reg_141.read()) + sc_biguint<8>(ap_const_lv8_1));
 }
 
-void NeuralNetwork::thread_or_cond1_fu_200_p2() {
-    or_cond1_fu_200_p2 = (tmp_1_fu_194_p2.read() & tmp_s_fu_176_p2.read());
+void NeuralNetwork::thread_or_cond1_fu_204_p2() {
+    or_cond1_fu_204_p2 = (tmp_4_fu_198_p2.read() & tmp_s_fu_180_p2.read());
 }
 
-void NeuralNetwork::thread_or_cond3_fu_224_p2() {
-    or_cond3_fu_224_p2 = (tmp1_fu_218_p2.read() & tmp_40_fu_206_p2.read());
+void NeuralNetwork::thread_or_cond3_fu_228_p2() {
+    or_cond3_fu_228_p2 = (tmp1_fu_222_p2.read() & tmp_8_fu_210_p2.read());
 }
 
-void NeuralNetwork::thread_or_cond5_fu_248_p2() {
-    or_cond5_fu_248_p2 = (tmp_43_fu_236_p2.read() & tmp_44_fu_242_p2.read());
+void NeuralNetwork::thread_or_cond5_fu_252_p2() {
+    or_cond5_fu_252_p2 = (tmp_2_fu_240_p2.read() & tmp_3_fu_246_p2.read());
 }
 
-void NeuralNetwork::thread_tmp1_fu_218_p2() {
-    tmp1_fu_218_p2 = (tmp_41_fu_212_p2.read() & tmp_39_fu_182_p2.read());
+void NeuralNetwork::thread_tmp1_fu_222_p2() {
+    tmp1_fu_222_p2 = (tmp_9_fu_216_p2.read() & tmp_7_fu_186_p2.read());
 }
 
-void NeuralNetwork::thread_tmp_1_fu_194_p2() {
-    tmp_1_fu_194_p2 = (!tmp_fu_188_p2.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_fu_188_p2.read() == ap_const_lv8_0);
+void NeuralNetwork::thread_tmp_1_fu_234_p2() {
+    tmp_1_fu_234_p2 = (setBais_r.read() | runNN_r.read());
 }
 
-void NeuralNetwork::thread_tmp_39_fu_182_p2() {
-    tmp_39_fu_182_p2 = (!setWeight_r.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(setWeight_r.read() == ap_const_lv8_0);
+void NeuralNetwork::thread_tmp_2_fu_240_p2() {
+    tmp_2_fu_240_p2 = (!tmp_1_fu_234_p2.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_1_fu_234_p2.read() == ap_const_lv8_0);
 }
 
-void NeuralNetwork::thread_tmp_40_fu_206_p2() {
-    tmp_40_fu_206_p2 = (!runNN_r.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(runNN_r.read() == ap_const_lv8_0);
+void NeuralNetwork::thread_tmp_3_fu_246_p2() {
+    tmp_3_fu_246_p2 = (!setWeight_r.read().is_01() || !ap_const_lv8_1.is_01())? sc_lv<1>(): sc_lv<1>(setWeight_r.read() == ap_const_lv8_1);
 }
 
-void NeuralNetwork::thread_tmp_41_fu_212_p2() {
-    tmp_41_fu_212_p2 = (!setBais_r.read().is_01() || !ap_const_lv8_1.is_01())? sc_lv<1>(): sc_lv<1>(setBais_r.read() == ap_const_lv8_1);
+void NeuralNetwork::thread_tmp_4_fu_198_p2() {
+    tmp_4_fu_198_p2 = (!tmp_fu_192_p2.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_fu_192_p2.read() == ap_const_lv8_0);
 }
 
-void NeuralNetwork::thread_tmp_42_fu_230_p2() {
-    tmp_42_fu_230_p2 = (setBais_r.read() | runNN_r.read());
+void NeuralNetwork::thread_tmp_4_i_fu_270_p1() {
+    tmp_4_i_fu_270_p1 = esl_zext<32,14>(i_i2_reg_130.read());
 }
 
-void NeuralNetwork::thread_tmp_43_fu_236_p2() {
-    tmp_43_fu_236_p2 = (!tmp_42_fu_230_p2.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_42_fu_230_p2.read() == ap_const_lv8_0);
+void NeuralNetwork::thread_tmp_6_i_fu_287_p1() {
+    tmp_6_i_fu_287_p1 = esl_zext<32,8>(i_i_reg_141.read());
 }
 
-void NeuralNetwork::thread_tmp_44_fu_242_p2() {
-    tmp_44_fu_242_p2 = (!setWeight_r.read().is_01() || !ap_const_lv8_1.is_01())? sc_lv<1>(): sc_lv<1>(setWeight_r.read() == ap_const_lv8_1);
+void NeuralNetwork::thread_tmp_7_fu_186_p2() {
+    tmp_7_fu_186_p2 = (!setWeight_r.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(setWeight_r.read() == ap_const_lv8_0);
 }
 
-void NeuralNetwork::thread_tmp_4_i_fu_266_p1() {
-    tmp_4_i_fu_266_p1 = esl_zext<32,14>(i_i2_reg_126.read());
+void NeuralNetwork::thread_tmp_8_fu_210_p2() {
+    tmp_8_fu_210_p2 = (!runNN_r.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(runNN_r.read() == ap_const_lv8_0);
 }
 
-void NeuralNetwork::thread_tmp_6_i_fu_283_p1() {
-    tmp_6_i_fu_283_p1 = esl_zext<32,8>(i_i_reg_137.read());
+void NeuralNetwork::thread_tmp_9_fu_216_p2() {
+    tmp_9_fu_216_p2 = (!setBais_r.read().is_01() || !ap_const_lv8_1.is_01())? sc_lv<1>(): sc_lv<1>(setBais_r.read() == ap_const_lv8_1);
 }
 
-void NeuralNetwork::thread_tmp_fu_188_p2() {
-    tmp_fu_188_p2 = (setBais_r.read() | setWeight_r.read());
+void NeuralNetwork::thread_tmp_fu_192_p2() {
+    tmp_fu_192_p2 = (setBais_r.read() | setWeight_r.read());
 }
 
-void NeuralNetwork::thread_tmp_i3_fu_254_p2() {
-    tmp_i3_fu_254_p2 = (!i_i2_reg_126.read().is_01() || !ap_const_lv14_2BC0.is_01())? sc_lv<1>(): sc_lv<1>(i_i2_reg_126.read() == ap_const_lv14_2BC0);
+void NeuralNetwork::thread_tmp_i3_fu_258_p2() {
+    tmp_i3_fu_258_p2 = (!i_i2_reg_130.read().is_01() || !ap_const_lv14_2BC0.is_01())? sc_lv<1>(): sc_lv<1>(i_i2_reg_130.read() == ap_const_lv14_2BC0);
 }
 
-void NeuralNetwork::thread_tmp_i_fu_271_p2() {
-    tmp_i_fu_271_p2 = (!i_i_reg_137.read().is_01() || !ap_const_lv8_96.is_01())? sc_lv<1>(): sc_lv<1>(i_i_reg_137.read() == ap_const_lv8_96);
+void NeuralNetwork::thread_tmp_i_fu_275_p2() {
+    tmp_i_fu_275_p2 = (!i_i_reg_141.read().is_01() || !ap_const_lv8_96.is_01())? sc_lv<1>(): sc_lv<1>(i_i_reg_141.read() == ap_const_lv8_96);
 }
 
-void NeuralNetwork::thread_tmp_s_fu_176_p2() {
-    tmp_s_fu_176_p2 = (!runNN_r.read().is_01() || !ap_const_lv8_1.is_01())? sc_lv<1>(): sc_lv<1>(runNN_r.read() == ap_const_lv8_1);
+void NeuralNetwork::thread_tmp_s_fu_180_p2() {
+    tmp_s_fu_180_p2 = (!runNN_r.read().is_01() || !ap_const_lv8_1.is_01())? sc_lv<1>(): sc_lv<1>(runNN_r.read() == ap_const_lv8_1);
 }
 
 void NeuralNetwork::thread_weights_s_address0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read())) {
-        weights_s_address0 =  (sc_lv<14>) (tmp_4_i_reg_306.read());
+        weights_s_address0 =  (sc_lv<14>) (tmp_4_i_reg_310.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read())) {
-        weights_s_address0 = grp_run_classification_fu_166_weights_s_address0.read();
+        weights_s_address0 = grp_run_classification_fu_170_weights_s_address0.read();
     } else {
         weights_s_address0 = "XXXXXXXXXXXXXX";
     }
@@ -690,7 +690,7 @@ void NeuralNetwork::thread_weights_s_ce0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read())) {
         weights_s_ce0 = ap_const_logic_1;
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read())) {
-        weights_s_ce0 = grp_run_classification_fu_166_weights_s_ce0.read();
+        weights_s_ce0 = grp_run_classification_fu_170_weights_s_ce0.read();
     } else {
         weights_s_ce0 = ap_const_logic_0;
     }
@@ -707,25 +707,25 @@ void NeuralNetwork::thread_weights_s_we0() {
 void NeuralNetwork::thread_ap_NS_fsm() {
     switch (ap_CS_fsm.read().to_uint64()) {
         case 1 : 
-            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(or_cond1_fu_200_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(or_cond3_fu_224_p2.read(), ap_const_lv1_1))) {
+            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(or_cond1_fu_204_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(or_cond3_fu_228_p2.read(), ap_const_lv1_1))) {
                 ap_NS_fsm = ap_ST_fsm_state5;
-            } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(or_cond1_fu_200_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(ap_const_lv1_0, or_cond3_fu_224_p2.read()))) {
+            } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(or_cond1_fu_204_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(ap_const_lv1_0, or_cond3_fu_228_p2.read()))) {
                 ap_NS_fsm = ap_ST_fsm_state2;
-            } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(or_cond1_fu_200_p2.read(), ap_const_lv1_1))) {
+            } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(or_cond1_fu_204_p2.read(), ap_const_lv1_1))) {
                 ap_NS_fsm = ap_ST_fsm_state7;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state1;
             }
             break;
         case 2 : 
-            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) && esl_seteq<1,1,1>(or_cond5_reg_294.read(), ap_const_lv1_1))) {
+            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) && esl_seteq<1,1,1>(or_cond5_reg_298.read(), ap_const_lv1_1))) {
                 ap_NS_fsm = ap_ST_fsm_state3;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state8;
             }
             break;
         case 4 : 
-            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && esl_seteq<1,1,1>(tmp_i3_fu_254_p2.read(), ap_const_lv1_1))) {
+            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && esl_seteq<1,1,1>(tmp_i3_fu_258_p2.read(), ap_const_lv1_1))) {
                 ap_NS_fsm = ap_ST_fsm_state8;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state4;
@@ -735,7 +735,7 @@ void NeuralNetwork::thread_ap_NS_fsm() {
             ap_NS_fsm = ap_ST_fsm_state3;
             break;
         case 16 : 
-            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) && esl_seteq<1,1,1>(tmp_i_fu_271_p2.read(), ap_const_lv1_1))) {
+            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) && esl_seteq<1,1,1>(tmp_i_fu_275_p2.read(), ap_const_lv1_1))) {
                 ap_NS_fsm = ap_ST_fsm_state8;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state6;
@@ -745,7 +745,7 @@ void NeuralNetwork::thread_ap_NS_fsm() {
             ap_NS_fsm = ap_ST_fsm_state5;
             break;
         case 64 : 
-            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) && esl_seteq<1,1,1>(grp_run_classification_fu_166_ap_done.read(), ap_const_logic_1))) {
+            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) && esl_seteq<1,1,1>(grp_run_classification_fu_170_ap_done.read(), ap_const_logic_1))) {
                 ap_NS_fsm = ap_ST_fsm_state8;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state7;

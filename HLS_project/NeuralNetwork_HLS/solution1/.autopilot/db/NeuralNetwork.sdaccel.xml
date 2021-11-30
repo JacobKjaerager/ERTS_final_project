@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'NeuralNetwork'" level="0">
-<item name = "Date">Mon Nov 22 20:34:40 2021
+<item name = "Date">Tue Nov 30 08:52:48 2021
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">NeuralNetwork_HLS</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
-<item name = "Target device">xc7z020clg400-1</item>
+<item name = "Target device">xc7z010clg400-1</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,21 +15,21 @@
 <section name = "" level="1">
 <item name = "Target clock period (ns)">8.00</item>
 <item name = "Clock uncertainty (ns)">1.00</item>
-<item name = "Estimated clock period (ns)">6.91</item>
+<item name = "Estimated clock period (ns)">9.63</item>
 </section>
 </item>
 <item name = "Latency (clock cycles)">
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 57842, 3, 57843, none</column>
+<column name="">2, 88104, 3, 88105, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_run_classification_fu_166">run_classification, 57840, 57840, 57840, 57840, none</column>
+<column name="grp_run_classification_fu_170">run_classification, 37222, 88102, 37222, 88102, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,12 +50,12 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, 76, 95</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">14, 12, 2711, 1621</column>
+<column name="Instance">12, 9, 1972, 1593</column>
 <column name="Memory">9, -, 0, 0</column>
 <column name="Multiplexer">-, -, -, 158</column>
 <column name="Register">-, -, 84, -</column>
-<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">8, 5, 2, 3</specialColumn>
+<specialColumn name="Available">120, 80, 35200, 17600</specialColumn>
+<specialColumn name="Utilization (%)">17, 11, 6, 10</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -63,7 +63,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="NeuralNetwork_NNIO_s_axi_U">NeuralNetwork_NNIO_s_axi, 10, 0, 246, 244</column>
-<column name="grp_run_classification_fu_166">run_classification, 4, 12, 2465, 1377</column>
+<column name="grp_run_classification_fu_170">run_classification, 2, 9, 1726, 1349</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -82,23 +82,23 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_3_fu_260_p2">+, 0, 47, 19, 14, 1</column>
-<column name="i_fu_277_p2">+, 0, 29, 13, 8, 1</column>
-<column name="or_cond1_fu_200_p2">and, 0, 0, 2, 1, 1</column>
-<column name="or_cond3_fu_224_p2">and, 0, 0, 2, 1, 1</column>
-<column name="or_cond5_fu_248_p2">and, 0, 0, 2, 1, 1</column>
-<column name="tmp1_fu_218_p2">and, 0, 0, 2, 1, 1</column>
-<column name="tmp_1_fu_194_p2">icmp, 0, 0, 4, 8, 1</column>
-<column name="tmp_39_fu_182_p2">icmp, 0, 0, 4, 8, 1</column>
-<column name="tmp_40_fu_206_p2">icmp, 0, 0, 4, 8, 1</column>
-<column name="tmp_41_fu_212_p2">icmp, 0, 0, 4, 8, 1</column>
-<column name="tmp_43_fu_236_p2">icmp, 0, 0, 4, 8, 1</column>
-<column name="tmp_44_fu_242_p2">icmp, 0, 0, 4, 8, 1</column>
-<column name="tmp_i3_fu_254_p2">icmp, 0, 0, 7, 14, 14</column>
-<column name="tmp_i_fu_271_p2">icmp, 0, 0, 4, 8, 8</column>
-<column name="tmp_s_fu_176_p2">icmp, 0, 0, 4, 8, 1</column>
-<column name="tmp_42_fu_230_p2">or, 0, 0, 8, 8, 8</column>
-<column name="tmp_fu_188_p2">or, 0, 0, 8, 8, 8</column>
+<column name="i_2_fu_264_p2">+, 0, 47, 19, 14, 1</column>
+<column name="i_fu_281_p2">+, 0, 29, 13, 8, 1</column>
+<column name="or_cond1_fu_204_p2">and, 0, 0, 2, 1, 1</column>
+<column name="or_cond3_fu_228_p2">and, 0, 0, 2, 1, 1</column>
+<column name="or_cond5_fu_252_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp1_fu_222_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_2_fu_240_p2">icmp, 0, 0, 4, 8, 1</column>
+<column name="tmp_3_fu_246_p2">icmp, 0, 0, 4, 8, 1</column>
+<column name="tmp_4_fu_198_p2">icmp, 0, 0, 4, 8, 1</column>
+<column name="tmp_7_fu_186_p2">icmp, 0, 0, 4, 8, 1</column>
+<column name="tmp_8_fu_210_p2">icmp, 0, 0, 4, 8, 1</column>
+<column name="tmp_9_fu_216_p2">icmp, 0, 0, 4, 8, 1</column>
+<column name="tmp_i3_fu_258_p2">icmp, 0, 0, 7, 14, 14</column>
+<column name="tmp_i_fu_275_p2">icmp, 0, 0, 4, 8, 8</column>
+<column name="tmp_s_fu_180_p2">icmp, 0, 0, 4, 8, 1</column>
+<column name="tmp_1_fu_234_p2">or, 0, 0, 8, 8, 8</column>
+<column name="tmp_fu_192_p2">or, 0, 0, 8, 8, 8</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -107,9 +107,9 @@
 <column name="biasWeight_input_r_address0">15, 3, 14, 42</column>
 <column name="bias_s_address0">15, 3, 8, 24</column>
 <column name="bias_s_ce0">15, 3, 1, 3</column>
-<column name="i_i2_reg_126">9, 2, 14, 28</column>
-<column name="i_i_reg_137">9, 2, 8, 16</column>
-<column name="res_2_reg_148">15, 3, 8, 24</column>
+<column name="i_i2_reg_130">9, 2, 14, 28</column>
+<column name="i_i_reg_141">9, 2, 8, 16</column>
+<column name="res_2_reg_152">15, 3, 8, 24</column>
 <column name="weights_s_address0">15, 3, 14, 42</column>
 <column name="weights_s_ce0">15, 3, 1, 3</column>
 </table>
@@ -117,15 +117,15 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">8, 0, 8, 0</column>
-<column name="ap_reg_grp_run_classification_fu_166_ap_start">1, 0, 1, 0</column>
-<column name="i_3_reg_301">14, 0, 14, 0</column>
-<column name="i_i2_reg_126">14, 0, 14, 0</column>
-<column name="i_i_reg_137">8, 0, 8, 0</column>
-<column name="i_reg_319">8, 0, 8, 0</column>
-<column name="or_cond5_reg_294">1, 0, 1, 0</column>
-<column name="res_2_reg_148">8, 0, 8, 0</column>
-<column name="tmp_4_i_reg_306">14, 0, 32, 18</column>
-<column name="tmp_6_i_reg_324">8, 0, 32, 24</column>
+<column name="ap_reg_grp_run_classification_fu_170_ap_start">1, 0, 1, 0</column>
+<column name="i_2_reg_305">14, 0, 14, 0</column>
+<column name="i_i2_reg_130">14, 0, 14, 0</column>
+<column name="i_i_reg_141">8, 0, 8, 0</column>
+<column name="i_reg_323">8, 0, 8, 0</column>
+<column name="or_cond5_reg_298">1, 0, 1, 0</column>
+<column name="res_2_reg_152">8, 0, 8, 0</column>
+<column name="tmp_4_i_reg_310">14, 0, 32, 18</column>
+<column name="tmp_6_i_reg_328">8, 0, 32, 24</column>
 </table>
 </item>
 </section>
@@ -164,9 +164,9 @@
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
 <column name="'setWeight_r'">read, 1.00, 1.00, -, -, -, s_axi, read, &apos;setWeight_r&apos;, -, -, -, -, -</column>
-<column name="'tmp_39', ../NN_Code/NN_Code/neuralnetwork_ccode.c:155">icmp, 2.91, 3.91, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'tmp1', ../NN_Code/NN_Code/neuralnetwork_ccode.c:158">and, 0.00, 3.91, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'or_cond3', ../NN_Code/NN_Code/neuralnetwork_ccode.c:158">and, 2.07, 5.98, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_7', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:115">icmp, 2.91, 3.91, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp1', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:118">and, 0.00, 3.91, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'or_cond3', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:118">and, 2.07, 5.98, -, -, -, -, -, -, -, -, -, -, -</column>
 </table>
 </item>
 </section>

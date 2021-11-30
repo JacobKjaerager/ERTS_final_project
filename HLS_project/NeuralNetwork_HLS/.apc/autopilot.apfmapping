@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="neuralnetwork_ccode.c" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\NN_Code\NN_Code\neuralnetwork_ccode.c"/>
+    <originFiles name="neuralnetwork_ccode.cpp" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\NN_Code\NN_Code\neuralnetwork_ccode.cpp"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="testbench_vivado.cpp" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\NN_Code\NN_Code\testbench_vivado.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -7,7 +7,7 @@
 <UserAssignments>
 <unit>ns</unit>
 <ProductFamily>zynq</ProductFamily>
-<Part>xc7z020clg400-1</Part>
+<Part>xc7z010clg400-1</Part>
 <TopModelName>NeuralNetwork</TopModelName>
 <TargetClockPeriod>8.00</TargetClockPeriod>
 <ClockUncertainty>1.00</ClockUncertainty>
@@ -17,15 +17,15 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.91</EstimatedClockPeriod>
+<EstimatedClockPeriod>9.63</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>2</Best-caseLatency>
-<Average-caseLatency>20137</Average-caseLatency>
-<Worst-caseLatency>57842</Worst-caseLatency>
+<Average-caseLatency>undef</Average-caseLatency>
+<Worst-caseLatency>88104</Worst-caseLatency>
 <Interval-min>3</Interval-min>
-<Interval-max>57843</Interval-max>
+<Interval-max>88105</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
@@ -43,16 +43,16 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>23</BRAM_18K>
-<DSP48E>12</DSP48E>
-<FF>2871</FF>
-<LUT>1874</LUT>
+<BRAM_18K>21</BRAM_18K>
+<DSP48E>9</DSP48E>
+<FF>2132</FF>
+<LUT>1846</LUT>
 </Resources>
 <AvailableResources>
-<BRAM_18K>280</BRAM_18K>
-<DSP48E>220</DSP48E>
-<FF>106400</FF>
-<LUT>53200</LUT>
+<BRAM_18K>120</BRAM_18K>
+<DSP48E>80</DSP48E>
+<FF>35200</FF>
+<LUT>17600</LUT>
 </AvailableResources>
 </AreaEstimates>
 

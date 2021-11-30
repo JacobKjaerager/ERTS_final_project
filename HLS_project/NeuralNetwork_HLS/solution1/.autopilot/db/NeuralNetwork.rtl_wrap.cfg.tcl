@@ -1,4 +1,4 @@
-set lang "C"
+set lang "C++"
 set moduleName "NeuralNetwork"
 set moduleIsExternC "0"
 set rawDecl ""

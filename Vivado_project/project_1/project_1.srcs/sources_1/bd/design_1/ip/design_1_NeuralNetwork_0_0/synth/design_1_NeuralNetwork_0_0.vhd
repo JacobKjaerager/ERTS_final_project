@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:NeuralNetwork:1.0
--- IP Revision: 2111172313
+-- IP Revision: 2111261122
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -55,7 +55,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY design_1_NeuralNetwork_0_0 IS
   PORT (
-    s_axi_NNIO_AWADDR : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+    s_axi_NNIO_AWADDR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     s_axi_NNIO_AWVALID : IN STD_LOGIC;
     s_axi_NNIO_AWREADY : OUT STD_LOGIC;
     s_axi_NNIO_WDATA : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -65,7 +65,7 @@ ENTITY design_1_NeuralNetwork_0_0 IS
     s_axi_NNIO_BRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_NNIO_BVALID : OUT STD_LOGIC;
     s_axi_NNIO_BREADY : IN STD_LOGIC;
-    s_axi_NNIO_ARADDR : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+    s_axi_NNIO_ARADDR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     s_axi_NNIO_ARVALID : IN STD_LOGIC;
     s_axi_NNIO_ARREADY : OUT STD_LOGIC;
     s_axi_NNIO_RDATA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -87,7 +87,7 @@ ARCHITECTURE design_1_NeuralNetwork_0_0_arch OF design_1_NeuralNetwork_0_0 IS
       C_S_AXI_NNIO_DATA_WIDTH : INTEGER
     );
     PORT (
-      s_axi_NNIO_AWADDR : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+      s_axi_NNIO_AWADDR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       s_axi_NNIO_AWVALID : IN STD_LOGIC;
       s_axi_NNIO_AWREADY : OUT STD_LOGIC;
       s_axi_NNIO_WDATA : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -97,7 +97,7 @@ ARCHITECTURE design_1_NeuralNetwork_0_0_arch OF design_1_NeuralNetwork_0_0 IS
       s_axi_NNIO_BRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi_NNIO_BVALID : OUT STD_LOGIC;
       s_axi_NNIO_BREADY : IN STD_LOGIC;
-      s_axi_NNIO_ARADDR : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+      s_axi_NNIO_ARADDR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       s_axi_NNIO_ARVALID : IN STD_LOGIC;
       s_axi_NNIO_ARREADY : OUT STD_LOGIC;
       s_axi_NNIO_RDATA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -114,7 +114,7 @@ ARCHITECTURE design_1_NeuralNetwork_0_0_arch OF design_1_NeuralNetwork_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_NeuralNetwork_0_0_arch : ARCHITECTURE IS "design_1_NeuralNetwork_0_0,NeuralNetwork,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_NeuralNetwork_0_0_arch: ARCHITECTURE IS "design_1_NeuralNetwork_0_0,NeuralNetwork,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=NeuralNetwork,x_ipVersion=1.0,x_ipCoreRevision=2111172313,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_S_AXI_NNIO_ADDR_WIDTH=14,C_S_AXI_NNIO_DATA_WIDTH=32}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_NeuralNetwork_0_0_arch: ARCHITECTURE IS "design_1_NeuralNetwork_0_0,NeuralNetwork,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=NeuralNetwork,x_ipVersion=1.0,x_ipCoreRevision=2111261122,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_S_AXI_NNIO_ADDR_WIDTH=16,C_S_AXI_NNIO_DATA_WIDTH=32}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_NNIO_AWADDR: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_NNIO AWADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_NNIO_AWVALID: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_NNIO AWVALID";
@@ -139,7 +139,7 @@ ARCHITECTURE design_1_NeuralNetwork_0_0_arch OF design_1_NeuralNetwork_0_0 IS
 BEGIN
   U0 : NeuralNetwork
     GENERIC MAP (
-      C_S_AXI_NNIO_ADDR_WIDTH => 14,
+      C_S_AXI_NNIO_ADDR_WIDTH => 16,
       C_S_AXI_NNIO_DATA_WIDTH => 32
     )
     PORT MAP (

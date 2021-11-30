@@ -18,10 +18,10 @@
     <ClCompile Include="NN_Code.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NeuralNetwork.cpp">
+    <ClCompile Include="neuralnetwork_ccode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="neuralnetwork_ccode.c">
+    <ClCompile Include="testbench_vivado.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -34,7 +34,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NeuralNetwork.hpp">
+    <ClInclude Include="neuralnetwork_ccode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
