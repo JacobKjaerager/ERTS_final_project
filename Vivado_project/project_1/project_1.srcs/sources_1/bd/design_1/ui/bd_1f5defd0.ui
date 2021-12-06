@@ -1,24 +1,39 @@
 {
    guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y -390 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y -370 -defaultsOSRD
-preplace inst NeuralNetwork_0 -pg 1 -lvl 4 -y 140 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y 150 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -y 110 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y -310 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 4 N -390 NJ -390 NJ -390 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 2 N -310 570
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 550 270 940
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 -410
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 N -370 NJ -370 NJ -370 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -850 -160 -400 200 560 30 940
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 930
+preplace port btns_4bits -pg 1 -y 360 -defaultsOSRD
+preplace port DDR -pg 1 -y 450 -defaultsOSRD
+preplace port sws_4bits_0 -pg 1 -y 380 -defaultsOSRD
+preplace port leds_4bits -pg 1 -y 110 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 470 -defaultsOSRD
+preplace inst inputPeripheral -pg 1 -lvl 4 -y 380 -defaultsOSRD
+preplace inst NeuralNetwork_0 -pg 1 -lvl 4 -y 240 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -y 540 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y 190 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -y 90 -defaultsOSRD
+preplace inst Led -pg 1 -lvl 4 -y 110 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 530 -defaultsOSRD
+preplace netloc inputPeripheral_GPIO2 1 4 1 NJ
+preplace netloc processing_system7_0_DDR 1 2 3 NJ 450 NJ 450 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 980
+preplace netloc Button_GPIO 1 4 1 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 660
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 670 10 1000
+preplace netloc Led_GPIO 1 4 1 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 210 190 650
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 N
+preplace netloc xlconcat_0_dout 1 1 1 N
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 470 NJ 470 NJ
+preplace netloc inputPeripheral_ip2intc_irpt 1 0 5 10 370 NJ 370 NJ 370 980J 460 1320
+preplace netloc NeuralNetwork_0_interrupt 1 0 5 20 680 NJ 680 NJ 680 NJ 680 1330
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 200 180 680 380 1010
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 990
 preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 2 1 N
-levelinfo -pg 1 -870 -630 380 780 1100 1270 -top -460 -bot 520
+levelinfo -pg 1 -10 110 430 830 1170 1350 -top 0 -bot 690
 ",
 }
 {
    da_axi4_cnt: "4",
+   da_board_cnt: "4",
    da_ps7_cnt: "1",
 }

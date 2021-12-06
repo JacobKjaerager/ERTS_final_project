@@ -3722,50 +3722,24 @@ unsigned long ps7_peripherals_init_data_3_0[] = {
     // .. .. .. .. START: DIR MODE BANK 0
     // .. .. .. .. FINISH: DIR MODE BANK 0
     // .. .. .. .. START: DIR MODE BANK 1
-    // .. .. .. .. DIRECTION_1 = 0x4000
-    // .. .. .. .. ==> 0XE000A244[21:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x003FFFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A244, 0x003FFFFFU ,0x00004000U),
     // .. .. .. .. FINISH: DIR MODE BANK 1
     // .. .. .. .. START: MASK_DATA_0_LSW HIGH BANK [15:0]
     // .. .. .. .. FINISH: MASK_DATA_0_LSW HIGH BANK [15:0]
     // .. .. .. .. START: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW HIGH BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x4000
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF4000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW HIGH BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. START: OUTPUT ENABLE BANK 0
     // .. .. .. .. FINISH: OUTPUT ENABLE BANK 0
     // .. .. .. .. START: OUTPUT ENABLE BANK 1
-    // .. .. .. .. OP_ENABLE_1 = 0x4000
-    // .. .. .. .. ==> 0XE000A248[21:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x003FFFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A248, 0x003FFFFFU ,0x00004000U),
     // .. .. .. .. FINISH: OUTPUT ENABLE BANK 1
     // .. .. .. .. START: MASK_DATA_0_LSW LOW BANK [15:0]
     // .. .. .. .. FINISH: MASK_DATA_0_LSW LOW BANK [15:0]
     // .. .. .. .. START: MASK_DATA_0_MSW LOW BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW LOW BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW LOW BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x0
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00000000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00000000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF0000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW LOW BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW LOW BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW LOW BANK [53:48]
@@ -3778,14 +3752,6 @@ unsigned long ps7_peripherals_init_data_3_0[] = {
     // .. .. .. .. START: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW HIGH BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x4000
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF4000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW HIGH BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW HIGH BANK [53:48]
@@ -8013,50 +7979,24 @@ unsigned long ps7_peripherals_init_data_2_0[] = {
     // .. .. .. .. START: DIR MODE BANK 0
     // .. .. .. .. FINISH: DIR MODE BANK 0
     // .. .. .. .. START: DIR MODE BANK 1
-    // .. .. .. .. DIRECTION_1 = 0x4000
-    // .. .. .. .. ==> 0XE000A244[21:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x003FFFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A244, 0x003FFFFFU ,0x00004000U),
     // .. .. .. .. FINISH: DIR MODE BANK 1
     // .. .. .. .. START: MASK_DATA_0_LSW HIGH BANK [15:0]
     // .. .. .. .. FINISH: MASK_DATA_0_LSW HIGH BANK [15:0]
     // .. .. .. .. START: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW HIGH BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x4000
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF4000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW HIGH BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. START: OUTPUT ENABLE BANK 0
     // .. .. .. .. FINISH: OUTPUT ENABLE BANK 0
     // .. .. .. .. START: OUTPUT ENABLE BANK 1
-    // .. .. .. .. OP_ENABLE_1 = 0x4000
-    // .. .. .. .. ==> 0XE000A248[21:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x003FFFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A248, 0x003FFFFFU ,0x00004000U),
     // .. .. .. .. FINISH: OUTPUT ENABLE BANK 1
     // .. .. .. .. START: MASK_DATA_0_LSW LOW BANK [15:0]
     // .. .. .. .. FINISH: MASK_DATA_0_LSW LOW BANK [15:0]
     // .. .. .. .. START: MASK_DATA_0_MSW LOW BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW LOW BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW LOW BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x0
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00000000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00000000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF0000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW LOW BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW LOW BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW LOW BANK [53:48]
@@ -8069,14 +8009,6 @@ unsigned long ps7_peripherals_init_data_2_0[] = {
     // .. .. .. .. START: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW HIGH BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x4000
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF4000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW HIGH BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW HIGH BANK [53:48]
@@ -12229,50 +12161,24 @@ unsigned long ps7_peripherals_init_data_1_0[] = {
     // .. .. .. .. START: DIR MODE BANK 0
     // .. .. .. .. FINISH: DIR MODE BANK 0
     // .. .. .. .. START: DIR MODE BANK 1
-    // .. .. .. .. DIRECTION_1 = 0x4000
-    // .. .. .. .. ==> 0XE000A244[21:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x003FFFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A244, 0x003FFFFFU ,0x00004000U),
     // .. .. .. .. FINISH: DIR MODE BANK 1
     // .. .. .. .. START: MASK_DATA_0_LSW HIGH BANK [15:0]
     // .. .. .. .. FINISH: MASK_DATA_0_LSW HIGH BANK [15:0]
     // .. .. .. .. START: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW HIGH BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x4000
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF4000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW HIGH BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. START: OUTPUT ENABLE BANK 0
     // .. .. .. .. FINISH: OUTPUT ENABLE BANK 0
     // .. .. .. .. START: OUTPUT ENABLE BANK 1
-    // .. .. .. .. OP_ENABLE_1 = 0x4000
-    // .. .. .. .. ==> 0XE000A248[21:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x003FFFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A248, 0x003FFFFFU ,0x00004000U),
     // .. .. .. .. FINISH: OUTPUT ENABLE BANK 1
     // .. .. .. .. START: MASK_DATA_0_LSW LOW BANK [15:0]
     // .. .. .. .. FINISH: MASK_DATA_0_LSW LOW BANK [15:0]
     // .. .. .. .. START: MASK_DATA_0_MSW LOW BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW LOW BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW LOW BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x0
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00000000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00000000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF0000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW LOW BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW LOW BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW LOW BANK [53:48]
@@ -12285,14 +12191,6 @@ unsigned long ps7_peripherals_init_data_1_0[] = {
     // .. .. .. .. START: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. FINISH: MASK_DATA_0_MSW HIGH BANK [31:16]
     // .. .. .. .. START: MASK_DATA_1_LSW HIGH BANK [47:32]
-    // .. .. .. .. MASK_1_LSW = 0xbfff
-    // .. .. .. .. ==> 0XE000A008[31:16] = 0x0000BFFFU
-    // .. .. .. ..     ==> MASK : 0xFFFF0000U    VAL : 0xBFFF0000U
-    // .. .. .. .. DATA_1_LSW = 0x4000
-    // .. .. .. .. ==> 0XE000A008[15:0] = 0x00004000U
-    // .. .. .. ..     ==> MASK : 0x0000FFFFU    VAL : 0x00004000U
-    // .. .. .. .. 
-    EMIT_MASKWRITE(0XE000A008, 0xFFFFFFFFU ,0xBFFF4000U),
     // .. .. .. .. FINISH: MASK_DATA_1_LSW HIGH BANK [47:32]
     // .. .. .. .. START: MASK_DATA_1_MSW HIGH BANK [53:48]
     // .. .. .. .. FINISH: MASK_DATA_1_MSW HIGH BANK [53:48]

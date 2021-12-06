@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="NeuralNetwork" xd:componentRef="NeuralNetwork" xd:initiationInterval="23124" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:returnValue xd:interfaceRef="s_axi_NNIO" xd:busTypeRef="axilite" xd:offset="0x10" xd:statusOffset="0x14" xd:dataWidth="8"/>
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_NNIO" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="input_r[]" xd:originalName="input_r" xd:direction="in" xd:interfaceRef="s_axi_NNIO" xd:busTypeRef="axilite" xd:offset="0x200" xd:arraySize="80" xd:dataWidth="32"/>
+  <xd:arg xd:name="biasWeight_input_r[]" xd:originalName="biasWeight_input_r" xd:direction="in" xd:interfaceRef="s_axi_NNIO" xd:busTypeRef="axilite" xd:offset="0x4000" xd:arraySize="11200" xd:dataWidth="8"/>
+  <xd:arg xd:name="runNN_r" xd:originalName="runNN_r" xd:direction="in" xd:interfaceRef="s_axi_NNIO" xd:busTypeRef="axilite" xd:offset="0x8000" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:arg xd:name="setBais_r" xd:originalName="setBais_r" xd:direction="in" xd:interfaceRef="s_axi_NNIO" xd:busTypeRef="axilite" xd:offset="0x8008" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:arg xd:name="setWeight_r" xd:originalName="setWeight_r" xd:direction="in" xd:interfaceRef="s_axi_NNIO" xd:busTypeRef="axilite" xd:offset="0x8010" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="23123" xd:average-case="11458"/>
+  <xd:resourceEstimates xd:LUT="2055" xd:FF="2784" xd:BRAM="21" xd:DSP="14"/>
+</xd:acceleratorMap>

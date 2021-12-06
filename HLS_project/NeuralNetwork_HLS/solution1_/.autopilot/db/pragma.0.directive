@@ -1,0 +1,64 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="setBias" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="setWeights" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="runLayer" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="runLayer" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="relu" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="softmax_lite" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="NeuralNetwork" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="input_r"/>
+<option name="bundle" value="NNIO"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NeuralNetwork" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="biasWeight_input_r"/>
+<option name="bundle" value="NNIO"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NeuralNetwork" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="runNN_r"/>
+<option name="bundle" value="NNIO"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NeuralNetwork" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="setBais_r"/>
+<option name="bundle" value="NNIO"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NeuralNetwork" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="setWeight_r"/>
+<option name="bundle" value="NNIO"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NeuralNetwork" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+<option name="bundle" value="NNIO"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

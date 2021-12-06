@@ -1,0 +1,93 @@
+#include "NeuralNetwork.h"
+
+NeuralNetwork NeuralNetwork::instance = NeuralNetwork();
+
+NeuralNetwork* NeuralNetwork::getInstance(){
+	return &instance;
+}
+
+NeuralNetwork::NeuralNetwork(){
+	XNeuralnetwork_Initialize(&nn, XPAR_NEURALNETWORK_0_DEVICE_ID);
+
+
+	// PS Timer related definitions
+	XScuTimer_Config *ConfigPtr;
+	XScuTimer *TimerInstancePtr = &timerInstance;
+	// Initialize the timer
+
+	ConfigPtr = XScuTimer_LookupConfig (XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+	int Status = XScuTimer_CfgInitialize (TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS){
+		xil_printf("Timer init() failed\r\n");
+	}
+
+	// Load timer with delay in multiple of ONE_SECOND
+	XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND);
+	// Set AutoLoad mode
+	XScuTimer_EnableAutoReload(TimerInstancePtr);
+}
+
+NeuralNetwork::~NeuralNetwork(){}
+
+char NeuralNetwork::setBias(char* bias){
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	XNeuralnetwork_Set_setBais_r(&nn, 1);
+	XNeuralnetwork_Set_setWeight_r(&nn, 0);
+	XNeuralnetwork_Set_runNN_r(&nn, 0);
+	XNeuralnetwork_Write_biasWeight_input_r_Bytes(&nn, 0, bias, 50);
+	XNeuralnetwork_Start(&nn);
+
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	return XNeuralnetwork_Get_return(&nn);
+}
+
+char NeuralNetwork::setWeights(char* weights){
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	XNeuralnetwork_Set_setBais_r(&nn, 0);
+	XNeuralnetwork_Set_setWeight_r(&nn, 1);
+	XNeuralnetwork_Set_runNN_r(&nn, 0);
+	XNeuralnetwork_Write_biasWeight_input_r_Bytes(&nn, 0, weights, 50);
+	XNeuralnetwork_Start(&nn);
+
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	return XNeuralnetwork_Get_return(&nn);
+}
+
+char NeuralNetwork::runNN(char* input){
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	XNeuralnetwork_Set_setBais_r(&nn, 0);
+	XNeuralnetwork_Set_setWeight_r(&nn, 0);
+	XNeuralnetwork_Set_runNN_r(&nn, 1);
+	XNeuralnetwork_Write_input_r_Bytes(&nn, 0, input, 80);
+
+	u32 startTime = XScuTimer_GetCounterValue(&timerInstance);
+
+	// Start the timer
+	XScuTimer_RestartTimer(&timerInstance);
+	XScuTimer_Start(&timerInstance);
+
+	XNeuralnetwork_Start(&nn);
+
+	while(!XNeuralnetwork_IsReady(&nn))
+	{}
+
+	char res = XNeuralnetwork_Get_return(&nn);
+
+	// Stop the timer
+	XScuTimer_Stop(&timerInstance);
+
+	u32 timerVal = XScuTimer_GetCounterValue(&timerInstance);
+	xil_printf("Time spent running nn: %.6\r\n", (startTime - timerVal)/ONE_SECOND);
+
+	return res;
+}

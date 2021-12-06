@@ -9,6 +9,7 @@ static char weights_[numOfWeights] = {
 };
 
 void setBias(char bias_r[numOfBias]) {
+	#pragma HLS inline
 	for (short unsigned int i = 0; i < numOfBias; i++)
 	{
 		bias_[i] = bias_r[i];
@@ -16,6 +17,7 @@ void setBias(char bias_r[numOfBias]) {
 }
 
 short int getBias(unsigned char layer, unsigned char neuron) {
+	//#pragma HLS inline
 	unsigned char mul = 1;
 	if (layer == 1)
 	{
@@ -30,6 +32,7 @@ short int getBias(unsigned char layer, unsigned char neuron) {
 }
 
 void setWeights(char weights_r[numOfWeights]) {
+	#pragma HLS inline
 	for (short unsigned int i = 0; i < numOfWeights; i++)
 	{
 		weights_[i] = weights_r[i];
@@ -37,7 +40,8 @@ void setWeights(char weights_r[numOfWeights]) {
  }
 
 char getWeight(unsigned char layer, unsigned char neuron, unsigned char number) {
-	short int startIndex = 0; 
+	//#pragma HLS inline
+	short int startIndex = 0;
 	short int neuronIndex = neuronsInLayer * neuron;
 	if (layer < numOfLayers && layer != 0)
 	{
@@ -52,20 +56,28 @@ char getWeight(unsigned char layer, unsigned char neuron, unsigned char number) 
 }
 
 void runLayer(unsigned char layer, unsigned char numOfInNeurons, unsigned char numOfOutNeurons, int * input, int * output) {
-	runLayer_outerloop:for (short int outNeurons = 0; outNeurons < numOfOutNeurons; outNeurons++)
-	{
-		output[outNeurons] = 0;
+	#pragma HLS inline
+	short int outNeurons = 0;
+	for(; outNeurons < numOfOutNeurons; outNeurons++){
+		output[outNeurons] = getBias(layer, outNeurons);
+	}
 
+	runLayer_outerloop:for (outNeurons = 0; outNeurons < numOfOutNeurons; outNeurons++)
+	{
 		runLayer_innerloop:for (short int inNeurons = 0; inNeurons < numOfInNeurons; inNeurons++)
 		{
+			#pragma HLS PIPELINE
 			output[outNeurons] += (getWeight(layer, inNeurons, outNeurons) * input[inNeurons]);
 		}
-
-		output[outNeurons] += getBias(layer, outNeurons);
 	}
 }
 
+void updateOutput(int* i, int* o, char idx){
+	o[idx] = i[idx];
+}
+
 void relu(int* data, unsigned char numOfNeurons) {
+	#pragma HLS inline
 	relu_label1:for (unsigned char i = 0; i < numOfNeurons; i++)
 	{
 		if (data[i] < 0)
@@ -76,6 +88,7 @@ void relu(int* data, unsigned char numOfNeurons) {
 }
 
 unsigned char softmax_lite(int* data, unsigned char numOfNeurons) {
+	#pragma HLS inline
 	int max = data[0];
 	unsigned char max_index = 0;
 
@@ -90,8 +103,9 @@ unsigned char softmax_lite(int* data, unsigned char numOfNeurons) {
 }
 
 unsigned char run_classification(int * input_r) {
-	int resArray1[neuronsInLayer] = { 0 };
-	int resArray2[neuronsInLayer] = { 0 };
+	//#pragma HLS inline
+	static int resArray1[neuronsInLayer] = { 0 };
+	static int resArray2[neuronsInLayer] = { 0 };
 
 	runLayer(0, inputSize, neuronsInLayer, input_r, resArray1);
 	relu(resArray1, neuronsInLayer);

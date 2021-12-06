@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Dec  6 12:45:55 2021
+# Process ID: 3724
+# Current directory: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/NeuralNetwork/xsim_script.tcl}
+# Log file: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/xsim.log
+# Journal file: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/NeuralNetwork/xsim_script.tcl
+# xsim {NeuralNetwork} -autoloadwcfg -tclbatch {NeuralNetwork.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source NeuralNetwork.tcl
+## run all
+Note: simulation done!
+Time: 2270908 ns  Iteration: 1  Process: /apatb_NeuralNetwork_top/generate_sim_done_proc  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 2270908 ns  Iteration: 1  Process: /apatb_NeuralNetwork_top/generate_sim_done_proc  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork.autotb.vhd
+$finish called at time : 2270908 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Dec  6 12:46:05 2021...

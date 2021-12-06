@@ -1,0 +1,25 @@
+#ifndef SRC_NEURALNETWORK_H_
+#define SRC_NEURALNETWORK_H_
+#include "xneuralnetwork.h"
+#include "xparameters.h"
+	 #define ONE_SECOND 325000000 // half of the CPU clock speed
+
+
+class NeuralNetwork
+{
+public:
+	static NeuralNetwork* getInstance();
+	char setBias(char* bias);
+	char setWeights(char* weights);
+	char runNN(char* input);
+
+private:
+	NeuralNetwork();
+	~NeuralNetwork();
+
+	XNeuralnetwork nn;
+	static NeuralNetwork instance;
+	XScuTimer Timer;
+};
+
+#endif /* SRC_NEURALNETWORK_H_ */

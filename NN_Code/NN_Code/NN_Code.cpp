@@ -6,7 +6,7 @@
 #define dimensions 80
 
 static int testImages[numOfImages*dimensions] = {
-	#include "testImages.dat"
+	#include "test_images.dat"
 };
 
 static int testLabels[numOfImages] = {
@@ -22,7 +22,6 @@ int main()
 	for (short int i = 0; i < numOfImages; i++)
 	{
 		char res = NeuralNetwork(&testImages[i * 80], &dummy, true, false, false);
-		//char res = run_classification(&testImages[i*80]);
 
 		if (res == testLabels[i])
 		{

@@ -1,0 +1,385 @@
+
+
+================================================================
+== Vivado HLS Report for 'NeuralNetwork'
+================================================================
+* Date:           Mon Dec  6 12:45:26 2021
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        NeuralNetwork_HLS
+* Solution:       solution1_
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.63|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-------+-----+-------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    | min |  max  | min |  max  |   Type  |
+    +-----+-------+-----+-------+---------+
+    |    2|  23123|    3|  23124|   none  |
+    +-----+-------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  |  Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+        |- Loop 1  |    300|    300|         2|          -|          -|    150|    no    |
+        |- Loop 2  |  22400|  22400|         2|          -|          -|  11200|    no    |
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 8
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	7  / (or_cond1)
+	2  / (!or_cond1 & !or_cond3)
+	5  / (!or_cond1 & or_cond3)
+2 --> 
+	8  / (!or_cond5)
+	3  / (or_cond5)
+3 --> 
+	4  / (!tmp_34)
+	8  / (tmp_34)
+4 --> 
+	3  / true
+5 --> 
+	6  / (!tmp_32)
+	8  / (tmp_32)
+6 --> 
+	5  / true
+7 --> 
+	8  / true
+8 --> 
+* FSM state operations: 
+
+ <State 1>: 5.98ns
+ST_1: StgValue_9 (10)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([80 x i32]* %input_r) nounwind, !map !42
+
+ST_1: StgValue_10 (11)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([11200 x i8]* %biasWeight_input_r) nounwind, !map !48
+
+ST_1: StgValue_11 (12)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i8 %runNN_r) nounwind, !map !54
+
+ST_1: StgValue_12 (13)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i8 %setBais_r) nounwind, !map !60
+
+ST_1: StgValue_13 (14)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i8 %setWeight_r) nounwind, !map !64
+
+ST_1: StgValue_14 (15)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i8 0) nounwind, !map !68
+
+ST_1: StgValue_15 (16)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @NeuralNetwork_str) nounwind
+
+ST_1: setWeight_r_read (17)  [1/1] 1.00ns
+:7  %setWeight_r_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %setWeight_r) nounwind
+
+ST_1: setBais_r_read (18)  [1/1] 1.00ns
+:8  %setBais_r_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %setBais_r) nounwind
+
+ST_1: runNN_r_read (19)  [1/1] 1.00ns
+:9  %runNN_r_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %runNN_r) nounwind
+
+ST_1: empty (20)  [1/1] 0.00ns
+:10  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([80 x i32]* %input_r, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_20 (21)  [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecInterface([80 x i32]* %input_r, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [5 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: empty_28 (22)  [1/1] 0.00ns
+:12  %empty_28 = call i32 (...)* @_ssdm_op_SpecMemCore([11200 x i8]* %biasWeight_input_r, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_22 (23)  [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecInterface([11200 x i8]* %biasWeight_input_r, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [5 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_23 (24)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:122
+:14  call void (...)* @_ssdm_op_SpecInterface(i8 %runNN_r, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [5 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_24 (25)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:123
+:15  call void (...)* @_ssdm_op_SpecInterface(i8 %setBais_r, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [5 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_25 (26)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:124
+:16  call void (...)* @_ssdm_op_SpecInterface(i8 %setWeight_r, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [5 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_26 (27)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:125
+:17  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [5 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: tmp_s (28)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129
+:18  %tmp_s = icmp eq i8 %runNN_r_read, 1
+
+ST_1: tmp_26 (29)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129
+:19  %tmp_26 = icmp eq i8 %setWeight_r_read, 0
+
+ST_1: tmp (30)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129 (grouped into LUT with out node tmp_3)
+:20  %tmp = or i8 %setBais_r_read, %setWeight_r_read
+
+ST_1: tmp_3 (31)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129 (out node of the LUT)
+:21  %tmp_3 = icmp eq i8 %tmp, 0
+
+ST_1: or_cond1 (32)  [1/1] 2.07ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129
+:22  %or_cond1 = and i1 %tmp_3, %tmp_s
+
+ST_1: StgValue_32 (33)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129
+:23  br i1 %or_cond1, label %1, label %2
+
+ST_1: tmp_27 (35)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:132
+:0  %tmp_27 = icmp eq i8 %runNN_r_read, 0
+
+ST_1: tmp_28 (36)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:132
+:1  %tmp_28 = icmp eq i8 %setBais_r_read, 1
+
+ST_1: tmp1 (37)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:132 (grouped into LUT with out node or_cond3)
+:2  %tmp1 = and i1 %tmp_28, %tmp_26
+
+ST_1: or_cond3 (38)  [1/1] 2.07ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:132 (out node of the LUT)
+:3  %or_cond3 = and i1 %tmp1, %tmp_27
+
+ST_1: StgValue_37 (39)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:132
+:4  br i1 %or_cond3, label %.preheader7.preheader, label %4
+
+ST_1: tmp_29 (41)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:136 (grouped into LUT with out node tmp_30)
+:0  %tmp_29 = or i8 %setBais_r_read, %runNN_r_read
+
+ST_1: tmp_30 (42)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:136 (out node of the LUT)
+:1  %tmp_30 = icmp eq i8 %tmp_29, 0
+
+ST_1: tmp_31 (43)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:136
+:2  %tmp_31 = icmp eq i8 %setWeight_r_read, 1
+
+ST_1: or_cond5 (44)  [1/1] 2.07ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:136
+:3  %or_cond5 = and i1 %tmp_30, %tmp_31
+
+ST_1: StgValue_42 (64)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:13->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+.preheader7.preheader:0  br label %.preheader7
+
+ST_1: res (81)  [2/2] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:130
+:0  %res = call fastcc zeroext i8 @run_classification([80 x i32]* %input_r) nounwind
+
+
+ <State 2>: 1.77ns
+ST_2: StgValue_44 (45)  [1/1] 1.77ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:136
+:4  br i1 %or_cond5, label %.preheader.preheader, label %._crit_edge
+
+ST_2: StgValue_45 (47)  [1/1] 1.59ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:36->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+.preheader.preheader:0  br label %.preheader
+
+
+ <State 3>: 3.01ns
+ST_3: i_0_i6 (49)  [1/1] 0.00ns
+.preheader:0  %i_0_i6 = phi i14 [ %i_3, %5 ], [ 0, %.preheader.preheader ]
+
+ST_3: tmp_34 (50)  [1/1] 3.01ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:36->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+.preheader:1  %tmp_34 = icmp eq i14 %i_0_i6, -5184
+
+ST_3: empty_30 (51)  [1/1] 0.00ns
+.preheader:2  %empty_30 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 11200, i64 11200, i64 11200) nounwind
+
+ST_3: i_3 (52)  [1/1] 2.34ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:36->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+.preheader:3  %i_3 = add i14 %i_0_i6, 1
+
+ST_3: StgValue_50 (53)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:36->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+.preheader:4  br i1 %tmp_34, label %._crit_edge.loopexit, label %5
+
+ST_3: tmp_35 (55)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+:0  %tmp_35 = zext i14 %i_0_i6 to i32
+
+ST_3: biasWeight_input_r_a_1 (56)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+:1  %biasWeight_input_r_a_1 = getelementptr [11200 x i8]* %biasWeight_input_r, i32 0, i32 %tmp_35
+
+ST_3: biasWeight_input_r_l_1 (57)  [2/2] 2.57ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+:2  %biasWeight_input_r_l_1 = load i8* %biasWeight_input_r_a_1, align 1
+
+ST_3: StgValue_54 (62)  [1/1] 1.77ns
+._crit_edge.loopexit:0  br label %._crit_edge
+
+
+ <State 4>: 5.82ns
+ST_4: biasWeight_input_r_l_1 (57)  [1/2] 2.57ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+:2  %biasWeight_input_r_l_1 = load i8* %biasWeight_input_r_a_1, align 1
+
+ST_4: weights_addr (58)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+:3  %weights_addr = getelementptr inbounds [11200 x i8]* @weights_s, i32 0, i32 %tmp_35
+
+ST_4: StgValue_57 (59)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+:4  store i8 %biasWeight_input_r_l_1, i8* %weights_addr, align 1
+
+ST_4: StgValue_58 (60)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:36->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137
+:5  br label %.preheader
+
+
+ <State 5>: 2.91ns
+ST_5: i_0_i (66)  [1/1] 0.00ns
+.preheader7:0  %i_0_i = phi i8 [ %i, %3 ], [ 0, %.preheader7.preheader ]
+
+ST_5: tmp_32 (67)  [1/1] 2.91ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:13->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+.preheader7:1  %tmp_32 = icmp eq i8 %i_0_i, -106
+
+ST_5: empty_29 (68)  [1/1] 0.00ns
+.preheader7:2  %empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 150, i64 150, i64 150) nounwind
+
+ST_5: i (69)  [1/1] 2.32ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:13->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+.preheader7:3  %i = add i8 %i_0_i, 1
+
+ST_5: StgValue_63 (70)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:13->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+.preheader7:4  br i1 %tmp_32, label %._crit_edge.loopexit7, label %3
+
+ST_5: tmp_33 (72)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+:0  %tmp_33 = zext i8 %i_0_i to i32
+
+ST_5: biasWeight_input_r_a (73)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+:1  %biasWeight_input_r_a = getelementptr [11200 x i8]* %biasWeight_input_r, i32 0, i32 %tmp_33
+
+ST_5: biasWeight_input_r_l (74)  [2/2] 2.57ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+:2  %biasWeight_input_r_l = load i8* %biasWeight_input_r_a, align 1
+
+ST_5: StgValue_67 (79)  [1/1] 1.77ns
+._crit_edge.loopexit7:0  br label %._crit_edge
+
+
+ <State 6>: 5.82ns
+ST_6: biasWeight_input_r_l (74)  [1/2] 2.57ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+:2  %biasWeight_input_r_l = load i8* %biasWeight_input_r_a, align 1
+
+ST_6: bias_addr (75)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+:3  %bias_addr = getelementptr inbounds [150 x i8]* @bias_s, i32 0, i32 %tmp_33
+
+ST_6: StgValue_70 (76)  [1/1] 3.25ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+:4  store i8 %biasWeight_input_r_l, i8* %bias_addr, align 1
+
+ST_6: StgValue_71 (77)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:13->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133
+:5  br label %.preheader7
+
+
+ <State 7>: 1.77ns
+ST_7: res (81)  [1/2] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:130
+:0  %res = call fastcc zeroext i8 @run_classification([80 x i32]* %input_r) nounwind
+
+ST_7: StgValue_73 (82)  [1/1] 1.77ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:131
+:1  br label %._crit_edge
+
+
+ <State 8>: 0.00ns
+ST_8: res_2 (84)  [1/1] 0.00ns
+._crit_edge:0  %res_2 = phi i8 [ %res, %1 ], [ -2, %4 ], [ -1, %._crit_edge.loopexit ], [ -1, %._crit_edge.loopexit7 ]
+
+ST_8: StgValue_75 (85)  [1/1] 0.00ns  loc: ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:141
+._crit_edge:1  ret i8 %res_2
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 5.98ns
+The critical path consists of the following:
+	s_axi read on port 'setWeight_r' [17]  (1 ns)
+	'or' operation ('tmp', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129) [30]  (0 ns)
+	'icmp' operation ('tmp_3', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129) [31]  (2.91 ns)
+	'and' operation ('or_cond1', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:129) [32]  (2.07 ns)
+
+ <State 2>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('res') with incoming values : ('res', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:130) [84]  (1.77 ns)
+
+ <State 3>: 3.01ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:36->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137) [49]  (0 ns)
+	'icmp' operation ('tmp_34', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:36->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137) [50]  (3.01 ns)
+
+ <State 4>: 5.82ns
+The critical path consists of the following:
+	'load' operation ('biasWeight_input_r_l_1', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137) on array 'biasWeight_input_r' [57]  (2.57 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137) of variable 'biasWeight_input_r_l_1', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:38->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:137 on array 'weights_s' [59]  (3.25 ns)
+
+ <State 5>: 2.91ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:13->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133) [66]  (0 ns)
+	'icmp' operation ('tmp_32', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:13->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133) [67]  (2.91 ns)
+
+ <State 6>: 5.82ns
+The critical path consists of the following:
+	'load' operation ('biasWeight_input_r_l', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133) on array 'biasWeight_input_r' [74]  (2.57 ns)
+	'store' operation (../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133) of variable 'biasWeight_input_r_l', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:15->../NN_Code/NN_Code/neuralnetwork_ccode.cpp:133 on array 'bias_s' [76]  (3.25 ns)
+
+ <State 7>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('res', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:130) to 'run_classification' [81]  (0 ns)
+	multiplexor before 'phi' operation ('res') with incoming values : ('res', ../NN_Code/NN_Code/neuralnetwork_ccode.cpp:130) [84]  (1.77 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

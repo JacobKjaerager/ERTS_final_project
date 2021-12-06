@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Fri Nov 26 11:27:38 2021
+| Date         : Sat Dec  4 15:58:34 2021
 | Host         : DESKTOP-IFL7HB3 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_NeuralNetwork_0_0_utilization_synth.rpt -pb design_1_NeuralNetwork_0_0_utilization_synth.pb
 | Design       : design_1_NeuralNetwork_0_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  777 |     0 |     17600 |  4.41 |
-|   LUT as Logic          |  777 |     0 |     17600 |  4.41 |
+| Slice LUTs*             |  909 |     0 |     17600 |  5.16 |
+|   LUT as Logic          |  909 |     0 |     17600 |  5.16 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         |  897 |     0 |     35200 |  2.55 |
-|   Register as Flip Flop |  897 |     0 |     35200 |  2.55 |
+| Slice Registers         | 1029 |     0 |     35200 |  2.92 |
+|   Register as Flip Flop | 1029 |     0 |     35200 |  2.92 |
 |   Register as Latch     |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                |    8 |     0 |      8800 |  0.09 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 8     |          Yes |         Set |            - |
-| 889   |          Yes |       Reset |            - |
+| 6     |          Yes |         Set |            - |
+| 1023  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -82,8 +82,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |    5 |     0 |        80 |  6.25 |
-|   DSP48E1 only |    5 |       |           |       |
+| DSPs           |    8 |     0 |        80 | 10.00 |
+|   DSP48E1 only |    8 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -149,18 +149,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  889 |        Flop & Latch |
-| LUT3     |  263 |                 LUT |
-| LUT6     |  182 |                 LUT |
-| LUT2     |  164 |                 LUT |
-| LUT5     |  163 |                 LUT |
-| LUT4     |   88 |                 LUT |
-| LUT1     |   70 |                 LUT |
-| CARRY4   |   56 |          CarryLogic |
+| FDRE     | 1023 |        Flop & Latch |
+| LUT5     |  294 |                 LUT |
+| LUT6     |  254 |                 LUT |
+| LUT3     |  206 |                 LUT |
+| LUT2     |  177 |                 LUT |
+| LUT4     |  105 |                 LUT |
+| CARRY4   |   51 |          CarryLogic |
+| LUT1     |   36 |                 LUT |
 | RAMB36E1 |    9 |        Block Memory |
 | MUXF7    |    8 |               MuxFx |
-| FDSE     |    8 |        Flop & Latch |
-| DSP48E1  |    5 |    Block Arithmetic |
+| DSP48E1  |    8 |    Block Arithmetic |
+| FDSE     |    6 |        Flop & Latch |
 | RAMB18E1 |    3 |        Block Memory |
 +----------+------+---------------------+
 

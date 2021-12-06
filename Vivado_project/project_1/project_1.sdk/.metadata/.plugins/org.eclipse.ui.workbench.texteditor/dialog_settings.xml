@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="&#x09;u32 res = nn-&gt;setBias((char*)bias_);" key="selection"/>
+		<item value="false" key="isRegEx"/>
+		<item value="nn" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="&#x09;u32 res = nn-&gt;setBias((char*)bias_);"/>
-			<item value="#include &quot;xparameters.h&quot;"/>
+			<item value="nn"/>
+			<item value="XNeuralnetwork"/>
+			<item value="re"/>
+			<item value="reset"/>
+			<item value="&#x0A;//#include &quot;GPIO/GPIOManager.h&quot;&#x0A;//#include &quot;StatePattern/Context.h&quot;&#x0A;//&#x0A;//void TestFileSDCard(void);&#x0A;//void TestFileSDCardOwn(int*);&#x0A;//&#x0A;//int main()&#x0A;//{&#x0A;//&#x09;Context c = Context();&#x0A;//&#x09;GPIOManager* gpio = GPIOManager::getInstance();&#x0A;//&#x09;while(1){&#x0A;//&#x09;&#x09;//c.handleButtons(gpio-&gt;getButtons(), gpio-&gt;getSwitches());&#x0A;//&#x09;}&#x0A;//&#x09;return 0;&#x0A;//}"/>
 		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="826" key="DIALOG_X_ORIGIN"/>
+		<item value="268" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

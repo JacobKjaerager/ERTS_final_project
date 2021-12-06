@@ -1,0 +1,9 @@
+/*
+ * Empty C++ Application
+ */
+
+int main()
+{
+	xil_printf("Test");
+	return 0;
+}

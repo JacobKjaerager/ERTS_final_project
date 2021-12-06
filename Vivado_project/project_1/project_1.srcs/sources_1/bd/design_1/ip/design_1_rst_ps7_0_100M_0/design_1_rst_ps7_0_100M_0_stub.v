@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Tue Nov 16 21:50:17 2021
+// Date        : Sat Dec  4 15:58:15 2021
 // Host        : DESKTOP-IFL7HB3 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_rst_ps7_0_100M_0 -prefix
-//               design_1_rst_ps7_0_100M_0_ design_1_rst_ps7_0_100M_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/Vivado_project/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_stub.v
 // Design      : design_1_rst_ps7_0_100M_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

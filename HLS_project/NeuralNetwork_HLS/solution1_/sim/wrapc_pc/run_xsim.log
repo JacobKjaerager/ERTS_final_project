@@ -1,0 +1,102 @@
+
+C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\HLS_project\NeuralNetwork_HLS\solution1_\sim\vhdl>call C:/Xilinx/Vivado/2017.2/bin/xelab xil_defaultlib.apatb_NeuralNetwork_top -prj NeuralNetwork.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile "C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s NeuralNetwork  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_NeuralNetwork_top -prj NeuralNetwork.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s NeuralNetwork 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/AESL_axi_slave_NNIO.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity AESL_axi_slave_NNIO
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork.autotb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity apatb_NeuralNetwork_top
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork_biahbi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_biahbi_ram
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_biahbi
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork_macfYi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_macfYi_DSP48_0
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_macfYi
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork_macg8j.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_macg8j_DSP48_1
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_macg8j
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork_muldEe.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_muldEe_MulnS_0
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_muldEe
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork_muleOg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_muleOg_MulnS_1
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_muleOg
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork_NNIO_s_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_NNIO_s_axi
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_NNIO_s_axi_ram
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork_weiibs.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_weiibs_ram
+INFO: [VRFC 10-307] analyzing entity NeuralNetwork_weiibs
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/run_classificatiobkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity run_classificatiobkb_ram
+INFO: [VRFC 10-307] analyzing entity run_classificatiobkb
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/run_classification.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity run_classification
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling architecture rtl of entity xil_defaultlib.NeuralNetwork_biahbi_ram [\NeuralNetwork_biahbi_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.NeuralNetwork_biahbi [neuralnetwork_biahbi_default]
+Compiling architecture rtl of entity xil_defaultlib.NeuralNetwork_weiibs_ram [\NeuralNetwork_weiibs_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.NeuralNetwork_weiibs [neuralnetwork_weiibs_default]
+Compiling architecture behave of entity xil_defaultlib.NeuralNetwork_NNIO_s_axi_ram [\NeuralNetwork_NNIO_s_axi_ram(de...]
+Compiling architecture behave of entity xil_defaultlib.NeuralNetwork_NNIO_s_axi_ram [\NeuralNetwork_NNIO_s_axi_ram(de...]
+Compiling architecture behave of entity xil_defaultlib.NeuralNetwork_NNIO_s_axi [neuralnetwork_nnio_s_axi_default]
+Compiling architecture rtl of entity xil_defaultlib.run_classificatiobkb_ram [\run_classificatiobkb_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.run_classificatiobkb [run_classificatiobkb_default]
+Compiling architecture behav of entity xil_defaultlib.NeuralNetwork_muldEe_MulnS_0 [neuralnetwork_muldee_mulns_0_def...]
+Compiling architecture arch of entity xil_defaultlib.NeuralNetwork_muldEe [\NeuralNetwork_muldEe(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.NeuralNetwork_muleOg_MulnS_1 [neuralnetwork_muleog_mulns_1_def...]
+Compiling architecture arch of entity xil_defaultlib.NeuralNetwork_muleOg [\NeuralNetwork_muleOg(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.NeuralNetwork_macfYi_DSP48_0 [neuralnetwork_macfyi_dsp48_0_def...]
+Compiling architecture arch of entity xil_defaultlib.NeuralNetwork_macfYi [\NeuralNetwork_macfYi(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.NeuralNetwork_macg8j_DSP48_1 [neuralnetwork_macg8j_dsp48_1_def...]
+Compiling architecture arch of entity xil_defaultlib.NeuralNetwork_macg8j [\NeuralNetwork_macg8j(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.run_classification [run_classification_default]
+Compiling architecture behav of entity xil_defaultlib.NeuralNetwork [neuralnetwork_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_slave_NNIO [aesl_axi_slave_nnio_default]
+Compiling architecture behav of entity xil_defaultlib.apatb_neuralnetwork_top
+Built simulation snapshot NeuralNetwork
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/xsim.dir/NeuralNetwork/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Dec  6 12:45:55 2021...
+
+****** xsim v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/NeuralNetwork/xsim_script.tcl
+# xsim {NeuralNetwork} -autoloadwcfg -tclbatch {NeuralNetwork.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source NeuralNetwork.tcl
+## run all
+Note: simulation done!
+Time: 2270908 ns  Iteration: 1  Process: /apatb_NeuralNetwork_top/generate_sim_done_proc  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 2270908 ns  Iteration: 1  Process: /apatb_NeuralNetwork_top/generate_sim_done_proc  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS_final_project/HLS_project/NeuralNetwork_HLS/solution1_/sim/vhdl/NeuralNetwork.autotb.vhd
+$finish called at time : 2270908 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Dec  6 12:46:05 2021...

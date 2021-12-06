@@ -1,0 +1,11 @@
+The attached C++ source files contains code for writing and reading files on the SD card with a simple demonstration.
+
+// The hardware must be created with I/O Periherals: SD 0 enabled
+
+// The board support package must be configured with: xilffs (Generic Fat File System Library)
+
+// The application project properties must be modified adding the xilffs library:
+
+// In the SDK project: Properties -> C/C++ Build -> Settings -> ARM v7 g++ linker -> Inferred Options -> Software Platform
+
+// Add: -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group

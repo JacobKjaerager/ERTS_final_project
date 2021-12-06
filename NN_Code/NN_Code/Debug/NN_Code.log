@@ -1,2 +1,23 @@
-﻿  testbench_vivado.cpp
+﻿  NN_Code.cpp
+  neuralnetwork_ccode.cpp
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(12): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(35): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(59): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(62): warning C4244: 'argument': conversion from 'short' to 'unsigned char', possible loss of data
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(69): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(70): warning C4244: 'argument': conversion from 'short' to 'unsigned char', possible loss of data
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(65): warning C4102: 'runLayer_outerloop': unreferenced label
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(67): warning C4102: 'runLayer_innerloop': unreferenced label
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(80): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(81): warning C4102: 'relu_label1': unreferenced label
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(91): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(95): warning C4102: 'softmax_lite_loop': unreferenced label
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(120): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(121): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(122): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(123): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(124): warning C4068: unknown pragma
+c:\users\jespe\desktop\uni_civil_9_semester\embedded_course\erts_final_project\nn_code\nn_code\neuralnetwork_ccode.cpp(125): warning C4068: unknown pragma
+  testbench_vivado.cpp
+  Generating Code...
   NN_Code.vcxproj -> C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS_final_project\NN_Code\Debug\NN_Code.exe

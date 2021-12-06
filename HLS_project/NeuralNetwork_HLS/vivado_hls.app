@@ -9,7 +9,7 @@
         <file name="../NN_Code/NN_Code/neuralnetwork_ccode.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions xmlns="">
-        <solution name="solution1" status="active"/>
+        <solution name="solution1_" status="active"/>
     </solutions>
 </project>
 

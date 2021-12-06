@@ -28,5 +28,4 @@ unsigned char softmax_lite(int* data, unsigned char numOfNeurons);
 
 unsigned char run_classification(int * input_r);
 
-//unsigned char NeuralNetwork(int input_r[inputSize]);//, char biasWeight_input_r[numOfWeights], char runNN_r, char setBais_r, char setWeight_r);
 unsigned char NeuralNetwork(int input_r[inputSize], char biasWeight_input_r[numOfWeights], char runNN_r, char setBais_r, char setWeight_r);
